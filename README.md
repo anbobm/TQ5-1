@@ -6,6 +6,4 @@ Dies ist ein Repository für die TQ5. Zum Ausprobieren von git/github und zum Fe
 
 * Foo
 * bar
-* baz
-
 ### Bar
