@@ -4,8 +4,8 @@ print("Habs herausgefunden!")
 # Persönliche Informationen abfragen
 namen = input("Gib deinen Namen ein: ")
 print("Hallo, " + namen )
-alter = input("Wie alt bist du? ")
-print("Du bist also" + alter + " Jahre alt.")
+alter = int(input("Wie alt bist du? "))
+print("Du bist also " + str(alter) + " Jahre alt.")
 gewicht = input("Wie viel wiegst du? ")
 print("Du wiegst " + gewicht + " kg.")
 größe = input("Wie groß bist du (in cm)? ")
@@ -27,5 +27,6 @@ elif note >= 3.6 and note <= 4.5:
     print("Ausreichend!")
 else:
     print("Nicht ausreichend!")
+
 
 
