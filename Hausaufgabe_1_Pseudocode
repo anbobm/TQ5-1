@@ -1,3 +1,17 @@
-name = "Nataliya
-"
-print(name)
+INPUT number1
+INPUT number2
+INPUT operator
+
+IF operator = "+" THEN
+    result = number1 + number2
+ELSE IF operator = "-" THEN
+    result = number1 - number2
+ELSE IF operator = "*" THEN
+    result = number1 * number2
+ELSE IF operator = "/" THEN
+    result = number1 / number2
+ELSE
+    OUTPUT "Bitte Operator eingeben"
+END IF
+
+OUTPUT result
