@@ -1,0 +1,64 @@
+//Übung 1
+
+INPUT operand1
+INPUT operand2
+INPUT operator
+IF operator is "+" THEN
+OUTPUT operand1 + operand2
+END IF
+IF operator is "-" THEN
+OUTPUT operand1 - operand2
+END IF
+IF operator is "*" THEN
+OUTPUT operand1 * operand2
+END IF
+IF operator is "/" THEN
+OUTPUT operand1 / operand2
+END IF
+
+//Übung 2
+
+INPUT score
+IF score >= 90 THEN PRINT(“GRADE A”)
+ELSE IF score >= 80 AND score < 90 THEN PRINT (“GRADE B”)
+ELSE IF score >= 70 AND score < 80 THEN PRINT (“GRADE C”)
+ELSE IF score >= 60 AND score < 70 THEN PRINT (“GRADE D”)
+ELSE PRINT (“GRADE F”)
+END IF
+END
+
+//Übung 3
+
+INPUT a 
+INPUT b 
+INPUT c 
+max = a 
+IF b > max 
+    max = b 
+END IF
+IF c > max
+    max = c 
+END IF 
+PRINT max 
+END
+
+//Übung 4
+
+INPUT number 
+WHILE number >= 0
+    PRINT number
+    number = number - 1
+END WHILE
+END
+
+//Übung 5
+
+INPUT n
+sum = 0
+WHILE i <= n
+    IF i % 2 == 0
+        sum = sum + i 
+END WHILE 
+PRINT sum
+END
+
