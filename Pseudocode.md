@@ -85,7 +85,7 @@ FOR i IN range(yournumber)
         OUTPUT 1
         OUTPUT 0
     ELSE 
-        OUTPUT ausganzahl
+        OUTPUT ausgangszahl
     END IF
 END FOR
 ```
