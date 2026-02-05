@@ -30,3 +30,18 @@ ELSE IF score >= 60 THEN
 ELSE
     OUTPUT "Grade F"
 END IF
+
+INPUT number1
+INPUT number2
+INPUT number3
+
+IF number1 >= number2 AND number1 >= number3 THEN
+    max = number1
+ELSE IF number2 >= number1 AND number2 >= number3 THEN
+    max = number2
+ELSE
+    max = number3
+END IF
+
+OUTPUT max
+
