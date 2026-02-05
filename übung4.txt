@@ -1,0 +1,12 @@
+4.
+Count Down Timer
+Write pseudocode for a countdown timer that takes a number as input and then counts down to zero, printing each number along the way.
+Example: Input 5 should output 5, 4, 3, 2, 1, 0.
+
+zaehler = input
+
+print("Bitte Countdown eingeben: zaehler")
+FOR zaehler FROM zaehler TO 0
+print("Starte Countdown mit zaehler")
+
+END FOR

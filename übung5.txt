@@ -1,0 +1,13 @@
+5.
+Sum of Even Numbers
+Write pseudocode that takes a positive integer as input and calculates the sum of all even numbers from 1 up to that number.
+Example: Input 6 should output 2 + 4 + 6 = 12.
+
+input = n
+sum = 0
+
+FOR i from 1 TO n
+    IF i even THEN
+    sum i + n 
+    END IF
+END FOR
