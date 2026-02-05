@@ -1,4 +1,5 @@
 ## Aufgabe 1
+```
 number1 = INPUT
 number2 = INPUT
 operator = INPUT
@@ -15,9 +16,10 @@ ELSE
     OUTPUT "Bitte Operator angeben"
 END IF
 OUTPUT result
-
+```
 
 ## Andreas Lösung
+```
 INPUT operand1
 INPUT operand2
 INPUT operator
@@ -34,10 +36,10 @@ END IF
 IF operator is "/" THEN
     OUTPUT operand1 / operand2
 END IF
-
+```
 
 ## Aufgabe 2
-
+```
 INPUT Score
 
 IF Score > 90
@@ -55,9 +57,9 @@ END IF
 IF Score < 60
     OUTPUT Grade F
 END IF
-
+```
 ## Aufgabe 3
-
+```
 INPUT number1
 INPUT number2
 INPUT number3
@@ -71,9 +73,10 @@ END IF
 IF number3 > number2 AND > number1
     OUTPUT number3 + "ist die größte Zahl"
 END IF
+```
 
 ## Aufgabe 4
-
+```
 INPUT yournumber
 
 FOR i IN range(yournumber)
@@ -84,9 +87,10 @@ FOR i IN range(yournumber)
     END IF
     OUTPUT ausgangszahl
 END FOR
+```
 
 ## Aufgabe 5
-
+```
 INPUT number
 ausgabe = 0
 IF number mod 2 = 0
@@ -104,7 +108,7 @@ IF number mod 2 = 0
 ELSE
     OUTPUT "Gibe eine grade Zahl ein"
 END IF
-        
+```        
             
     
         
