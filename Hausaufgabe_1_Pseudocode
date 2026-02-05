@@ -53,3 +53,13 @@ WHILE number >= 0
     OUTPUT number
     number = number - 1
 END WHILE
+
+
+   INPUT n
+sum ← 0
+i ← 2
+
+WHILE i ≤ n
+    sum ← sum + i
+    i ← i + 2
+END WHILE 
