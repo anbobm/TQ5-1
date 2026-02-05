@@ -81,12 +81,11 @@ INPUT yournumber
 
 FOR i IN range(yournumber)
     ausgangszahl = yournumber - i
-    OUTPUT i
+    OUTPUT ausgangszahl
     IF ausgangszahl = 1
         OUTPUT 1
         OUTPUT 0
     END IF
-    OUTPUT ausgangszahl
 END FOR
 ```
 
