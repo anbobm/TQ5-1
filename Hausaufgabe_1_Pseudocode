@@ -46,6 +46,7 @@ END IF
 OUTPUT max
 
 
+
 INPUT number
 
 WHILE number >= 0
