@@ -45,3 +45,10 @@ END IF
 
 OUTPUT max
 
+
+INPUT number
+
+WHILE number >= 0
+    OUTPUT number
+    number = number - 1
+END WHILE
