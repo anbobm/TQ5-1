@@ -36,7 +36,7 @@ rechnung = float(input("Betrag: "))
 prozent = 0.1
 def trinkgeld_funktion(rechnung, prozent):
     trinkgeld = rechnung * prozent
-    print("Trinkgeld: ", trinkgeld)
     return trinkgeld
 
-trinkgeld_funktion(rechnung, prozent)
+trinkgeld = trinkgeld_funktion(rechnung, prozent)
+print("Trinkgeld: ", trinkgeld)
