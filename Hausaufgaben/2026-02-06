@@ -1,0 +1,38 @@
+Aufgabe 1
+Schreibe ein Python Skript, welches den Rechnungsbetrag in einem Restaurant einliest, 
+und daraus das Trinkgeld (10 Prozent) berechnet.
+
+rechnung = float(input("Betrag: "))
+
+# Trinkgeld berechnen und ausgeben:
+rechnung = float(input("Betrag: "))
+
+trinkgeld = rechnung * 0.10
+print("Trinkgeld:", trinkgeld)
+
+Aufgabe 2
+Schreibe eine Funktion, die das Trinkgeld berechnet. Die Funktion soll als 
+Parameter den Rechnungsbetrag bekommen, und das Trinkgeld zurückgeben (return). 
+Dann kannst du im Programm von Aufgabe 1 diese Funktion aufrufen.
+
+def berechne_trinkgeld(betrag):
+    return betrag * 0.10
+
+rechnung = float(input("Betrag: "))
+trinkgeld = berechne_trinkgeld(rechnung)
+print("Trinkgeld:", trinkgeld)
+
+
+Aufgabe 3
+Erweitere die Funktion um den Parameter prozent. Die Trinkgeldberechnung soll dann anhand dieses übergebenen Parameters erfolgen, 
+anstatt mit den fest eingebauten 10%.
+
+def berechne_trinkgeld(betrag, prozent):
+    return betrag * (prozent / 100)
+
+rechnung = float(input("Betrag: "))
+prozent = float(input("Trinkgeld-Prozent: "))
+
+trinkgeld = berechne_trinkgeld(rechnung, prozent)
+print("Trinkgeld:", trinkgeld)
+
