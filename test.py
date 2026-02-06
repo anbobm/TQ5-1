@@ -26,8 +26,17 @@
     
 
 
-def add_3(zahl):
-    zahl = zahl + 3
-    print(zahl)
+# def add_3(zahl):
+#     zahl = zahl + 3
+#     print(zahl)
 
-add_3("5")
+# add_3("5")
+
+rechnung = float(input("Betrag: "))
+prozent = 0.1
+def trinkgeld_funktion(rechnung, prozent):
+    trinkgeld = rechnung * prozent
+    print("Trinkgeld: ", trinkgeld)
+    return trinkgeld
+
+trinkgeld_funktion(rechnung, prozent)
