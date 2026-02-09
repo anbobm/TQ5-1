@@ -33,10 +33,10 @@
 # add_3("5")
 
 rechnung = float(input("Betrag: "))
-prozent = 0.1
+prozent = float(input("Trinkgeld in Prozent ohne das Prozenzeichen: "))
 def trinkgeld_funktion(rechnung, prozent):
-    trinkgeld = rechnung * prozent
+    trinkgeld = rechnung * prozent/100
+    print("Trinkgeld: ", trinkgeld)
     return trinkgeld
 
-trinkgeld = trinkgeld_funktion(rechnung, prozent)
-print("Trinkgeld: ", trinkgeld)
+trinkgeld_funktion(rechnung, prozent)
