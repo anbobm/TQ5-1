@@ -51,10 +51,34 @@
 # rückgabewert = zieh_ab(variable, variable2)
 # print(rückgabewert)
 
-def add_3(zahl):
-    print()
-    print()
-    return zahl + 3
-variable = 11
-rückgabewert = add_3(variable)
-print(rückgabewert)
+# def add_3(zahl):
+#     return zahl + 3
+
+# def divide_by_2(zahl):
+#     return zahl / 2
+
+# a = add_3(5)
+# print(a)
+
+# b = divide_by_2(10)
+# print(b)
+
+# c = divide_by_2(add_3(5))
+# print(c)
+
+
+# from math import sqrt, pi, sin
+# #sqrt: square root
+# print(sqrt(16))
+# print(pi)
+# print(sin(pi))
+
+# from random import randint
+# print(randint(1, 6))
+
+eingabe = input("2+2? ")
+
+if eingabe == "4":
+    print("Richtig!")
+else:
+    print("Falsch!")
