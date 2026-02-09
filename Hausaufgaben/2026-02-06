@@ -10,8 +10,10 @@ rechnung = float(input("Betrag: "))
 trinkgeld = rechnung * 0.10
 print("Trinkgeld:", trinkgeld)
 
+
 Aufgabe 2
-Schreibe eine Funktion, die das Trinkgeld berechnet. Die Funktion soll als 
+Schreibe eine Funktion, die das Trinkgeld berechnet.
+Die Funktion soll als 
 Parameter den Rechnungsbetrag bekommen, und das Trinkgeld zurückgeben (return). 
 Dann kannst du im Programm von Aufgabe 1 diese Funktion aufrufen.
 
