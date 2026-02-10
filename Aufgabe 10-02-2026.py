@@ -9,17 +9,17 @@ dreiherpashBonus = 6
 Summe = zufallszahl + zufallszahl2 + zufallszahl3
 Punkte = Summe
 if zufallszahl == zufallszahl2:
-    print("Du hast ein Pash geworfen!")
+    print("Du hast ein Pash geworfen! Du bekommst 2 Punkte Bonus!")
     print(zufallszahl,"+",zufallszahl2,"+",zufallszahl3,"+",PashBonus,"=",Summe + PashBonus)
     print("Deine Punkte:",Punkte + PashBonus)
     Summe = Summe + PashBonus
 elif zufallszahl == zufallszahl3:
-    print("Du hast ein Pash geworfen!")
+    print("Du hast ein Pash geworfen! Du bekommst 2 Punkte Bonus!")
     print(zufallszahl,"+",zufallszahl2,"+",zufallszahl3,"+",PashBonus,"=",Summe + PashBonus)
     print("Deine Punkte:",Punkte + PashBonus)
     Summe = Summe + PashBonus
 elif zufallszahl2 == zufallszahl3 and zufallszahl2 == zufallszahl:
-    print("Du hast ein dreiherpash geworfen!")
+    print("Du hast ein dreiherpash geworfen! Du bekommst 6 Punkte Bonus!")
     print(zufallszahl,"+",zufallszahl2,"+",zufallszahl3,"+",dreiherpashBonus,"=",Summe + dreiherpashBonus)
     print("Deine Punkte:",Punkte + dreiherpashBonus)
     Summe = Summe + dreiherpashBonus
