@@ -7,7 +7,7 @@ else:
     print("Die Zahl ist kleiner als 10.")
 
 # Aufgabe 2
-zahl = input("Gib eine Zahl ein: ")
+zahl = int(input("Gib eine Zahl ein: "))
 
 if zahl >= 10:
     print("Die Zahl ist größer oder gleich 10.")
