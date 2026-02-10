@@ -26,3 +26,18 @@ elif temp < 20:
 elif temp < 30:
     print("Es ist warm.")  
 else:    print("Es ist zu heiß.")
+
+# Notenausgabe nach Punktzahleingabe
+punkte = int(input("Geben Sie die erreichten Punkte ein: "))
+if punkte >= 92:
+    print("Note: Sehr gut")
+elif punkte >= 81:
+    print("Note: Gut")
+elif punkte >= 67:
+    print("Note: Befriedigend")
+elif punkte >= 50:
+    print("Note: Ausreichend") 
+    elif punkte >= 30:
+    print("Note: Mangelhaft")
+else:
+    print("Note: Ungenügend")
