@@ -11,3 +11,11 @@ elif zahl < 0:
 else:
     print("Die Zahl ist 0")
 
+# Alternative mit gleichem Ergebnis, aber weniger ausdrucksstark
+
+if zahl > 0:
+    print("Die Zahl ist positiv")
+if zahl < 0:
+    print("Die Zahl ist negativ")
+if zahl == 0:
+    print("Die Zahl ist 0")
