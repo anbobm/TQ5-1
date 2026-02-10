@@ -1,1 +1,0 @@
-Diese Datei wurde eingefügt, um zu üben, eine Datei anzulegen und anschließend den Branch zu pushen
