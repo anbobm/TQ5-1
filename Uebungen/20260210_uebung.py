@@ -37,7 +37,8 @@ elif punkte >= 67:
     print("Note: Befriedigend")
 elif punkte >= 50:
     print("Note: Ausreichend") 
-    elif punkte >= 30:
+
+elif punkte >= 30:
     print("Note: Mangelhaft")
 else:
     print("Note: Ungenügend")
