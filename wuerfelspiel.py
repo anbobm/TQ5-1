@@ -15,9 +15,11 @@ def wuerfeln():
     return randint(1, 6) 
 
 versuch1 = wuerfeln()
+print(f"Wurf: {versuch1}")
 versuch2 = wuerfeln()  
+print(f"Wurf: {versuch2}")
 versuch3 = wuerfeln()
-print(f"Wurf: {versuch1} + {versuch2} + {versuch3}")
+print(f"Wurf: {versuch3}")
 summe = versuch1 + versuch2 + versuch3
 if versuch1 == versuch2 == versuch3:
     summe += 6
