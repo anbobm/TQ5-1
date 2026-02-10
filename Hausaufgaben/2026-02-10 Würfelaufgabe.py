@@ -13,42 +13,33 @@ from random import randint
 
 import random
 
-gesamtpunkte_alle_runden = 0
-ziel_punkte = 60  
-for runde in range(1, 6):
-    print(f"\n--- RUNDE {runde} ---")
-    
-    # Würfeln
-    w1 = random.randint(1, 6)
-    w2 = random.randint(1, 6)
-    w3 = random.randint(1, 6)
-    
-    # Berechnung
-    summe = w1 + w2 + w3
-    bonus = 0
-    
-    print(f"Wurf: {w1} + {w2} + {w3} = {summe}")
-    
-    # Pasch-Prüfung
-    if w1 == w2 == w3:
-        bonus = 6
-        print("Dreierpasch! +6 Bonuspunkte")
-    elif w1 == w2 or w1 == w3 or w2 == w3:
-        bonus = 2
-        print("Zweierpasch! +2 Bonuspunkte")
-    
-    runde_ergebnis = summe + bonus
-    print(f"Punkte in dieser Runde: {runde_ergebnis}")
-    
-    # Punkte zur Gesamtsumme addieren
-    gesamtpunkte_alle_runden += runde_ergebnis
+# Drei Würfel werfen
+w1 = random.randint(1, 6)
+w2 = random.randint(1, 6)
+w3 = random.randint(1, 6)
 
-# Endergebnis ausgeben
-print("-" * 30)
-print(f"GESAMTPUNKTE NACH 5 RUNDEN: {gesamtpunkte_alle_runden}")
+# Summe berechnen
+summe = w1 + w2 + w3
 
-# Gewinn-Entscheidung
-if gesamtpunkte_alle_runden >= ziel_punkte:
-    print(f"GEWONNEN! Du hast {ziel_punkte} oder mehr Punkte erreicht.")
+# Ausgabe des Wurfs
+print(f"Wurf: {w1} + {w2} + {w3} = {summe}")
+
+# Bonuspunkte bestimmen
+bonus = 0
+
+if w1 == w2 == w3:
+    bonus = 6
+    print("Bonus: Dreierpasch! +6 Punkte")
+elif w1 == w2 or w1 == w3 or w2 == w3:
+    bonus = 2
+    print("Bonus: Zweierpasch! +2 Punkte")
+
+# Gesamtpunktzahl
+gesamt = summe + bonus
+print(f"Gesamtpunktzahl: {gesamt}")
+
+# Gewinnbedingung
+if gesamt >= 15:
+    print("Du hast gewonnen!")
 else:
-    print(f"VERLOREN! Dir fehlen {ziel_punkte - gesamtpunkte_alle_runden} Punkte zum Sieg.")
+    print("Du hast leider verloren.")
