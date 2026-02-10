@@ -85,43 +85,6 @@ elif temperatur < 30:
 else:
     print("Es ist zu heiß")
 
-import random
-
-# 1. Drei Würfel werfen
-w1 = random.randint(1, 6)
-w2 = random.randint(1, 6)
-w3 = random.randint(1, 6)
-
-# 2. Summe berechnen
-summe = w1 + w2 + w3
-
-# 3. Ausgabe des Wurfs
-print(f"Wurf: {w1} + {w2} + {w3} = {summe}")
-
-# 4. Bonuspunkte prüfen
-bonus = 0
-
-# Dreierpasch zuerst prüfen (sonst würde Zweierpasch vorher greifen)
-if w1 == w2 == w3:
-    bonus = 6
-    print("Dreierpasch! +6 Bonuspunkte")
-# Zweierpasch prüfen
-elif w1 == w2 or w1 == w3 or w2 == w3:
-    bonus = 2
-    print("Zweierpasch! +2 Bonuspunkte")
-
-# 5. Bonus zur Summe addieren
-gesamt = summe + bonus
-
-print(f"Gesamtpunkte: {gesamt}")
-
-# 6. Gewinnbedingung
-if gesamt >= 15:
-    print("Du hast gewonnen!")
-else:
-    print("Du hast verloren!")
-
- 
 
 
 
