@@ -61,13 +61,11 @@ def start_game():
             print("The number is less than quess number")
         else:
             print("You Win. Wanna u play again?")
-            answer = input("Yes or No? ")
-            if answer == "Yes":
-                start_game()
-            elif answer == "No":
-                return exit_from_game()
+            answer = input("Play again? (yes/no): ").lower()
+            if answer != "yes":
+                exit_from_game()
             
 def exit_from_game():
-    return "Exit"
+    exit()
 
 main()
