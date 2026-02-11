@@ -17,15 +17,21 @@
 # print("Richtig du hast es Erraten:")
 
 #Aufgabe 3
-# import random
-# w1 = random.randint(1,11)
-# zahl = 0
-# while zahl != w1:
-#     zahl = int(input("Rate:"))
-#     if zahl < w1:
-#         print("zu niedrig.:")
-#     elif zahl > w1:
-#         print("zu hoch.:")
-# print("Klasse du hast es Erraten.:")
+import random
+nochmal = "ja"
+while nochmal == "ja":    
+    w1 = random.randint(1,11)
+    zahl = 0
+    while zahl != w1:
+        zahl = int(input("Rate:"))
+        if zahl < w1:
+            print("zu niedrig.:")
+        elif zahl > w1:
+                print("zu hoch.:")
+    print("Klasse du hast es Erraten.:")
+   
+    nochmal = input("Noch eine Runde? (ja/nein): ")
+print("Spiel beenden.") 
     
+
     
