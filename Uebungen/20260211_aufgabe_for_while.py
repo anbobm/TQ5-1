@@ -35,3 +35,4 @@ print("")
 print("Aufgabe 2 mit for: Gib die Zahen von 13 bis 25 aus. ")
 for zahl in range(13, 26):
     print(zahl)
+print("Wie du siehst, siehst du nüscht!")
