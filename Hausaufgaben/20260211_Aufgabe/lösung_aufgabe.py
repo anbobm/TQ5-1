@@ -35,7 +35,7 @@ import random
 
 
 def main():
-    start_game()
+    show_menu()
 
 def quess_number():
     return random.randint(1,10)
