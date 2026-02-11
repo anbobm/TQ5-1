@@ -31,3 +31,58 @@ zahl = 13
 while zahl <= 25:
     print(zahl)
     zahl = zahl + 1
+
+# Aufgabe 3
+# Summiere alle Zahlen von 0 bis 100 auf.
+
+# mit for
+summe = 0
+
+for zahl in range(101):
+    summe = summe + zahl
+
+print(summe)
+
+# mit while
+
+summe = 0
+zahl = 0
+
+while zahl <= 100:
+    summe = summe + zahl
+    zahl = zahl + 1
+
+print(summe)
+
+# Gauss:
+# 1   +   2 +   3 +  .. +  99 + 100 = 101 * 100 / 2
+# 100 +  99 +  98 +  .. +   2 +   1
+# 101 + 101 + 101 +  .. + 101 + 101 = 101 * 100
+
+
+# Aufgabe 4
+# Summiere alle geraden Zahlen von 0 bis 100 auf.
+
+# mit for
+summe = 0
+
+for zahl in range(101):
+    if zahl % 2 == 0:
+        summe = summe + zahl
+
+# mit for aber anders
+
+summe = 0
+
+for zahl in range(0, 101, 2):
+    summe = summe + zahl
+
+# mit while
+
+summe = 0
+zahl = 0
+
+while zahl <= 100:
+    if zahl % 2 == 0:
+        summe = summe + zahl
+    zahl = zahl + 1
