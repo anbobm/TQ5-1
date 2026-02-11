@@ -1,12 +1,6 @@
 #Aufgabe 1
+#mit for
 
-for i in range(21):
-    print(i)
-
-    #Aufgabe 2
-
-for i in range(13, 26):
-    print(i)
-
-    
+for zahl in range(21):
+    print(zahl)
 
