@@ -37,7 +37,7 @@ print(summe)
 
 # Aufgabe 4
 summe = 0
-zahlen = range(1,101,2)
+zahlen = range(0,101,2)
 
 for zahl in zahlen:
     summe = summe + zahl
