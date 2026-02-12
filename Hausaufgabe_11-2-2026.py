@@ -44,6 +44,7 @@ while gefunden == False:
         nochmal = input("Möchtest du nochmal spielen? (ja/nein): ")
         if nochmal == "ja":
             print("Super, lass es uns nochmal versuchen!")
+            suchende_zahl = random.randint(1, 10)
         else:
             gefunden = True
     elif eingabe < suchende_zahl:
