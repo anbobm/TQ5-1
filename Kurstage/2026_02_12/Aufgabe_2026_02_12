@@ -1,0 +1,9 @@
+# Aufgabe 1
+# Nutze eine while-Schleife, um die Zahlen von 10 bis 1 auszugeben.
+
+zahl = 10
+
+while zahl >= 1:
+    print(zahl)
+    zahl = zahl - 1
+
