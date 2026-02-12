@@ -23,5 +23,4 @@ while i <= zahl:
 
 print(f"{zahl}! = {fakultaet}")
 
-   
 
