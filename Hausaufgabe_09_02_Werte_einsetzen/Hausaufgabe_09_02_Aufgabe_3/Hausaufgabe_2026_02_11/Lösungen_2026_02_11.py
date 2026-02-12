@@ -9,6 +9,20 @@ for i in range(1, 11):
     print(f"{i} x {zahl} = {i * zahl}")
 
 
+    # Aufgabe 4
+# Summe von Zahlen berechnen, bis 0 eingegeben wird
+
+summe = 0
+
+zahl = int(input("Zahl? "))
+
+while zahl != 0:
+    summe = summe + zahl
+    zahl = int(input("Zahl? "))
+
+print("Summe =", summe)
+
+
     # Aufgabe 2
 # Das Programm würfelt eine Zahl zwischen 1 und 10.
 # Der Benutzer muss die Zahl erraten.
