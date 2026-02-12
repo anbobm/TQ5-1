@@ -14,7 +14,7 @@ for i in range(1, faktorial + 1):
 
 print(multipliziert)
 
-# Aufgabe 4
+# Aufgabe 3
 satz = input("Gib einen Satz ein: ")
 Vokale = 0
 for buchstabe in satz:
@@ -25,7 +25,7 @@ for buchstabe in satz:
 
 print("Der Satz enthält", Vokale, "Vokale.")
 
-# Aufgabe 5
+# Aufgabe 4
 
 frage = True
 Zusatz = 0
@@ -38,3 +38,14 @@ while frage == True:
         
 
 print("Die Summe der eingegebenen Zahlen ist:", Zusatz)
+
+# Aufgabe 5
+
+liste = [2, 2, 3, 3, 1, 2, 1, 1, 3, 2, 2, 3, 1, 3, 1, 2, 3, 2, 2, 1, 2, 2, 1, 3, 1, 1, 2, 1, 1, 3, 3, 1, 2, 1, 1, 3, 2, 3, 1, 3, 1, 2, 1, 3, 1, 2, 2, 1, 2, 3, 3, 2, 3, 2, 3, 3, 3, 3, 1, 2, 3, 2, 3, 1, 3, 1, 3, 3, 3, 1, 2, 1, 1, 3, 2, 1, 2, 3, 2, 1, 3, 2, 3, 1, 2, 3, 1, 3, 3, 3, 1, 1, 1, 2, 2, 1, 1, 2, 3, 3]
+anzahl = 0
+
+for zahl in liste:
+    if zahl == 3:
+        anzahl = anzahl + 1
+
+print("Die Zahl 3 kommt", anzahl, "Mal in der Liste vor.")
