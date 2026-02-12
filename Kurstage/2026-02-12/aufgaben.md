@@ -16,10 +16,12 @@ Der Benutzer soll einen Satz eingeben. Anschließend zählen wir, wie viele Voka
 
 Frage den Benutzer so lange nach einer Zahl, bis er eine 0 eingibt. Anschließend gib die Summe aller Zahlen die er eingegeben hat aus. Z.B:
 
+```
 Zahl? 34
 Zahl? 35
 Zahl? 0
 Summe = 69
+```
 
 # Aufgabe 5
 
