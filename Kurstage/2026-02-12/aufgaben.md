@@ -20,3 +20,13 @@ Zahl? 34
 Zahl? 35
 Zahl? 0
 Summe = 69
+
+# Aufgabe 5
+
+Gegeben ist folgende Liste:
+
+```python
+liste = [2, 2, 3, 3, 1, 2, 1, 1, 3, 2, 2, 3, 1, 3, 1, 2, 3, 2, 2, 1, 2, 2, 1, 3, 1, 1, 2, 1, 1, 3, 3, 1, 2, 1, 1, 3, 2, 3, 1, 3, 1, 2, 1, 3, 1, 2, 2, 1, 2, 3, 3, 2, 3, 2, 3, 3, 3, 3, 1, 2, 3, 2, 3, 1, 3, 1, 3, 3, 3, 1, 2, 1, 1, 3, 2, 1, 2, 3, 2, 1, 3, 2, 3, 1, 2, 3, 1, 3, 3, 3, 1, 1, 1, 2, 2, 1, 1, 2, 3, 3]
+```
+
+Zähle mit einer Schleife, wie oft die Zahl 3 in dieser Liste vorkommt. (36 mal)
