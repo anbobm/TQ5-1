@@ -10,7 +10,7 @@ multipliziert = 1
 
 for i in range(1, faktorial + 1):
     multipliziert = multipliziert * i
-    
+    print(multipliziert)
 
 print(multipliziert)
 
