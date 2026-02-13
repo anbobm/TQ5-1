@@ -21,6 +21,6 @@ Die größte Zahl ist: 11
 
 # Aufgabe 3
 
-Der Benutzer gibt eine Zahl ein. Anschließend werden alle Vielfachen von 3 (3, 6, 9, 12, 15, ...) bis einschließlich dieser Zahl aufsummiert. Wenn der Benutzer `6` eingibt, dann soll `9` ausgegeben werden, denn `3 + 6 = 9`. Wenn der Benutzer `13` eingibt, soll `30` ausgegeben werden, denn `3 + 6 + 9 + 12 = 30`. Wenn der Benutzer `53` eingibt muss der Ergebnis `459` sein weil `3 + 6 + ... + 51 = 459`.
+Der Benutzer gibt eine Zahl ein. Anschließend werden alle Vielfachen von 3 (3, 6, 9, 12, 15, ...) bis einschließlich dieser Zahl aufsummiert. Wenn der Benutzer `6` eingibt, dann soll `9` ausgegeben werden, denn `3 + 6 = 9`. Wenn der Benutzer `13` eingibt, soll `30` ausgegeben werden, denn `3 + 6 + 9 + 12 = 30`. Wenn der Benutzer `53` eingibt muss das Ergebnis `459` sein weil `3 + 6 + ... + 51 = 459`.
 
 Löse die Aufgabe einmal mit `while` und einmal mit `for`.
