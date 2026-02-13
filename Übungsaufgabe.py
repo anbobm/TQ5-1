@@ -1,22 +1,22 @@
 # Aufgabe 1
-match Operator:
-    case "+":
-        Ergebnis = Zahl_a + Zahl_b
-        print("Das Ergebnis ist:", Ergebnis)
-    case "-":
-        Ergebnis = Zahl_a - Zahl_b
-        print("Das Ergebnis ist:", Ergebnis)
-    case "*":
-        Ergebnis = Zahl_a * Zahl_b
-        print("Das Ergebnis ist:", Ergebnis)
-    case "/":
-        if Zahl_b != 0:
-            Ergebnis = Zahl_a / Zahl_b
-            print("Das Ergebnis ist:", Ergebnis)
-        else:
-            print("Fehler: Division durch Null ist nicht erlaubt.")
-    case _:
-        print("Fehler: Ungültiger Operator.")
+# match Operator:
+#     case "+":
+#         Ergebnis = Zahl_a + Zahl_b
+#         print("Das Ergebnis ist:", Ergebnis)
+#     case "-":
+#         Ergebnis = Zahl_a - Zahl_b
+#         print("Das Ergebnis ist:", Ergebnis)
+#     case "*":
+#         Ergebnis = Zahl_a * Zahl_b
+#         print("Das Ergebnis ist:", Ergebnis)
+#     case "/":
+#         if Zahl_b != 0:
+#             Ergebnis = Zahl_a / Zahl_b
+#             print("Das Ergebnis ist:", Ergebnis)
+#         else:
+#             print("Fehler: Division durch Null ist nicht erlaubt.")
+#     case _:
+#         print("Fehler: Ungültiger Operator.")
 
 # Aufgabe 1 aber aners geschrieben
 
@@ -63,7 +63,14 @@ print("Die größte Zahl ist:", Groesste_Zahl)
 
 Zahl = int(input("Gib eine Zahl ein: "))
 Ausgabbe = 0
+Liste = []
 for i in range(3, Zahl + 1, 3):
     Ausgabbe = Ausgabbe + i
+    Liste.append(i)
 print("Die Summe der Vielfachen von 3 ist:", Ausgabbe)
+print("Die Vielfachen von 3 sind:", *Liste, sep=" + ", end=" = " + str(Ausgabbe))
 
+
+# n = int(input("Zahl: "))
+# print(*range(3, n+1, 3), sep=" + ", end=" = ")
+# print(sum(range(3, n+1, 3)))
