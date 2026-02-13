@@ -71,6 +71,7 @@ while True:
     summe += zahl
 print(f"summe = {summe}")   
 
+
 # Aufgabe 5
 # Gegeben ist folgende Liste:
 

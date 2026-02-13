@@ -85,3 +85,5 @@ while weiterspielen == "ja":
 
 print("Ende.")
 
+
+
