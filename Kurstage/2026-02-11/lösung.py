@@ -1,3 +1,20 @@
+<<<<<<< HEAD
+#for i in range(21):
+#    print(i)
+
+#i = 0
+#while i <= 20:
+#    print(i)
+#    i = i + 1
+
+#for i in range(13,26):
+#    print(i)
+
+i = 13
+while i <= 25:
+    print(i)
+    i = i + 1
+
 # Aufgabe 1
 # Gib die Zahlen von 0 bis 20 aus: 0, 1, ..., 20
 # Einmal mit Hilfe von `for .. in ..:` und einmal mit Hilfe von  `while`.
@@ -31,6 +48,8 @@ zahl = 13
 while zahl <= 25:
     print(zahl)
     zahl = zahl + 1
+<<<<<<< HEAD
+=======
 
 # Aufgabe 3
 # Summiere alle Zahlen von 0 bis 100 auf.
@@ -86,3 +105,4 @@ while zahl <= 100:
     if zahl % 2 == 0:
         summe = summe + zahl
     zahl = zahl + 1
+>>>>>>> e4e837b7382beaaebc6aa70577c49580bc2c8046
