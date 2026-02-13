@@ -23,15 +23,13 @@ multipliziere(zahl)
 # Schreibe ein Python-Skript, welches eine Zahl zwischen 1 und 10 würfelt. 
 # Anschließend soll der Benutzer diese Zahl raten. Das Skript wird erst beendet, wenn der Benutzer richtig geraten hat.
 from random import randint
-def wuerfeln():
-    return randint(1,10)
 
-while True:
-    zahl = int(input("Gib deinen Tip ab:"))
-    if zahl == wuerfeln():
-        print("Gut geraten!")
-        break
- 
+gewuerfelte_zahl = randint(1, 10)
+
+while gewuerfelte_zahl != int(input("Gib deinen Tip ab: ")):
+    print("Falsch geraten, versuche es erneut!")
+print("Gut geraten!")
+    
 
 
 # Aufgabe 3
@@ -40,41 +38,43 @@ while True:
 # def wuerfeln():
 #     return randint(1,10)
 from random import randint
-def wuerfeln():
-    return randint(1,10)
 
-rate_zahl = 0
+gewuerfelte_zahl = randint(1, 10)
+rate_zahl = int(input("Gib deinen Tip ab: "))
 
-while rate_zahl != wuerfeln():
-    rate_zahl = int(input("Gib deinen Tip ab:"))
-    if rate_zahl < wuerfeln():
+while gewuerfelte_zahl != rate_zahl:
+    print("Falsch geraten, versuche es erneut!")
+    if rate_zahl < gewuerfelte_zahl:
         print("deine Zahl ist zu niedrig")
-    elif rate_zahl > wuerfeln():
+    elif rate_zahl > gewuerfelte_zahl:
         print("deine Zahl ist zu hoch")
-    else:
-        print("Gut geraten!")
+    rate_zahl = int(input("Gib deinen Tip ab: "))
+print("Gut geraten!")
     
      
-
 
 
 # # Zusatz:
 # # Nachdem der Benutzer richtig geraten hat wird er gefragt, ob er noch einmal spielen möchte. 
 # # Falls ja wird das ganze wiederholt, ansonsten das Skript beendet.
+from random import randint
 
-print("")
-print("möchtest du noch eine Runde raten?")
-spiel = input("Ja oder Nein")
-if spiel == "Ja":
-    print("Viel Spaß!")
-    while rate_zahl != wuerfeln():
-        rate_zahl = int(input("Gib deinen Tip ab:"))
-        if rate_zahl < wuerfeln():
-            print("deine Zahl ist zu niedrig")
-        elif rate_zahl > wuerfeln():
-            print("deine Zahl ist zu hoch")
-        else:
-            print("Gut geraten!")
+
+gewuerfelte_zahl = randint(1, 10)
+rate_zahl = int(input("Gib deinen Tip ab: "))
+
+while gewuerfelte_zahl != rate_zahl:
+    print("Falsch geraten, versuche es erneut!")
+    if rate_zahl < gewuerfelte_zahl:
+        print("deine Zahl ist zu niedrig")
+    elif rate_zahl > gewuerfelte_zahl:
+        print("deine Zahl ist zu hoch")
+    rate_zahl = int(input("Gib deinen Tip ab: "))
+print("Gut geraten!")
 else:
     print("Schade, vielleicht beim nächsten Mal!")  
+print("")
+print("möchtest du noch eine Runde raten?")
+spiel = input("J/N: ")
+
     
