@@ -79,3 +79,7 @@ for i in range(3, zahl + 1, 3):
     summe += i
 print(summe)
 
+
+
+
+
