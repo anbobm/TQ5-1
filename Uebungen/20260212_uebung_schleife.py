@@ -34,7 +34,7 @@ vokale = "aeiouAEIOU"
 anzahl = 0
 for buchstabe in satz:
     if buchstabe in vokale:
-        anzahl += 1
+        anzahl = anzahl + 1
 print(f"Der Satz enthält {anzahl} Vokale.")
 
 
