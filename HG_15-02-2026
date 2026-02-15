@@ -1,0 +1,24 @@
+liste = [3, 27, -3, 0.5, "apfel"]
+print(liste[0])
+print(liste[4])
+liste.insert(3, "birne1")
+print(liste[3])
+print(liste[1])
+
+
+
+# liste = [3, 27, -3, "birne", 0.5, "apfel"]
+# print(liste[0])
+# print(liste[4])
+# print(liste[-1])
+
+
+# liste = [3, 26, -3, 0.5, "apfel"]
+
+
+# neue_frucht = input("Welche Frucht soll ich an Stelle 3 schieben? ")
+
+# liste.insert(3, neue_frucht)
+
+# print("Erledigt! So sieht die Liste jetzt aus:")
+# print(liste)

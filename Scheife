@@ -1,0 +1,46 @@
+# Aufgabe 1
+
+# Nutze eine `while`-Schleife, um die Zahlen von 10 bis 1 auszugeben.
+
+# Aufgabe 2
+
+# Berechne die Fakultät einer Zahl, die der Benutzer eingegeben hat.
+# 5! = fakultät(5) = 1 * 2 * 3 * 4 * 5
+# 7! = fakultät(7) = 1 * 2 * 3 * 4 * 5 * 6 * 7
+
+#Aufgabe 1
+
+# zahlenstand = 10
+# while zahlenstand >= 0:
+#     print(zahlenstand)
+#     zahlenstand = zahlenstand - 1
+
+#Aufgabe 2
+
+# zahl = int(input("Gib eine Zahl ein: "))
+# f = 1
+# zahlenstand = 1
+# while zahlenstand <= zahl:
+#     f = f * zahlenstand
+#     print(zahlenstand)
+#     zahlenstand = zahlenstand + 1
+
+# print("Endergebnis:", f)
+
+#Aufgabe 3 
+
+# satz = input("Sag was: ")
+# vokale = "aeiouAEIOU"
+# anzahl = 0
+# index = 0
+
+# while index < len(satz):
+#     if satz[index] in vokale:
+#         anzahl = anzahl + 1
+    
+#     index = index + 1
+
+# print("Anzahl der Vokale:", anzahl)
+
+#Aufgabe 4
+

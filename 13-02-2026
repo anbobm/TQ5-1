@@ -1,0 +1,55 @@
+#Aufgabe 1
+
+# zahl_a = float(input("Zahl a? "))
+# zahl_b = float(input("Zahl b? "))
+# operator = input("Operator (+, -, *, /)? ")
+
+# if operator == "+":
+#     ergebnis = zahl_a + zahl_b
+# elif operator == "-":
+#     ergebnis = zahl_a - zahl_b
+# elif operator == "*":
+#     ergebnis = zahl_a * zahl_b
+# elif operator == "/":
+#     if zahl_b != 0:
+#         ergebnis = zahl_a / zahl_b
+#     else:
+#         ergebnis = "Fehler (Division durch 0)"
+# else:
+#     ergebnis = "Ungültiger Operator"
+
+
+# print(f"Ergebnis: {zahl_a} {operator} {zahl_b} = {ergebnis}")
+
+#Aufgabe 2
+# zahl_1 = int(input("Trage die erste zahl ein"))
+# zahl_2 = int(input("Trage die 2 zahl ein"))
+# zahl_3 = int(input("Trage die 3 zahl ein"))
+
+# if zahl_1 > zahl_2:
+#     print(f"Zahl_1 war größer: {zahl_1}")
+# elif zahl_2 > zahl_1:
+#     print(f"Zahl_2 war größer: {zahl_2}")
+# elif zahl_1 > zahl_3:
+#     print(f"zahl_1 war gößer: {zahl_1}")
+# elif zahl_3 > zahl_1:
+#     print(f"Zahl_3 war größer: {zahl_3}")
+# elif zahl_2 > zahl_3:
+#     print(f"Zahl_2 war größer: {zahl_2}")
+# elif zahl_3 > zahl_2:
+#     print(f"Zahl_3 war größer: {zahl_3}")
+
+
+# else:
+#     print("Alle zahlen sind gleich groß")
+
+
+# Aufgabe 2: Die größte Zahl finden
+# zahl_1 = int(input("Trage die erste zahl ein: "))
+# zahl_2 = int(input("Trage die 2 zahl ein: "))
+# zahl_3 = int(input("Trage die 3 zahl ein: "))
+
+
+# groesste_zahl = max(zahl_1, zahl_2, zahl_3)
+# print(f"Die größte der drei Zahlen ist: {groesste_zahl}")
+
