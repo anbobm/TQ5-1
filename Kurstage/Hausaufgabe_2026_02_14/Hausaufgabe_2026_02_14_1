@@ -20,3 +20,8 @@ print(liste[-3])  # Ausgabe: -3
 
 liste[1] = 27
 print(liste)
+
+
+# Aufgabe 4
+# Füge zwischen der -3 und der 0.5 den String "birne" ein.  Nutze dafür eine der Funktionen, die Listen bereits mitbringen (liste.append() etc.)
+# Die Liste sollte dann so aussehen: [3, 27, -3, "birne", 0.5, "apfel"]
