@@ -5,3 +5,10 @@ liste = [3, 26, -3, 0.5, "apfel"]
 print(liste[0])
 print(liste[-1])
 print(liste[len(liste) - 1])
+
+# Aufgabe 2
+# Was ist die Ausgabe von print(liste[-3])?
+
+liste = [3, 26, -3, 0.5, "apfel"]
+
+print(liste[-3])  # Ausgabe: -3
