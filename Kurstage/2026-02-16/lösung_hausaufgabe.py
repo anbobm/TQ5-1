@@ -8,30 +8,30 @@ liste = [3, 26, -3, 0.5, "apfel"]
 #        0   1   2   3      4
 #       -5  -4  -3  -2     -1
 
-# # länge einer liste
-# print(len(liste))
+# länge einer liste
+print(len(liste))
 
-# # erstes element
-# print(liste[0])
+# erstes element
+print(liste[0])
 
-# # letztes element
-# print(liste[4])
+# letztes element
+print(liste[4])
 
-# # letztes element
-# länge = len(liste)
-# print(liste[länge-1])
+# letztes element
+länge = len(liste)
+print(liste[länge-1])
 
-# # letztes element
-# print(liste[-1])
+# letztes element
+print(liste[-1])
 
-# # Aufgabe 2
-# # Was ist die Ausgabe von print(liste[-3])? Überlege es dir vorher und probiere es dann aus.
+# Aufgabe 2
+# Was ist die Ausgabe von print(liste[-3])? Überlege es dir vorher und probiere es dann aus.
 
-# liste = [3, 26, -3, 0.5, "apfel"]
-# #        0   1   2   3      4
-# #       -5  -4  -3  -2     -1
+liste = [3, 26, -3, 0.5, "apfel"]
+#        0   1   2   3      4
+#       -5  -4  -3  -2     -1
 
-# print(liste[-3]) # gibt -3
+print(liste[-3]) # gibt -3
 
 # Aufgabe 3
 # Modifiziere die Liste so dass aus der 26 eine 27 wird.
