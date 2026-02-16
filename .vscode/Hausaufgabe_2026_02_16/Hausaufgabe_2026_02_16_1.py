@@ -26,3 +26,21 @@ def zähle_positive(liste):
 
 # Test / Kontrolle
 print(zähle_positive([1, -2, 3, 0, 5, -7]))
+
+
+# Aufgabe 3
+# Funktion berechnet die Summe 
+# aller ungeraden Zahlen in der Liste.
+
+def summe_ungerade(liste):
+    summe = 0
+    for zahl in liste:
+        if zahl % 2 != 0:
+            summe += zahl
+    return summe
+
+# Test / Kontrolle
+print(summe_ungerade([1, 2, 3, 4, 5, 6, 7]))
+
+
+
