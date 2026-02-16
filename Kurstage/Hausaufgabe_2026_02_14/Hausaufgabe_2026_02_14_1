@@ -12,3 +12,11 @@ print(liste[len(liste) - 1])
 liste = [3, 26, -3, 0.5, "apfel"]
 
 print(liste[-3])  # Ausgabe: -3
+
+
+# Aufgabe 3
+# Modifiziere die Liste so dass aus der 26 eine 27 wird.
+# Die Liste sollte dann so aussehen: [3, 27, -3, 0.5, "apfel"]
+
+liste[1] = 27
+print(liste)
