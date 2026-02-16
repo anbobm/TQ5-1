@@ -37,5 +37,6 @@ for i in range(len(liste)):
         i = liste[i]
     elif type(liste[i]) == str:
         print("Das Ziel ist:", liste[i])
+        break
     else:
         i = liste[i]
