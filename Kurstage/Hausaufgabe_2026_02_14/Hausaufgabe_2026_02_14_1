@@ -1,0 +1,7 @@
+# Aufgabe 1
+# Gegeben ist folgende Liste
+# liste = [3, 26,, -3, 0,5, "apfel"]
+liste = [3, 26, -3, 0.5, "apfel"]
+print(liste[0])
+print(liste[-1])
+print(liste[len(liste) - 1])
