@@ -54,7 +54,7 @@ liste = [3, 7, -181, -8, 47, -9, 5, 32]
 def summe_ungerade(liste):
     summe = 0
     for i in range(len(liste)):
-        if liste[i] % 2 != 0:
+        if liste[i] % 2 == 1:
             summe = summe + liste[i]
     return summe
 print("Die Summe aller ungeraden Zahlen ist:", summe_ungerade(liste))
