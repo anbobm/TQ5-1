@@ -37,6 +37,7 @@ for i in range(len(liste)):
             wert += liste[i]
         else: 
             wert -= liste[i]
+            print(wert) 
             
 
 
@@ -54,3 +55,14 @@ for i in range(len(liste)):
         else: 
             wert = wert - wert
 print(wert)
+
+
+#  Katja:
+    
+code = 0
+for i in range(len(liste)):
+    x = liste[i]
+    if i % 2 == 0:
+        x *= 2
+    code += x if x % 2 == 0 else -x
+print(code)
