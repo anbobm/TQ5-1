@@ -27,13 +27,13 @@ liste = [3, 9, 6, 6, 5, 5, 5, 4, 5, 8, 2, 8, 6, 7, 3, 7, 6, 8, 6, 9, 9, 3, 7, 9,
 
 wert = 0
 for i in range(len(liste)):
-    if i % 2 != 0:
-        if liste[i] % 2 == 0:
+    if i % 2 == 0: 
+        if liste[i] % 2 == 0:  
+            wert += liste[i] * 2
+        else:  
+            wert -= liste[i] * 2
+    else: 
+        if liste[i] % 2 == 0:  
             wert += liste[i]
-        else:
+        else: 
             wert -= liste[i]
-    else:
-        if liste[i] % 2 == 0:
-            wert += 2 * liste[i]
-        else:
-            wert = wert - liste[i]
