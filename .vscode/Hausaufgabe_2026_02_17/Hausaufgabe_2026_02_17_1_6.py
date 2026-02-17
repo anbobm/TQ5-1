@@ -51,3 +51,17 @@ student = {
 student["Studiengang"] = "Biologie"
 
 print(student)
+
+
+# Aufgabe 5
+# Alle Werte mit einer for-Schleife ausgeben
+
+student = {
+    "Name": "Alice",
+    "Alter": 21,
+    "Note": "befriedigend",
+    "Studiengang": "Biologie"
+}
+
+for value in student.values():
+    print(value)
