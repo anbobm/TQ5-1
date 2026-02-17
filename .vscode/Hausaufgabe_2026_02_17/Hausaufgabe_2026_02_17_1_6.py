@@ -65,3 +65,18 @@ student = {
 
 for value in student.values():
     print(value)
+
+
+    # Aufgabe 6
+# Gegeben ist
+
+liste = [1, 5, 3, 5, 2, 1, 7, 1, 8, 4]
+
+zahlen = {}
+
+for zahl in liste:
+    if zahl in zahlen:
+        zahlen[zahl] = zahlen[zahl] + 1
+    else:
+        zahlen[zahl] = 1
+print(zahlen)
