@@ -33,7 +33,24 @@ for i in range(len(liste)):
         else:  
             wert -= liste[i] * 2
     else: 
-        if liste[i] % 2 == 0:  
+        if liste[i] % 2 == 0: 
             wert += liste[i]
         else: 
             wert -= liste[i]
+            
+
+
+# andere Lösung:
+            wert = 0
+for i in range(len(liste)):
+    if i % 2 == 0: 
+        if liste[i] % 2 == 0:  
+            wert = wert + liste[i] * 2
+        else:  
+            wert = wert -liste[i]
+    else: 
+        if liste[i] % 2 == 0:  
+            wert = wert + wert
+        else: 
+            wert = wert - wert
+print(wert)
