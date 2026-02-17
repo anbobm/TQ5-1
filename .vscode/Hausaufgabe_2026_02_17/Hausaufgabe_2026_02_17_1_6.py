@@ -37,3 +37,17 @@ student = {
 student["Alter"] = 21
 
 print(student)
+
+
+# Aufgabe 4
+# Neuen Schlüssel hinzufügen
+
+student = {
+    "Name": "Alice",
+    "Alter": 20,
+    "Note": "befriedigend"
+}
+
+student["Studiengang"] = "Biologie"
+
+print(student)
