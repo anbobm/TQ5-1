@@ -70,6 +70,7 @@ for value in student.values():
     # Aufgabe 6
 # Gegeben ist
 
+
 liste = [1, 5, 3, 5, 2, 1, 7, 1, 8, 4]
 
 zahlen = {}
