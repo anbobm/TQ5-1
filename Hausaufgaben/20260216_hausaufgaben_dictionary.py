@@ -50,7 +50,7 @@ zaehler = {}
 
 for i in liste:
     if i in zaehler:
-        zaehler[i] += 1
+        zaehler[i] = zaehler[i] + 1
     else:
         zaehler[i] = 1
 print(zaehler)
