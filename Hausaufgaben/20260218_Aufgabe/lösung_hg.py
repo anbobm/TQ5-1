@@ -16,8 +16,6 @@
 
 #Aufgabe 2 
 
-
-
 def main():
 
     lager = {
@@ -36,6 +34,7 @@ def show_menue():
     print("3. Menge von Artikeln entfernen (Verkauf)")
     print("4. Menge von Artikeln zufuegen (Einkauf)")
     print("5. Artikel loeschen")
+    print("6. Exit")
 
 def launch_app(lager): 
     menue_auswahl = int(input("Waehlen Sie Menuepunkt aus: "))
@@ -62,7 +61,7 @@ def komplett_lagerbestand_anzeigen(lager):
 #####
 def artikel_lagerbestand_anzeigen(lager):
     artikel = input("Welche Artikel? ")   
-    
+
     if artikel in lager:
         __artikel = lager[artikel]
         print(f"Preis: {__artikel["preis"]} \nMenge: {__artikel["menge"]}")
@@ -92,9 +91,14 @@ def menge_artikel_zufuegen(lager):
         __artikel = lager[artikel]     
         __count = __artikel["menge"] + count_hinzufügen
         __artikel["menge"] = __count
-        print(f"Es sind noch {__count} uebrig.")
+        print(f"Es sind jetzt {__count} vorrätig.")
     else:
-        print("Artikel ist nicht gefunden")
+        preis = int(input("Preis des Artikels? "))
+        lager[artikel] = {
+            "preis": preis,
+            "menge": count_hinzufügen
+        }
+        print(f"Es sind jetzt {count_hinzufügen} vorrätig.")
 
 #####
 def artikel_loeschen(lager):
