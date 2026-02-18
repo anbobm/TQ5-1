@@ -52,7 +52,8 @@ for wert in student.values():
 # Gegeben ist
 
 # liste = [1, 5, 3, 5, 2, 1, 7, 1, 8, 4]
-# Benutze ein Dictionary um zu Zählen, wie oft jede Zahl in dieser Liste vorkommt 
+# Benutze ein Dictionary um zu Zählen, wie oft jede Zahl in dieser Liste 
+# vorkommt 
 # (Schlüssel ist die Zahl, Wert ist die Anzahl).
 
 # Lösung Aufgabe 6
