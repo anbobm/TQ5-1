@@ -67,13 +67,16 @@ Nach der Eingabe:
     ```
     Wenn der Benutzer mehr entnehmen will als es gibt, soll "Nicht genug vorrätig" ausgegeben werden und nichts entnommen werden.
 
-* Wenn der Benutzer `4` eingibt, dann soll nach dem Artikel und der Menge gefragt werden, und der neue Lagerbestand ausgegeben werden:
+* Wenn der Benutzer `4` eingibt, dann soll nach dem hinzuzufügenden Artikel und der Menge gefragt werden, und der neue Lagerbestand ausgegeben werden:
 
     ```
     Welcher Artikel? Apfel
     Wie viele hinzufügen? 5
     Es sind jetzt 15 vorrätig.
     ```
+
+    Wenn der Artikel im Dictionary nicht vorkommt, dann soll er angelegt werden.
+
 * Wenn der Benutzer eine `5` eingibt, dann wird nach dem Artikel gefragt und anschließend die Menge auf 0 gesetzt:
 
     ```
@@ -81,6 +84,6 @@ Nach der Eingabe:
     Lagerbestand auf 0 gesetzt.
     ```
 
-Immer wenn der Nutzer nach einem Artikel gefragt wird und dann einen eingibt, der nicht im Lager vorhanden ist, soll ausgegeben werden "Artikel nicht vorhanden" und sonst nichts getan werden.
+Immer wenn der Nutzer nach einem Artikel gefragt wird und dann einen eingibt, der nicht im Lager vorhanden ist, soll ausgegeben werden "Artikel nicht vorhanden" und sonst nichts getan werden (außer beim Hinzufügen im Menü 4)
 
 **Nachdem** du das erfolgreich umgesetzt hast, füge noch einen 6. Menüpunkt "Ende" hinzu, und lasse in einer Schleife den Benutzer immer wieder fragen, welchen Menüpunkt er ausführen will, bis er eine `6` eingibt und das Programm beendet wird.
