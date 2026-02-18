@@ -24,36 +24,38 @@ lager = {
 
 Auswahl = input("1: Kompletten Lagerbestand anzeigen\n2: Lagerbestand von einem Artikel anzeigen\n3: Menge von Artikeln entfernen (Verkauf)\n4: Menge von Artikeln zufügen (Einkauf)\n5: Artikel löschen\n")
 if Auswahl == "1":
-    print(lager)
+    for artikel in lager:
+        print("Artikel:", artikel, "Preis:", str(lager[artikel]["preis"]) + "€", "Menge:", lager[artikel]["menge"])
 elif Auswahl == "2":
-    Artikel = input("Gib den Namen des Artikels ein: ")
+    Artikel = input("Welcher Artikel: ")
     if Artikel in lager:
-        print(lager[Artikel])
+        print("Preis:", str(lager[Artikel]["preis"]) + "€")
+        print("Menge:", lager[Artikel]["menge"])
     else:
         print("Der Artikel existiert nicht")
 elif Auswahl == "3":
-    Artikel = input("Gib den Namen des Artikels ein: ")
-    Menge = int(input("Gib die Menge ein, die entfernt werden soll: "))
+    Artikel = input("Welcher Artikel: ")
+    Menge = int(input("Wie viele entnehmen? "))
     if Artikel in lager:
         if Menge <= lager[Artikel]["menge"]:
             lager[Artikel]["menge"] = lager[Artikel]["menge"] - Menge
-            print(lager[Artikel])
+            print("Es sind noch" , lager[Artikel]["menge"], Artikel , "übrig.")
         else:
             print("Nicht genügend Menge vorhanden")
     else:
         print("Der Artikel existiert nicht")
 elif Auswahl == "4":
-    Artikel = input("Gib den Namen des Artikels ein: ")
-    Menge = int(input("Gib die Menge ein, die hinzugefügt werden soll: "))
+    Artikel = input("Welcher Artikel: ")
+    Menge = int(input("Wie viele hinzufügen? "))
     if Artikel in lager:
         lager[Artikel]["menge"] = lager[Artikel]["menge"] + Menge
-        print(lager[Artikel])
+        print("Es sind jetzt", lager[Artikel]["menge"], Artikel, "vorrätig.")
     else:
         print("Der Artikel existiert nicht")
 elif Auswahl == "5":
-    Artikel = input("Gib den Namen des Artikels ein: ")
+    Artikel = input("Welcher Artikel:: ")
     if Artikel in lager:
-        del lager[Artikel]
-        print(lager)
+        lager[Artikel]["menge"] = 0
+        print("Lagerbestand von", Artikel, "auf 0 gesetzt.")
     else:
         print("Der Artikel existiert nicht")
