@@ -31,3 +31,7 @@ person.get("email", "")
 
 for key in person:
     print(f"Schlüssel {key} hat Wert {person[key]}")
+
+# mit == kann man gucken ob zwei dictionaries genau gleich sind (Reihenfolge
+# der Schlüssel ist egal)
+{"a": 1, "b": 2} == {"b": 2, "a": 1} # True
