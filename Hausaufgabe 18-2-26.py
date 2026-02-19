@@ -23,7 +23,7 @@ lager = {
 }
 menu = True
 while menu == True:
-    Auswahl = input("1: Kompletten Lagerbestand anzeigen\n2: Lagerbestand von einem Artikel anzeigen\n3: Menge von Artikeln entfernen (Verkauf)\n4: Menge von Artikeln zufügen (Einkauf)\n5: Artikel löschen\n6: Programm beenden\n")
+    Auswahl = input("1: Kompletten Lagerbestand anzeigen\n2: Lagerbestand von einem Artikel anzeigen\n3: Menge von Artikeln entfernen (Verkauf)\n4: Menge von Artikeln zufügen (Einkauf)\n5: Artikel löschen\n6: Programm beenden\nGeben Sie ein was Sie machen wollen: ")
     if Auswahl == "1":
         for artikel in lager:
             print("Artikel:", artikel, "Preis:", str(lager[artikel]["preis"]) + "€", "Menge:", lager[artikel]["menge"])
