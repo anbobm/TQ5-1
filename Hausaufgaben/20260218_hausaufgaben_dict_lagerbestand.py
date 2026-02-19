@@ -13,15 +13,15 @@
 # # l kommt 1 mal vor
 # # Erinnerung: In Python kann man Strings wie Listen behandeln, also z.B. elementweise durchlaufen in einer for-Schleife.
 
-# dict = {}
-# wort = input("Denke dir ein Wort aus: ")
-# for i in wort:
-#     if i in dict:
-#         dict[i] = dict[i] + 1
-#     else:
-#         dict[i] = 1
-# for letter in dict:
-#     print(letter, "kommt", dict[letter], "mal vor")       
+dict = {}
+wort = input("Denke dir ein Wort aus: ")
+for i in wort:
+    if i in dict:
+        dict[i] = dict[i] + 1
+    else:
+        dict[i] = 1
+for i in dict:
+    print(i, "kommt", dict[i], "mal vor")       
     
 
 
@@ -90,47 +90,48 @@ print("2: Lagerbestand von einem Artikel anzeigen")
 print("3: Menge von Artikeln entfernen (Verkauf)")
 print("4: Menge von Artikeln zufügen (Einkauf)")
 print("5: Artikel löschen")
-print("6: Ende")
+print("6: Ende")    
 
-menue = int(input("Gib die Nummer des Menüpunkts ein: "))
-if menue == 1:
-    for i in lager:
-        print("Artikel", i, ": Preis", lager[i]["preis"], ", Menge:", lager[i]["menge"])   
-elif menue == 2:
-    artikel = input("Welcher Artikel? ")
-    if artikel in lager:
-        print("Preis:", lager[artikel]["preis"])
-        print("Menge:", lager[artikel]["menge"])
-    else:
-        print("Artikel nicht vorhanden")
-elif menue == 3:
-    artikel = input("Welcher Artikel? ")
-    if artikel in lager:
-        menge = int(input("Wie viele entnehmen? "))
-        if menge <= lager[artikel]["menge"]:
-            lager[artikel]["menge"] = lager[artikel]["menge"] - menge
-            print(menge, "Stück entnommen.")
-            print("Es sind noch", lager[artikel]["menge"], "übrig.")
+while True:
+    menue = int(input("Gib die Nummer des Menüpunkts ein: "))
+
+    if menue == 1:
+        for artikel in lager:
+            print("Artikel", artikel, ": Preis", lager[artikel]["preis"], ", Menge:", lager[artikel]["menge"])   
+    elif menue == 2:
+        artikel = input("Welcher Artikel? ")
+        if artikel in lager:
+            print("Preis:", lager[artikel]["preis"])
+            print("Menge:", lager[artikel]["menge"])
         else:
-            print("Nicht genug vorrätig")
-    else:
-        print("Artikel nicht vorhanden")
-elif menue == 4:
-    artikel = input("Welcher Artikel? ")
-    menge = int(input("Wie viele hinzufügen? "))
-    if artikel in lager:
-        lager[artikel]["menge"] = lager[artikel]["menge"] + menge
-        print("Es sind jetzt", lager[artikel]["menge"], "vorrätig.")
-    else:
-        print("Artikel nicht vorhanden.")
-elif menue == 5:
-    artikel = input("Welcher Artikel? ")
-    if artikel in lager:
-        del lager[artikel]
-        print("Artikel gelöscht.")
-    else:
-        print("Artikel nicht vorhanden")
-elif menue == 6:
-    print("Programm wird beendet.")
-else:
-    print("Ungültige Eingabe")
+            print("Artikel nicht vorhanden")
+    elif menue == 3:
+        artikel = input("Welcher Artikel? ")
+        if artikel in lager:
+            menge = int(input("Wie viele entnehmen? "))
+            if menge <= lager[artikel]["menge"]:
+                lager[artikel]["menge"] = lager[artikel]["menge"] - menge
+                print(menge, "Stück entnommen.")
+                print("Es sind noch", lager[artikel]["menge"], "übrig.")
+            else:
+                print("Nicht genug vorrätig")
+        else:
+            print("Artikel nicht vorhanden")
+    elif menue == 4:
+        artikel = input("Welcher Artikel? ")
+        menge = int(input("Wie viele hinzufügen? "))
+        if artikel in lager:
+            lager[artikel]["menge"] = lager[artikel]["menge"] + menge
+            print("Es sind jetzt", lager[artikel]["menge"], "vorrätig.")
+        else:
+            print("Artikel nicht vorhanden.")
+    elif menue == 5:
+        artikel = input("Welcher Artikel? ")
+        if artikel in lager:
+            del lager[artikel]
+            print("Artikel gelöscht.")
+        else:
+            print("Artikel nicht vorhanden")
+    elif menue == 6:
+        print("Programm wird beendet.")
+        break
