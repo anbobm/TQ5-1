@@ -1,0 +1,13 @@
+# Aufgabe 1
+wort = input("Gib ein Wort ein: ")
+
+haeufigkeit = {}
+
+for buchstabe in wort:
+    if buchstabe in haeufigkeit:
+        haeufigkeit[buchstabe] += 1
+    else:
+        haeufigkeit[buchstabe] = 1
+
+for buchstabe in haeufigkeit:
+    print(buchstabe, "kommt", haeufigkeit[buchstabe], "mal vor")
