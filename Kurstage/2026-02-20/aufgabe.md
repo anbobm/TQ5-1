@@ -14,4 +14,11 @@ Wie durch die Konvention festgelegt, sind die Attribute privat, *sollen* also vo
 
 Schreibe nun Methoden für die Klasse:
 
-* `info()`: Die Methode gibt einen String aus, der den Zustand des Objekts darstellt, z.B.: `"Dieses Auto hat die Farbe grün und die Geschwindigkeit 30"`.
+* `info()`: Die Methode gibt einen String aus, der den Zustand des Objekts darstellt, z.B.: `"Dieses Auto hat die Farbe grün und die Maximalgeschwindigkeit 220. Aktuelle Geschwindigkeit ist 30"`.
+* `beschleunigen(...)`: die Methode bekommt einen Betrag übergeben, und die aktuelle Geschwindigkeit `_geschwindigkeit` des Objekts, soll um diesen erhöht werden.
+
+    Wenn ein `auto1` die Geschwindigkeit `30` hat und die Methode mit `auto1.beschleunigen(15)` aufgerufen wird, dann soll die Geschwindigkeit `_geschwindigkeit` jetzt `45` betragen.
+
+    Ein Beschleunigen auf mehr als die Maximalgeschwindigkeit `_max_geschwindigkeit` soll nicht möglich sein. Wenn mit `auto1.beschleunigen(15)` die Maximalgeschwindigkeit überschritten werden würde, dann soll die `_geschwindigkeit` auf die Maximalgeschwindigkeit gesetzt werden.
+
+* `bremsen(...)`: Genau wie `beschleunigen(...)`, aber die Geschwindigkeit soll um den übergebenen Betrag reduziert werden, und die Geschwindigkeit soll höchstens auf `0` reduziert werden - negative Geschwindigkeiten sollen nicht möglich sein.
