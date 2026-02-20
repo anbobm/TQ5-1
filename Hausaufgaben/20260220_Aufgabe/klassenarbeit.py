@@ -4,11 +4,17 @@ class Auto:
         self._geschwindigkeit = 0
         self._max_geschwindigkeit = max_geschwindigkeit
 
-    def get_farbe(self):
+    @property
+    def farbe(self):
         return self._farbe
-
-    def set_farbe(self, farbe):
-        self._farbe = farbe
+    
+    @farbe.setter
+    def farbe(self, farbe):
+        farbe_liste = ["rot", "blau", "grün", "schwarz", "weiß"]
+        if farbe in farbe_liste:
+            self._farbe = farbe
+        else:
+            print("Die Farbe wurde nicht gefunden!")
 
     def beschleunigen(self, betrag):
         self._geschwindigkeit = self._geschwindigkeit + betrag
@@ -21,11 +27,19 @@ class Auto:
             self._geschwindigkeit = 0
 
     def info(self):
-        print(f"Dieses Auto hat die Farbe {self._farbe} "
-              f"und die Maximalgeschwindigkeit {self._max_geschwindigkeit}. "
-              f"Aktuelle Geschwindigkeit ist {self._geschwindigkeit}")
+         return f"Dieses Auto hat die Farbe {self._farbe} " \
+              f"und die Maximalgeschwindigkeit {self._max_geschwindigkeit}. " \
+              f"Aktuelle Geschwindigkeit ist {self._geschwindigkeit}"
         
 auto = Auto("grün", 220)
 auto._geschwindigkeit = 30
-auto.info()
+print(f"Die Geschwindigkeit ist: {auto._geschwindigkeit}")
+print(f"Die Farbe ist: {auto.farbe}")
 
+auto.beschleunigen(200) #warten auf 230 aber bekommen 220
+print(f"Die Geschwindigkeit mit Beschleunigung ist: {auto._geschwindigkeit}") # 220, weil max_speed 220 ist
+
+auto.bremsen(300)
+print(f"Die Geschwindigkeit mit Bremsen ist: {auto._geschwindigkeit}") #0
+
+auto.farbe = "gelb" # Nicht gefunden!
