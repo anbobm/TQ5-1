@@ -17,25 +17,60 @@
 
 # bremsen(...): Genau wie beschleunigen(...), aber die Geschwindigkeit soll um den übergebenen Betrag reduziert werden, und die Geschwindigkeit soll höchstens auf 0 reduziert werden - negative Geschwindigkeiten sollen nicht möglich sein.
 
+# Einen getter für das Attribut _farbe: get_farbe(...), um die Farbe auslesen zu können.
+
+# Einen setter für das Attribut _farbe: set_farbe(...), um die Farbe setzen zu können. Der setter soll sicherstellen, dass die Farbe nur auf eine der vorgeschriebenen Farben gesetzt werden kann: "rot", "grün", "blau", "schwarz", "weiß"
+# Erstelle dir von der Klasse Auto dann zwei Objekte und probiere alle Methoden aus.
+
+# Teste vor allem, ob sich durch beschleunigen(...) und bremsen(...) Geschwindigkeiten ergeben können, die nicht zugelassen sind (also kleiner 0 oder größer der Maximalgeschwindigkeit), oder Farben gesetzt werden können die nicht zugelassen sind.
+
+# Es ist möglich, dass der Aufrufende die Methoden beschleunigen und bremsen mit negativen Werten aufruft. Das würde mit der Bedeutung von Beschleunigen und Bremsen kollidieren, außerdem könnte es dazu führen, dass unzulässige Geschwindigkeiten doch erreicht werden. Prüfe also in beiden Methoden, ob der Betrag 0 oder größer ist.
+
+
+
+
 class auto:
-    def __init__(self, _farbe, _geschwindigkeit, _max_geschwindigkeit):
-        self._farbe = _farbe
-        self._geschwindigkeit = 0
-        self._max_geschwindigkeit = _max_geschwindigkeit
-        
+    def __init__(self, farbe, geschwindigkeit, max_geschwindigkeit):
+        self.__farbe = farbe
+        self.geschwindigkeit = geschwindigkeit
+        self.__max_geschwindigkeit = max_geschwindigkeit
+    
+    @property
+    def farbe(self):
+        return self.__farbe
+    
+    @farbe.setter
+    def farbe(self, neue_farbe):
+        if neue_farbe in ["rot", "grün", "blau", "schwarz", "weiß"]:
+            self.__farbe = neue_farbe
+        else:
+            print("Ungültige Farbe")
+    
     def info(self):
-        print("Dieses Auto hat die Farbe", self._farbe, "und die Maximalgeschwindigkeit", self._max_geschwindigkeit, ". Aktuelle Geschwindigkeit ist", self._geschwindigkeit)
+        print("Dieses Auto hat die Farbe", self.__farbe, "und die Maximalgeschwindigkeit", self.__max_geschwindigkeit, ". Aktuelle Geschwindigkeit ist", self.geschwindigkeit)
     
     def beschleunigen(self, pluskmh):
-        if self._geschwindigkeit + pluskmh > self._max_geschwindigkeit:
-            self._geschwindigkeit = self._max_geschwindigkeit
+        if self.geschwindigkeit + pluskmh > self.__max_geschwindigkeit:
+            self.geschwindigkeit = self.__max_geschwindigkeit
         else:
-            self._geschwindigkeit += pluskmh
+            self.geschwindigkeit += pluskmh
             
     def bremsen(self, minuskmh):
-        if self._geschwindigkeit - minuskmh < 0:
-            self._geschwindigkeit = 0
+        if self.geschwindigkeit - minuskmh < 0:
+            self.geschwindigkeit = 0
         else:
-            self._geschwindigkeit -= minuskmh
+            self.geschwindigkeit -= minuskmh
+            
+auto1 = auto("grün", 0, 220)
+auto2 = auto("schwarz", 0, 185)
+
+
+auto2.farbe = "lila"
+auto2.geschwindigkeit = 270
+
+auto1.info()
+auto2.info()
+
+
             
     
