@@ -63,6 +63,7 @@ class auto:
             
 auto1 = auto("grün", 0, 220)
 auto2 = auto("schwarz", 0, 185)
+auto3 = auto("weiss mit roten Felgen", 0, 200)
 
 
 auto2.farbe = "lila"
@@ -71,6 +72,7 @@ auto2.beschleunigen(30)
 auto1.bremsen(15)
 auto1.info()
 auto2.info()
+auto3.info()
 
 
             
