@@ -1,13 +1,11 @@
 # Aufgabe
- 
 # Erstelle eine Klasse Bankkonto mit den Attributen inhaber (String, anfangs "")  und kontostand (Ganzzahl, anfangs 0).
- 
 # Erzeuge anschließend zwei Objekte aus dieser Klasse und gib ihren Attributen konkrete Werte.
 
 class bankkonto:
     def __init__(self):
-        self.inhaber = str("")
-        self.kontostand = int(0)
+        self.inhaber = ""
+        self.kontostand = 0
         
 konto1 = bankkonto()
 konto2 = bankkonto()
