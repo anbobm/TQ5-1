@@ -2,8 +2,7 @@
 # erzeugt daraus 2 Objekte und weist deren Attributen unterschiedliche Werte zu
 # und gebt diese dann aus.
 # Aufgabe 1
-class Bankkonto:
-    def init(self, inhaber, kontostand):
+class Bankkontodef _init_(self, inhaber, kontostand):
         self.inhaber = inhaber
         self._kontostand = kontostand
 
