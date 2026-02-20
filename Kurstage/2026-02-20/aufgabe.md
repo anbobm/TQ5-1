@@ -22,3 +22,6 @@ Schreibe nun Methoden für die Klasse:
     Ein Beschleunigen auf mehr als die Maximalgeschwindigkeit `_max_geschwindigkeit` soll nicht möglich sein. Wenn mit `auto1.beschleunigen(15)` die Maximalgeschwindigkeit überschritten werden würde, dann soll die `_geschwindigkeit` auf die Maximalgeschwindigkeit gesetzt werden.
 
 * `bremsen(...)`: Genau wie `beschleunigen(...)`, aber die Geschwindigkeit soll um den übergebenen Betrag reduziert werden, und die Geschwindigkeit soll höchstens auf `0` reduziert werden - negative Geschwindigkeiten sollen nicht möglich sein.
+
+* Einen **getter** für das Attribut `_farbe`: `get_farbe(...)`, um die Farbe auslesen zu können.
++ Einen **setter** für das Attribut `_farbe`: `set_farbe(...)`, um die Farbe setzen zu können. Der setter soll sicherstellen, dass die Farbe nur auf eine der vorgeschriebenen Farben gesetzt werden kann: `"rot"`, `"grün"`, `"blau"`, `"schwarz"`, `"weiß"`
