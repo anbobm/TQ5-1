@@ -13,6 +13,7 @@ class Bankkonto:
 
     def ausgeben(self):
         print(f"Inhaber: {self._inhaber}, Kontostand: {self._kontostand} Euro")
+        return f"Inhaber: {self._inhaber}, Kontostand: {self._kontostand} Euro"  
 
     def einzahlen(self, betrag):
         if betrag > 0:
@@ -31,7 +32,7 @@ konto1 = Bankkonto("", 100)
 konto1.set_inhaber("Max")  # Setze den Inhaber für konto1
 konto2 = Bankkonto("", 250)
 konto2.set_inhaber("Lisa")  # Setze den Inhaber für konto2
-print(konto1.get_inhaber())  # Ausgabe: Max
+print(konto1.ausgeben())  # Ausgabe: Max
 
 
 # Gib die Attribute der Objekte aus
