@@ -25,3 +25,9 @@ Schreibe nun Methoden für die Klasse:
 
 * Einen **getter** für das Attribut `_farbe`: `get_farbe(...)`, um die Farbe auslesen zu können.
 + Einen **setter** für das Attribut `_farbe`: `set_farbe(...)`, um die Farbe setzen zu können. Der setter soll sicherstellen, dass die Farbe nur auf eine der vorgeschriebenen Farben gesetzt werden kann: `"rot"`, `"grün"`, `"blau"`, `"schwarz"`, `"weiß"`
+
+Erstelle dir von der Klasse `Auto` dann zwei Objekte und probiere alle Methoden aus.
+
+Teste vor allem, ob sich durch `beschleunigen(...)` und `bremsen(...)` Geschwindigkeiten ergeben können, die nicht zugelassen sind (also kleiner 0 oder größer der Maximalgeschwindigkeit), oder Farben gesetzt werden können die nicht zugelassen sind.
+
+Es ist möglich, dass der Aufrufende die Methoden `beschleunigen` und `bremsen` mit negativen Werten aufruft. Das würde mit der Bedeutung von Beschleunigen und Bremsen kollidieren, außerdem könnte es dazu führen, dass unzulässige Geschwindigkeiten doch erreicht werden. Prüfe also in beiden Methoden, ob der Betrag 0 oder größer ist.
