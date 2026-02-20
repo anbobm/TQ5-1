@@ -14,4 +14,4 @@ Wie durch die Konvention festgelegt, sind die Attribute privat, *sollen* also vo
 
 Schreibe nun Methoden für die Klasse:
 
-* `info()`: Die Methode gibt einen String aus, der den Zustand des Objekts darstellt, z.B.: `"Dieses Auto hat die Farbe grün und die Geschwindigkeit 30"`.
+* `info()`: Die Methode gibt einen String aus, der den Zustand des Objekts darstellt, z.B.: `"Dieses Auto hat die Farbe grün und die Maximalgeschwindigkeit 220. Aktuelle Geschwindigkeit ist 30"`..
