@@ -33,8 +33,7 @@ class Auto:
         
 auto = Auto("grün", 220)
 auto._geschwindigkeit = 30
-print(f"Die Geschwindigkeit ist: {auto._geschwindigkeit}")
-print(f"Die Farbe ist: {auto.farbe}")
+print(auto.info())
 
 auto.beschleunigen(200) #warten auf 230 aber bekommen 220
 print(f"Die Geschwindigkeit mit Beschleunigung ist: {auto._geschwindigkeit}") # 220, weil max_speed 220 ist
