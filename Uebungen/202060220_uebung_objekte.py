@@ -66,8 +66,9 @@ auto2 = auto("schwarz", 0, 185)
 
 
 auto2.farbe = "lila"
-auto2.geschwindigkeit = 270
 
+auto2.beschleunigen(30)
+auto1.bremsen(15)
 auto1.info()
 auto2.info()
 
