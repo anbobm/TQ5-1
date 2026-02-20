@@ -10,8 +10,8 @@ Erstelle eine Klasse `Auto` mit den Attributen `_farbe` (String), `_geschwindigk
 
 Die initialen Werte für `_farbe` und `_max_geschwindigkeit` sollen über den Konstruktor (`__init__(...)`) erhalten werden. `_geschwindigkeit` soll initial auf `0` gesetzt werden.
 
-Wie durch die Konvention festgelegt, sind die Attribute privat, *sollen* also von außen nicht gesetzt werden. Dies wird durch den `_` am Anfang des Attributnamens gekennzeichnet. Der Inhalt dieser Attribute soll sich also nur von *innen*, also über Methoden der Klasse ändern oder ausgelesen werden.
+Wie durch die Konvention festgelegt, sind die Attribute privat, *sollen* also von außen nicht gesetzt werden. Dies wird durch den `_` am Anfang des Attributnamens gekennzeichnet. Der Inhalt dieser Attribute soll nur von *innen*, also über Methoden der Klasse, ausgelesen oder geändert werden.
 
 Schreibe nun Methoden für die Klasse:
 
-* `info()`: Die Methode gibt einen String aus, der den Zustand des Objekts darstellt, z.B.: `"Dieses Auto hat die Farbe grün und die Maximalgeschwindigkeit 220. Aktuelle Geschwindigkeit ist 30"`..
+* `info()`: Die Methode gibt einen String aus, der den Zustand des Objekts darstellt, z.B.: `"Dieses Auto hat die Farbe grün und die Geschwindigkeit 30"`.
