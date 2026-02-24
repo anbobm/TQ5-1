@@ -20,7 +20,7 @@ while Wahrhaftig == False:
             continue
         else:
             celsius = fahrenheit_in_celsius(fahrenheit)
-            print(f"{fahrenheit} Grad Fahrenheit entsprechen {celsius:.2f} Grad Celsius.")
+            print(f"{fahrenheit} Grad Fahrenheit entsprechen {celsius} Grad Celsius.")
             Wahrhaftig = True
     elif Auswahl == "2":
         try:
@@ -30,7 +30,7 @@ while Wahrhaftig == False:
             continue
         else:
             fahrenheit = celsius_in_fahrenheit(celsius)
-            print(f"{celsius} Grad Celsius entsprechen {fahrenheit:.2f} Grad Fahrenheit.")
+            print(f"{celsius} Grad Celsius entsprechen {fahrenheit} Grad Fahrenheit.")
             Wahrhaftig = True
     else:
         Auswahl = input("Gib eine Auswahl zwischen 1 und 2 ein: ")
