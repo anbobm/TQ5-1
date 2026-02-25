@@ -54,7 +54,7 @@ class Auto(Fahrzeug):
 
 class Fahrrad(Fahrzeug):
     def __init__(self, farbe, max_geschwindigkeit, gaenge):
-        super().init(farbe, max_geschwindigkeit)
+        super().__init__(farbe, max_geschwindigkeit)
         self._gang = 1
         self._gaenge = gaenge
         self._licht_an = False
@@ -72,3 +72,26 @@ class Fahrrad(Fahrzeug):
 
     def licht_ausschalten(self):
         self._licht_an = False
+
+        # --- Mini-Test ---
+
+auto = Auto("rot", 180)
+auto.info()
+auto.beschleunigen(50)      # Motor läuft noch nicht → keine Wirkung
+auto.motor_starten()
+auto.beschleunigen(50)
+auto.info()
+auto.motor_stoppen()
+auto.beschleunigen(50)      
+auto.info()
+
+print("-----")
+
+fahrrad = Fahrrad("blau", 40, 5)
+fahrrad.info()
+fahrrad.hochschalten()
+fahrrad.hochschalten()
+fahrrad.runterschalten()
+fahrrad.licht_einschalten()
+fahrrad.beschleunigen(10)
+fahrrad.info()
