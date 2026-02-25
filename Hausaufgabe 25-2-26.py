@@ -64,7 +64,7 @@ class Auto(Fahrzeug):
             motor_brumm = "Der Motor ist an"
         if self._motor_läuft == False:
             motor_brumm = "Der Motor ist nicht an"
-        print(f"Dieses Fahrzeug hat die Farbe {self._farbe} und die Maximalgeschwindigkeit {self._max_geschwindigkeit}. Aktuelle Geschwindigkeit ist {self._geschwindigkeit}. {motor_brumm}")
+        return (f"Dieses Fahrzeug hat die Farbe {self._farbe} und die Maximalgeschwindigkeit {self._max_geschwindigkeit}. Aktuelle Geschwindigkeit ist {self._geschwindigkeit}. {motor_brumm}")
 
 class Fahrrad(Fahrzeug):
     def __init__(self, gang, gänge, licht_an, farbe, max_geschwindigkeit):
