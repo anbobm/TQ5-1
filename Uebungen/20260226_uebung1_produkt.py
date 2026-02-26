@@ -10,33 +10,33 @@
 
 class Produkt:
     def __init__(self, name, preis, lagerbestand):
-        self.__name = name
-        self.__preis = preis
-        self.__lagerbestand = lagerbestand
+        self._name = name
+        self._preis = preis
+        self._lagerbestand = lagerbestand
         
     def verkaufen(self, menge):
-        self.__neuer_lagerbestand = self.__lagerbestand - menge
-        if menge > self.__lagerbestand:
+        if menge > self._lagerbestand:
             print("Bestand nicht vorrätig")
         else:
-            print(f"{menge} verkauft. Es sind noch {self.__neuer_lagerbestand} auf Lager.")
+            self._lagerbestand = self._lagerbestand - menge
+            print(f"{menge} verkauft. Es sind noch {self._lagerbestand} auf Lager.")
     
     def nachbestellen(self, menge):
-        self.__neuer_lagerbestand = self.__neuer_lagerbestand + menge
+        self._lagerbestand = self._lagerbestand + menge
         if menge <= 0:
             print("Bitte nur positive Bestellmengen angeben")
         else:
-            print(f"{menge} nachbestellt. Neuer Lagerbestand: {self.__neuer_lagerbestand}")
+            print(f"{menge} nachbestellt. Neuer Lagerbestand: {self._lagerbestand}")
             
     def set_preis(self, neuer_preis):
-        self.__preis = neuer_preis
+        self._preis = neuer_preis
         if neuer_preis < 0:
             print("Der Preis darf nicht unter 0 liegen.")
         else:
             print(f"Preis auf {neuer_preis} gesetzt.")
             
     def get_info(self):
-        print(f"Produktname: {self.__name}, Preis: {self.__preis}, Lagerbestand: {self.__lagerbestand} Stück")
+        print(f"Produktname: {self._name}, Preis: {self._preis}, Lagerbestand: {self._lagerbestand} Stück")
         
 produkt1 = Produkt("Kaugummi", 2, 85)
 produkt2 = Produkt("China-Vasen", 395, 3)
@@ -49,3 +49,7 @@ produkt3.get_info()
 produkt1.verkaufen(6)
 produkt2.verkaufen(6)
 produkt2.nachbestellen(17)
+
+produkt1.get_info()
+produkt2.get_info()
+produkt3.get_info()
