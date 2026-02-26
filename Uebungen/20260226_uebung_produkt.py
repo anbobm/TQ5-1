@@ -45,4 +45,8 @@ produkt3 = Produkt("Sitzerhöhung", 15, 30)
 produkt1.get_info()
 produkt2.get_info()
 produkt3.get_info()
+
+produkt1.verkaufen(6)
+produkt2.verkaufen(6)
+produkt2.nachbestellen(17)
         
