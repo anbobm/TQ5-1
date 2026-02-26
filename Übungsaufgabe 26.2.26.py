@@ -126,6 +126,3 @@ class Temperatursensor():
             return
         else:
             return "Die Senkung der Temperatur ist nicht möglich!"
-
-
-            
