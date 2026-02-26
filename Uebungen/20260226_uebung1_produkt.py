@@ -22,17 +22,17 @@ class Produkt:
             print(f"{menge} verkauft. Es sind noch {self._lagerbestand} auf Lager.")
     
     def nachbestellen(self, menge):
-        self._lagerbestand = self._lagerbestand + menge
         if menge <= 0:
             print("Bitte nur positive Bestellmengen angeben")
         else:
+            self._lagerbestand = self._lagerbestand + menge
             print(f"{menge} nachbestellt. Neuer Lagerbestand: {self._lagerbestand}")
             
     def set_preis(self, neuer_preis):
-        self._preis = neuer_preis
         if neuer_preis < 0:
             print("Der Preis darf nicht unter 0 liegen.")
         else:
+            self._preis = neuer_preis
             print(f"Preis auf {neuer_preis} gesetzt.")
             
     def get_info(self):
