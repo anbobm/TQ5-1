@@ -11,27 +11,27 @@
 
 class Rechteck:
     def __init__(self, hoehe, breite):
-        self.__hoehe = hoehe
-        self.__breite = breite
+        self._hoehe = hoehe
+        self._breite = breite
     
     def set_breite(self, wert):
         if wert < 0:
             return f"Nur positive Werte zur Berechnung eingeben!"
         else:
-            return f"Breite: {self.__breite} gesetzt"
+            return f"Breite: {self._breite} gesetzt"
     
     def set_hoehe(self, wert):
         if wert < 0:
             return f"Nur positive Werte zur Berechnung eingeben!"
         else:
-            return f"Höhe: {self.__hoehe} gesetzt"
+            return f"Höhe: {self._hoehe} gesetzt"
     
     def flaeche(self):
-        flaeche = self.__breite * self.__hoehe
+        flaeche = self._breite * self._hoehe
         print(f"Die Fläche beträgt {flaeche}.")
         
     def umfang(self):
-        umfang = (self.__breite + self.__hoehe)*2
+        umfang = (self._breite + self._hoehe)*2
         print(f"Der Umfang beträgt {umfang}.")
         
 rechteck1 = Rechteck(2, 4)
