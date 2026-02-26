@@ -32,11 +32,18 @@
 
 # add_3("5")
 
-rechnung = float(input("Betrag: "))
-prozent = float(input("Trinkgeld in Prozent ohne das Prozenzeichen: "))
-def trinkgeld_funktion(rechnung, prozent):
-    trinkgeld = rechnung * prozent/100
-    print("Trinkgeld: ", trinkgeld)
-    return trinkgeld
+# rechnung = float(input("Betrag: "))
+# prozent = float(input("Trinkgeld in Prozent ohne das Prozenzeichen: "))
+# def trinkgeld_funktion(rechnung, prozent):
+#     trinkgeld = rechnung * prozent/100
+#     print("Trinkgeld: ", trinkgeld)
+#     return trinkgeld
 
-trinkgeld_funktion(rechnung, prozent)
+# trinkgeld_funktion(rechnung, prozent)
+
+Passwortlänge = 0
+neues_pw = input("Irgendein Passowrt eingeben: ")
+for i in neues_pw:
+    Passwortlänge = Passwortlänge + 1
+
+print(Passwortlänge)
