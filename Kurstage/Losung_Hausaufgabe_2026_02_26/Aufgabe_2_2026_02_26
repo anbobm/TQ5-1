@@ -1,0 +1,30 @@
+# Aufgabe 2 (Rechteck)
+
+class Rechteck:
+    def __init__(self, breite, hoehe):
+        self._breite = breite
+        self._hoehe = hoehe
+
+    def set_breite(self, wert):
+        # nur positive Werte zulässig
+        if wert <= 0:
+            return
+        self._breite = wert
+
+
+    def set_hoehe(self, wert):
+        # nur positive Werte zulässig
+        if wert <= 0:
+            return
+        self._hoehe = wert
+
+    def flaeche(self):
+        return self._breite * self._hoehe
+
+    def umfang(self):
+        return 2 * (self._breite + self._hoehe)
+
+# Test
+rechteck1 = Rechteck(4, 5)
+print(rechteck1.flaeche())
+print(rechteck1.umfang())                
