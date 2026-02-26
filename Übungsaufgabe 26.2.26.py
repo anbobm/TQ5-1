@@ -126,3 +126,35 @@ class Temperatursensor():
             return
         else:
             return "Die Senkung der Temperatur ist nicht möglich!"
+
+# Aufgabe 5
+class Mitarbeiter():
+    def __init__(self, Namen, Gehalt):
+        self._Namen = Namen
+        self._Gehalt = Gehalt
+    
+    def get_gehalt(self):
+        return (f"Der Mitarbeiter {self._Namen} bekommt das Gehalt {self._Gehalt}.")
+    
+    def gehalt_erhoehen(self, prozent):
+        if prozent > 0.0:
+            self._Gehalt = self._Gehalt + self._Gehalt * prozent
+            return
+        else:
+            return "Funktioniert so nicht."
+    
+class Manager(Mitarbeiter):
+    def __init__(self, Namen, Gehalt, Bonus):
+        super().__init__(Namen, Gehalt)
+        self._Bonus = Bonus
+    
+    def get_gehalt(self):
+        return (f"Der Manager {self._Namen} bekommt das Gehalt {self._Gehalt + self._Bonus}.")
+    
+    def set_bonus(self,bonus):
+        if bonus > 0:
+            self._Bonus = bonus
+            return
+    
+    
+
