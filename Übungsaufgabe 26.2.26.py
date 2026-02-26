@@ -1,8 +1,8 @@
 class Produkt():
-    def __init__(self, Name, Preis, Lagerbestand):
+    def __init__(self, Name, Preis):
         self._Name = Name
         self._Preis = Preis
-        self._Lagerbestand = Lagerbestand
+        self._Lagerbestand = 0
     
     def verkaufen(self, menge):
         if self._Lagerbestand >= menge and menge >= 0:
