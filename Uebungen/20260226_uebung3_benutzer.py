@@ -11,32 +11,42 @@
 
 class Benutzer:
     def __init__(self, benutzername, passwort):
-        self.__benutzername = benutzername
-        self.__passwort = passwort
-        self.__ist_eingeloggt = False
+        self._benutzername = benutzername
+        self._passwort = passwort
+        self._ist_eingeloggt = False
         
     def login(self, passwort):
-        if self.__passwort == passwort:
-            self.__ist_eingeloggt = True
-            return f"du bist eingeloggt"
+        if self._passwort == passwort:
+            self._ist_eingeloggt = True
+            print(f"du bist eingeloggt")
         else:
-            return f"Passwort falsch"
+            print(f"Passwort falsch")
     
     def logout(self):
-        self.__ist_eingeloggt = False
-        return f"du bist ausgeloggt"
+        self._ist_eingeloggt = False
+        print(f"du bist ausgeloggt")
     
     def passwort_ändern(self, altes_pw, neues_pw):
         if len(neues_pw) >= 8 and altes_pw == neues_pw:
-            self.__passwort = neues_pw
-            return "Passwort geändert" 
+            self._passwort = neues_pw
+            print("Passwort geändert")
         else:
-            return "Altes und neues Passwort stimmen nicht überein"
+            print("Altes und neues Passwort stimmen nicht überein")
         
     def eingeloggt(self):
-        if self.__ist_eingeloggt == True:
-            return "Du bist eingeloggt"
+        if self._ist_eingeloggt == True:
+            print("Du bist eingeloggt")
         else:
-            return "Du bist ausgeloggt"
+            print("Du bist ausgeloggt")
         
-        
+benutzer1 = Benutzer("user", "passwort123")
+benutzer2 = Benutzer("benutzer", "keinpasswort")
+
+benutzer1.login("hfdhfu") 
+
+print(benutzer1._benutzername)
+print(benutzer1._passwort)
+print(benutzer2._benutzername)
+print(benutzer2._passwort)
+
+benutzer1.passwort_ändern("hagsdg", "passwortja")
