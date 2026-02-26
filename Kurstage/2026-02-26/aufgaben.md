@@ -53,3 +53,21 @@ Sie hat ein privates **Attribut** für die aktuelle Temperatur (in Celsius), die
 * `senken(wert)`: Senkt die Temperatur um den übergebenen Wert. 
 
 **Hinweis**: Die Temperatur darf nie kleiner als `-273.15` sein.
+
+# Aufgabe 5
+
+Erstelle eine Klasse `Mitarbeiter` mit privaten Attributen für den Namen und das Gehalt, die der Konstruktor als Parameter erwartet.
+
+#### Methoden:
+
+* `get_gehalt()` gibt das Gehalt zurück
+* `gehalt_erhoehen(prozent)` erhöht das Gehalt um `prozent`. Nur positive Werte sind zugelassen.
+
+Erstelle nun eine Klasse `Manager`. Ein Manager *ist* ein Mitarbeiter, die Klasse `Manager` soll also von der Klasse `Mitarbeiter` erben.
+
+Darüber hinaus hat die Klasse `Manager` ein privates Attribut für den Bonus, welcher als Parameter im Konstruktor erwartet wird.
+
+#### Methoden:
+
+* Die Methode `get_gehalt()` der Basisklasse wird überschrieben und berücksichtigt jetzt auch den zusätzlichen Bonus des Managers (Gehalt + Bonus).
+* `set_bonus(bonus)` setzt den Bonus auf den Wert `bonus`. Negative Werte sind nicht erlaubt.
