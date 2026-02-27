@@ -16,15 +16,17 @@ class Rechteck:
     
     def set_breite(self, wert):
         if wert < 0:
-            return f"Nur positive Werte zur Berechnung eingeben!"
+            print(f"Nur positive Werte zur Berechnung eingeben!")
         else:
-            return f"Breite: {self._breite} gesetzt"
+            self._breite = wert
+            print(f"Breite: {self._breite} gesetzt")
     
     def set_hoehe(self, wert):
         if wert < 0:
-            return f"Nur positive Werte zur Berechnung eingeben!"
+            print(f"Nur positive Werte zur Berechnung eingeben!")
         else:
-            return f"Höhe: {self._hoehe} gesetzt"
+            self._hoehe = wert
+            print(f"Höhe: {self._hoehe} gesetzt")
     
     def flaeche(self):
         flaeche = self._breite * self._hoehe
@@ -37,6 +39,9 @@ class Rechteck:
 rechteck1 = Rechteck(2, 4)
 rechteck2 = Rechteck(7.5, 15)
 rechteck3 = Rechteck(3, 3)
+
+
+rechteck1.set_breite(6)
 
 rechteck1.flaeche()
 rechteck1.umfang()
