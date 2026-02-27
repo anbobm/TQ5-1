@@ -29,7 +29,7 @@ class Produkt():
             return 
     
     def get_info(self):
-        print (f"Der Produktname ist: {self._Name}, hat den Preis: {self._Preis} und hat den Lagerbestand: {self._Lagerbestand}.")
+        print (f"Der Produktname ist: {self._Name}, hat den Preis: {self._Preis}€ und hat den Lagerbestand: {self._Lagerbestand}.")
         return 
             
 Produkt1 = Produkt("Apfel", 3)
@@ -68,6 +68,9 @@ class Rechteck():
     def umfang(self):
         print(f"Der Umfang des Rechtecks beträgt {self._breite* 2 + self._höhe*2}.")
         return 
+
+Rechtecht1 = Rechteck(10,20)
+Rechtecht1.flaeche()
     
 # Aufgabe 3
 
@@ -78,13 +81,17 @@ class Benutzer():
         self._Ist_eingeloggt = False
     
     def login(self, passwort):
-        if passwort == self._Passwort:
-            self._Ist_eingeloggt = True
-            print("Der Login war Erfolgreich.")
-            return 
+        if self._Ist_eingeloggt == False:
+            if passwort == self._Passwort:
+                self._Ist_eingeloggt = True
+                print("Der Login war Erfolgreich.")
+                return
+            else:
+                print("Der Login war nicht Erfolgreich. Falsches Passwort.")         
         else:
-            print("Der Login war nicht Erfolgreich. Falsches Passwort.")
-            return 
+            print("Der Benutzer ist schon eingeloggt.")
+            
+
     
     def logout(self):
         if self._Ist_eingeloggt == True:
@@ -98,12 +105,24 @@ class Benutzer():
         Passwortlänge = 0
         for i in neues_pw:
             Passwortlänge = Passwortlänge + 1
-        if altes_pw != neues_pw and Passwortlänge >= 8:
-            self._Passwort = neues_pw
-            return
+        if altes_pw == self._Passwort:
+            if altes_pw != neues_pw and Passwortlänge >= 8:
+                self._Passwort = neues_pw
+                return
+            else:
+                print("Das ist das Selbe Passwort oder das Passwort ist zu kurz.")
+                return 
         else:
-            print("Das ist das Selbe Passwort oder das Passwort ist zu kurz.")
-            return 
+            print("Das ist das falsche Passwort!")
+    
+    def passwort_ändern2(self, altes_pw, neues_pw):
+        if len(neues_pw) >= 8 and altes_pw == self._Passwort:
+            if altes_pw != neues_pw:
+                altes_pw = neues_pw
+            else:
+                print("Das Passwort ist das Selbe.")
+        else:
+            print("Das Passwort ist zu kurz oder das falsche.")
         
     def eingeloggt(self):
         if self._Ist_eingeloggt == True:
@@ -112,7 +131,11 @@ class Benutzer():
         else: 
             print("User ist nicht eingeloggt.")
             return 
-    
+
+Benutzer1 = Benutzer("Fred", "IstSchonSo")
+Benutzer1.login("IstSchonSo")
+Benutzer1.login("IstSchonSo")
+Benutzer1.logout()
 # Aufgabe 4
 class Temperatursensor():
     def __init__(self):
