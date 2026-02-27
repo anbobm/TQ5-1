@@ -50,7 +50,7 @@ class Rechteck():
             self._breite = wert
             return
         else:
-            print("Der Wert kann nicht unter Nulll Liegen oder keine Zahl sein.")
+            print("Der Wert kann nicht unter Null Liegen oder keine Zahl sein.")
             return 
     
     def set_hoehe(self, wert):
