@@ -17,18 +17,27 @@ class Produkt():
             self._Lagerbestand = self._Lagerbestand + menge
             return
         else:
-            return "Nichts passiert."
+            print("Nichts passiert.")
+            return 
         
     def set_preis(self, neuer_preis):
         if neuer_preis >= 0:
             self._Preis = neuer_preis
             return
         else:
-            return "Das ist nicht möglich, da der Preis nicht negativ sein kann."
+            print("Das ist nicht möglich, da der Preis nicht negativ sein kann.")
+            return 
     
     def get_info(self):
-        return (f"Der Produktname ist: {self._Name}, hat den Preis: {self._Preis} und hat den Lagerbestand: {self._Lagerbestand}.")
+        print (f"Der Produktname ist: {self._Name}, hat den Preis: {self._Preis} und hat den Lagerbestand: {self._Lagerbestand}.")
+        return 
             
+Produkt1 = Produkt("Apfel", 3)
+
+Produkt1.nachbestellen(-2)
+Produkt1.get_info()
+Produkt1.nachbestellen(3)
+Produkt1.get_info()
 
 # Aufgabe 2
 class Rechteck():
@@ -41,20 +50,24 @@ class Rechteck():
             self._breite = wert
             return
         else:
-            return "Der Wert kann nicht unter Nulll Liegen oder keine Zahl sein."
+            print("Der Wert kann nicht unter Nulll Liegen oder keine Zahl sein.")
+            return 
     
     def set_hoehe(self, wert):
         if wert > 0:
             self._höhe = wert
             return
         else:
-            return "Dieser Wert ist nicht möglich."
+            print("Dieser Wert ist nicht möglich.")
+            return 
         
     def flaeche(self):
-        return (f"Der Flächeninhalt beträgt {self._breite * self._höhe} in ²")
+        print(f"Der Flächeninhalt beträgt {self._breite * self._höhe} in ²")
+        return 
     
     def umfang(self):
-        return (f"Der Umfang des Rechtecks beträgt {self._breite* 2 + self._höhe*2}.")
+        print(f"Der Umfang des Rechtecks beträgt {self._breite* 2 + self._höhe*2}.")
+        return 
     
 # Aufgabe 3
 
@@ -67,16 +80,19 @@ class Benutzer():
     def login(self, passwort):
         if passwort == self._Passwort:
             self._Ist_eingeloggt = True
-            return "Der Login war Erfolgreich."
+            print("Der Login war Erfolgreich.")
+            return 
         else:
-            return "Der Login war nicht Erfolgreich. Falsches Passwort."
+            print("Der Login war nicht Erfolgreich. Falsches Passwort.")
+            return 
     
     def logout(self):
         if self._Ist_eingeloggt == True:
             self._Ist_eingeloggt = False
             return
         else:
-            return "Du bist garnicht eingeloggt!"
+            print("Du bist garnicht eingeloggt!")
+            return 
     
     def passwort_ändern(self, altes_pw, neues_pw):
         Passwortlänge = 0
@@ -86,13 +102,16 @@ class Benutzer():
             self._Passwort = neues_pw
             return
         else:
-            return "Das ist das Selbe Passwort oder das Passwort ist zu kurz."
+            print("Das ist das Selbe Passwort oder das Passwort ist zu kurz.")
+            return 
         
     def eingeloggt(self):
         if self._Ist_eingeloggt == True:
-            return "User ist eingeloggt!"
+            print("User ist eingeloggt!")
+            return 
         else: 
-            return "User ist nicht eingeloggt."
+            print("User ist nicht eingeloggt.")
+            return 
     
 # Aufgabe 4
 class Temperatursensor():
@@ -104,28 +123,33 @@ class Temperatursensor():
         return
     
     def get_celsius(self):
-        return (f"Die Temperatur gerade beträgt {self._aktuelle_Temperatur_celsius} in celsius.")
+        print(f"Die Temperatur gerade beträgt {self._aktuelle_Temperatur_celsius} in celsius.")
+        return 
     
     def get_fahrenheit(self):
         fahrenheit = (self._aktuelle_Temperatur_celsius * 9 / 5) + 32
-        return (f"Die aktuelle Temperatur in Fahrenheit beträgt {fahrenheit}.")
+        print(f"Die aktuelle Temperatur in Fahrenheit beträgt {fahrenheit}.")
+        return 
     
     def ehoehen(self, wert):
         if wert > 0:
             self._aktuelle_Temperatur_celsius = self._aktuelle_Temperatur_celsius + wert
             return
         else:
-            return "Die Erhöhung der Temperatur ist mit der Eingabe nicht übereinstimmbar."
+            print("Die Erhöhung der Temperatur ist mit der Eingabe nicht übereinstimmbar.")
+            return 
         
     def senken(self, wert):
         if wert > 0:
             self._aktuelle_Temperatur_celsius = self._aktuelle_Temperatur_celsius - wert
             if self._aktuelle_Temperatur_celsius <= -273.15:
                 self._aktuelle_Temperatur_celsius = self._aktuelle_Temperatur_celsius + wert
-                return "Die Temperatur ist zu kalt!"
+                print("Die Temperatur ist zu kalt!")
+                return 
             return
         else:
-            return "Die Senkung der Temperatur ist nicht möglich!"
+            print("Die Senkung der Temperatur ist nicht möglich!")
+            return 
 
 # Aufgabe 5
 class Mitarbeiter():
@@ -134,14 +158,16 @@ class Mitarbeiter():
         self._Gehalt = Gehalt
     
     def get_gehalt(self):
-        return (f"Der Mitarbeiter {self._Namen} bekommt das Gehalt {self._Gehalt}.")
+        print(f"Der Mitarbeiter {self._Namen} bekommt das Gehalt {self._Gehalt}.")
+        return 
     
     def gehalt_erhoehen(self, prozent):
         if prozent > 0.0:
             self._Gehalt = self._Gehalt + self._Gehalt * prozent
             return
         else:
-            return "Funktioniert so nicht."
+            print("Funktioniert so nicht.")
+            return 
     
 class Manager(Mitarbeiter):
     def __init__(self, Namen, Gehalt, Bonus):
@@ -149,7 +175,8 @@ class Manager(Mitarbeiter):
         self._Bonus = Bonus
     
     def get_gehalt(self):
-        return (f"Der Manager {self._Namen} bekommt das Gehalt {self._Gehalt + self._Bonus}.")
+        print(f"Der Manager {self._Namen} bekommt das Gehalt {self._Gehalt + self._Bonus}.")
+        return 
     
     def set_bonus(self,bonus):
         if bonus > 0:
