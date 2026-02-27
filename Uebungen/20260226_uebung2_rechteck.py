@@ -31,11 +31,14 @@ class Rechteck:
     def flaeche(self):
         flaeche = self._breite * self._hoehe
         print(f"Die Fläche beträgt {flaeche}.")
+        return flaeche
         
     def umfang(self):
         umfang = (self._breite + self._hoehe)*2
         print(f"Der Umfang beträgt {umfang}.")
-        
+        return umfang
+    
+    
 rechteck1 = Rechteck(2, 4)
 rechteck2 = Rechteck(7.5, 15)
 rechteck3 = Rechteck(3, 3)
