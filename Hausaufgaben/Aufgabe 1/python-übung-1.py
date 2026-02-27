@@ -1,21 +1,31 @@
-# Exercise 1
-rechnung = float(input("Betrag: "))
-trinkgeld = rechnung * 0.10
-print("Trinkgeld: ", round(trinkgeld, 2))
+lager = {}
 
-# Exercise 2
-def trinkgeld_berechnen(rechnung):
-    return rechnung * 0.10
+def hinzufuegen(artikel, menge):
+    if artikel not in lager:
+        lager[artikel] = menge
+    else:
+        lager[artikel] += menge
 
-betrag = float(input("Betrag: "))
-trinkgeld = trinkgeld_berechnen(betrag)
-print("Trinkgeld: ", round(trinkgeld, 2))
+    print(f"{menge} von {artikel} hinzugefügt. Neuer Bestand: {lager[artikel]}")
 
-# Exercise 3
-def trinkgeld_berechnen(rechnung, prozent):
-    return rechnung * prozent / 100
+def entfernen(artikel, menge):
+    if artikel in lager and lager[artikel] >= menge:
+        lager[artikel] -= menge
+        print(f"{menge} von {artikel} entfernt. Neuer Bestand: {lager[artikel]}")
 
-betrag = float(input("Betrag: "))
-prozent = float(input("Prozent: "))
-trinkgeld = trinkgeld_berechnen(betrag, prozent)
-print("Trinkgeld: ", round(trinkgeld, 2))
+        if lager[artikel] == 0:
+            del lager[artikel]
+    else:
+        print(f"Nicht genügend Bestand von {artikel} oder Artikel nicht vorhanden.")
+
+# Beispiel
+hinzufuegen("Rot", 5)
+hinzufuegen("Rot", 5)
+hinzufuegen("Rot", 5)
+hinzufuegen("Rot", 5)
+
+entfernen("Rot", 5)
+entfernen("Rot", 5)
+entfernen("Rot", 5)
+entfernen("Rot", 5)
+
