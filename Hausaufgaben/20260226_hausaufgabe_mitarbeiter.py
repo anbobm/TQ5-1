@@ -33,8 +33,7 @@ class Manager(Mitarbeiter):
         self._bonus = bonus
         
     def get_gehalt(self):
-        super().get_gehalt + self._bonus
-        print(f"Das Gehalt von {self._name} beträgt: {super().get_gehalt + self._bonus} Euro.")
+        print(f"Das Gehalt von {self._name} beträgt: {super().get_gehalt} + {self._bonus} Euro.")
     
     def set_bonus(self, bonus):
         if self._bonus < 0:
