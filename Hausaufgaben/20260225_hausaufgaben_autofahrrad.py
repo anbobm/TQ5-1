@@ -1,6 +1,5 @@
 class Fahrzeug:
-    def __init__(self, kategorie, _farbe, max_geschwindigkeit):
-        self.kategorie = kategorie
+    def __init__(self, _farbe, max_geschwindigkeit):
         self._farbe = _farbe
         self.max_geschwindigkeit = max_geschwindigkeit
         self.geschwindigkeit = 0
@@ -30,10 +29,51 @@ class Fahrzeug:
         return self._farbe
     
     def set_farbe(self, farbe):
-        if _farbe in ["rot", "grün", "blau", "schwarz", "weiß"]:
-            self._farbe = _farbe
+        if self._farbe in ["rot", "grün", "blau", "schwarz", "weiß"]:
+            self._farbe = self._farbe
+
+class Fahrrad(Fahrzeug):
+    def __init__(self, gänge):
+        self._gang = 1
+        self._gänge = gänge
+        self._licht_an = False
+    
+    def hochschalten(self):
+        if self._gang > self._gänge:
+            self._gang = self._gänge
+            print("Maximalen Gang erreicht")
+        else:
+            self._gang = self._gang + 1
+            print(f"du bist jetzt im {self._gang}ten Gang")
+    
+    def runterschalten(self):
+        if self._gang <= 0:
+            self._gang = 1
+            print("Kleinster Gang erreicht")
+        else:
+            self._gang = self._gang - 1
+            print(f"du bist jetzt im {self._gang}ten Gang")
+            
+    def licht_einschalten(self):
+        if self._licht_an == False:
+            self._licht_an = True
+            print("Das Licht ist an")
+        
+    def licht_ausschalten(self):    
+        if self._licht_an == True:
+            self._licht_an = False
+            print("Das Licht ist wieder aus")
+            
+                 
+bike1 = Fahrrad(7)
+bike1.hochschalten()
+bike1.licht_einschalten()
+
+print(bike1)
+
+
 class Auto(Fahrzeug):
-    def __init__(self, _motor_läuft):
+    def __init__(self, _farbe, max_geschwindigkeit):
         super().__init__(self, _farbe, max_geschwindigkeit)
         self._motor_läuft = False
     
@@ -47,16 +87,15 @@ class Auto(Fahrzeug):
     
     def beschleunigen(self, betrag):
         if self.motor_starten == True:
-            beschleunigen(self, betrag)
+            super().beschleunigen(self, betrag)
             
             
-auto1 = Auto(Fahrzeug)
+auto1 = Auto(Fahrzeug("blau", 230))
 auto1._farbe = ("blau")
-auto1.max_geschwindigkeit = 230
-auto1.motorstarten = True
+auto1.motor_starten = True
 auto1.geschwindigkeit(88)
 
-auto1.info()
+print(auto1.info)
 
 # // Implementiere jetzt eine Klasse Auto und eine Klasse Fahrrad, die von der Klasse Fahrzeug erben.
 
