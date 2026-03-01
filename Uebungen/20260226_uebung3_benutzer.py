@@ -27,11 +27,11 @@ class Benutzer:
         print(f"du bist ausgeloggt")
     
     def passwort_ändern(self, altes_pw, neues_pw):
-        if len(neues_pw) >= 8 and altes_pw == neues_pw:
+        if len(neues_pw) >= 8 and altes_pw == self._passwort:
             self._passwort = neues_pw
             print("Passwort geändert")
         else:
-            print("Altes und neues Passwort stimmen nicht überein")
+            print("Altes und neues Passwort stimmen nicht überein oder das Passwort ist zu kurz")
         
     def eingeloggt(self):
         if self._ist_eingeloggt == True:
