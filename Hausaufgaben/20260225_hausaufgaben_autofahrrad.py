@@ -84,9 +84,10 @@ class Auto(Fahrzeug):
     def motor_stoppen(self):
         print("Motor läuft nicht")
         self.motor_läuft = False
+        self.geschwindigkeit = 0
     
     def beschleunigen(self, betrag):
-        if self.motor_starten == True:
+        if self.motor_läuft == True:
             super().beschleunigen(self, betrag)
             
             
