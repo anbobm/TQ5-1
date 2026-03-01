@@ -16,29 +16,32 @@ class Temperatur:
         self._temp_celsius = 0
         
     def set_celsius(self, wert):
-        self._temp_celsius = wert
         if wert >= -273.15:
+            self._temp_celsius = wert
             print(f"Temperatur auf {wert}°C gesetzt.")
         else:
             print("Die Temperatur kann nicht unter -273.15 °C liegen.")
         
     
     def get_celsius(self): 
-        print(self._temp_celsius)
+        return self._temp_celsius
         
     def get_fahrenheit(self):
         print(f"Temperatur von {self._temp_celsius}°C sind {self._temp_celsius * 9/5 + 32}° Fahrenheit")
     
     def erhoehen(self, wert):
-        self.temp_celsius = self._temp_celsius + wert 
-        print(f"Temperatur um {wert}°C erhöht.Es sind jetzt {self._temp_celsius + wert}°C.")
+        if wert < 0:
+            print("Keine negativen Werte eingeben!")
+        else:
+            self.temp_celsius = self._temp_celsius + wert 
+            print(f"Temperatur um {wert}°C erhöht.Es sind jetzt {self._temp_celsius}°C.")
     
     def senken(self, wert):
-        self.temp_celsius = self._temp_celsius - wert
-        if wert <= -273.15:
+        if self._temp_celsius - wert < -273.15:
             print("Die Temperatur kann nicht unter -273.15°C liegen.")
         else:
-            print(f"Temperatur um {wert}°C gesenkt. Es sind jetzt {self._temp_celsius - wert}°C.")
+            self._temp_celsius = self._temp_celsius - wert
+            print(f"Temperatur um {wert}°C gesenkt. Es sind jetzt {self._temp_celsius}°C.")
         
 temp1 = Temperatur()
 temp2 = Temperatur()
