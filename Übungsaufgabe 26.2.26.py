@@ -206,5 +206,6 @@ class Manager(Mitarbeiter):
             self._Bonus = bonus
             return
     
-    
+Manager1 = Manager("Fred", 3000, 500)
+Manager1.get_gehalt()    
 
