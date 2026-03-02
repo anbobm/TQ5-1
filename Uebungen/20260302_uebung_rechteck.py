@@ -43,8 +43,8 @@ class Rechteck:
         return umfang
     
 class Quadrat(Rechteck):
-    def __init__(self, hoehe, breite, kantenlaenge):
-        super().__init__(hoehe, breite)
+    def __init__(self, kantenlaenge):
+        super().__init__(kantenlaenge, kantenlaenge)
         self.kantenlaenge = kantenlaenge
         
     
@@ -65,7 +65,7 @@ rechteck1 = Rechteck(2, 4)
 rechteck2 = Rechteck(7.5, 15)
 rechteck3 = Rechteck(3, 7)
 
-quadrat1 = Quadrat(3, 3, 3)
+quadrat1 = Quadrat(3)
 
 
 rechteck1.set_breite(6)
