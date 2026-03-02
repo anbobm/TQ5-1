@@ -5,17 +5,15 @@ class Fahrzeug:
         self._geschwindigkeit = 0
 
     def info(self):
-        print(f"Dieses Fahrzeug hat die Farbe {self._farbe} und die Maximalgeschwindigkeit {self._max_geschwindigkeit}. Aktuelle Geschwindigkeit ist {self._geschwindigkeit}")
+        print(f"Dieses Fahrzeug hat die Farbe {self._farbe} und die Maximalgeschwindigkeit {self._max_geschwindigkeit}km/h. Aktuelle Geschwindigkeit ist {self._geschwindigkeit}km/h.")
 
     def beschleunigen(self, betrag):
         if betrag < 0:
             return
-
-        self._geschwindigkeit = self._geschwindigkeit + betrag
-
-        if self._geschwindigkeit > self._max_geschwindigkeit:
+        elif self._geschwindigkeit > self._max_geschwindigkeit:
             self._geschwindigkeit = self._max_geschwindigkeit
-
+        self._geschwindigkeit = self._geschwindigkeit + betrag
+    
     def bremsen(self, betrag):
         if betrag < 0:
             return
@@ -31,6 +29,8 @@ class Fahrzeug:
     def set_farbe(self, farbe):
         if farbe in ["rot", "grün", "blau", "schwarz", "weiß"]:
             self._farbe = farbe
+        else:
+            print("Farbe in diesem Universum nicht möglich!")
             
     # Implementiere jetzt eine Klasse Auto und eine Klasse Fahrrad, 
     # die von der Klasse Fahrzeug erben.
@@ -103,6 +103,8 @@ auto1 = Auto("weiß", 235)
 auto2 = Auto("orange", 180)
 auto1._motor_läuft == True
 auto2.beschleunigen(78)
+auto2.set_farbe("lila")
+auto2.set_farbe("blau")
 
 
 print(auto1.info())
