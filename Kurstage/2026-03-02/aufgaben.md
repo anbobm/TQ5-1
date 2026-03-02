@@ -7,18 +7,21 @@ class Rechteck:
     def __init__(self, hoehe, breite):
         self._hoehe = hoehe
         self._breite = breite
+
     def set_breite(self, wert):
         if wert <= 0:
             print("Nur positive Werte als Breite erlaubt")
             return
       
         self._breite = wert
+
     def set_hoehe(self, wert):
         if wert <= 0:
             print("Nur positive Werte als Höhe erlaubt")
             return
       
         self._hoehe = wert
+        
     def flaeche(self):
         return self._breite * self._hoehe
   
