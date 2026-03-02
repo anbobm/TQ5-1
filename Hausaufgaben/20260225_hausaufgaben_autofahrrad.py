@@ -76,7 +76,7 @@ class Auto(Fahrzeug):
     def __init__(self, _farbe, max_geschwindigkeit):
         super().__init__(self, _farbe, max_geschwindigkeit)
         self._motor_läuft = False
-    
+        
     def motor_starten(self):
         print("Motor läuft")
         self.motor_läuft = True
@@ -91,8 +91,7 @@ class Auto(Fahrzeug):
             super().beschleunigen(self, betrag)
             
             
-auto1 = Auto(Fahrzeug("blau", 230))
-auto1._farbe = ("blau")
+auto1 = Auto("weiß", 235)
 auto1.motor_starten = True
 auto1.geschwindigkeit(88)
 
