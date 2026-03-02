@@ -27,4 +27,16 @@ class Rechteck:
   
     def umfang(self):
         return 2 * (self._hoehe + self._breite)
-´´´
+```
+
+# Aufgabe 2
+
+Erstelle eine Basisklasse namens `Form` mit der Methode `flaeche()` (die kann leer sein: `pass`).
+
+Erstelle eine Klasse `Kreis(radius)` und eine Klasse `RechtwinkligesDreieck(breite, hoehe)`, die von `Form` erben und jeweils die Methode `flaeche()` implementieren (überschreiben).
+
+Erstelle anschließend eine Liste aus Objekten der beiden Klassen, z.B. `formen = [Kreis(..), Kreis(..), RechtwinkligesDreieck(..), Kreis, ....]`.
+
+Durchlaufe diese Liste in einer Schleife und berechne die Summe aller Flächeninhalte dieser Formen.
+
+**Hinweis**: Quadratwurzeln (square roots) kann man mit `sqrt()` aus dem `math` Modul berechnen.
