@@ -24,8 +24,8 @@ class Mitarbeiter:
         if prozent <= 0:
             print("Nur positive Gehaltsänderung möglich")
         else:
-            self._gehalt = self._gehalt * prozent
-            print(f"Das Gehalt von {self._name} wurde um {prozent} Prozent erhöht und beträgt jetzt {self._gehalt/10} Euro.")
+            self._gehalt = self._gehalt + self._gehalt * prozent/100
+            print(f"Das Gehalt von {self._name} wurde um {prozent} Prozent erhöht und beträgt jetzt {self._gehalt} Euro.")
             
 class Manager(Mitarbeiter):
     def __init__(self, name, gehalt, bonus):
@@ -33,11 +33,12 @@ class Manager(Mitarbeiter):
         self._bonus = bonus
         
     def get_gehalt(self):
-        print(f"Das Gehalt von {self._name} beträgt: {super().get_gehalt} + {self._bonus} Euro.")
+        print(f"Das Gehalt von {self._name} beträgt: {super().get_gehalt()} + {self._bonus} Euro.")
     
     def set_bonus(self, bonus):
         if self._bonus < 0:
             print("Nur positive Boni möglich")
+            self._bonus = 0
         else:
             self._bonus = bonus
             print(f"Der Bonus beträgt {self._bonus} Euro.")
