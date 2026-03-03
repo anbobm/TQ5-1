@@ -1,3 +1,6 @@
+import math
+
+
 class Rechteck:
     def __init__(self, hoehe, breite):
         self._hoehe = hoehe
@@ -46,13 +49,19 @@ class Form:
 
 class Kreis(Form):
     def __init__(self, radius):
+        if radius <= 0:
+            print("Nur positive Werte als Radius erlaubt")
+            return
         self._radius = radius
     
     def flaeche(self):
-        return 3.14 * self._radius ** 2
+        return math.pi * self._radius ** 2
 
 class RechtwinkligesDreieck(Form):
     def __init__(self, breite, hoehe):
+        if breite <= 0 or hoehe <= 0:
+            print("Nur positive Werte als Breite und Höhe erlaubt")
+            return
         self._breite = breite
         self._hoehe = hoehe
     
