@@ -17,40 +17,35 @@
 import math
 
 class Form:
-    def __init__(self):
-        
     def flaeche():
         pass
     
     
 class Kreis(Form):
     def __init__(self, radius):
-        super().__init__()
-        self.radius = radius 
+        self._radius = radius 
     
-    def flaeche_kreis():
-        if radius <= 0:
-            print("Der Radius muß größer 0 sein.")
-        flaeche_kreis = math.pi * radius**2
+    def flaeche():
+        return math.pi * self._radius ** 2
         
         
         
 class RechtwinkligesDreieck(Form):
     def __init__(self, breite, hoehe):
-        super().__init__()
-        self.breite = breite
-        self.hoehe = hoehe
+        self._breite = breite
+        self._hoehe = hoehe
         
-    def flaeche_dreieck():
-        flaeche_dreieck = breite * hoehe
+    def flaeche():
+        return math.sqrt(self._breite ** 2 + self._hoehe ** 2)
+    
+    
         
-formen = [Kreis(3), Kreis(5,5), RechtwinkligesDreieck(5,7), Kreis(7), RechtwinkligesDreieck(4,9)]
+formen = [Kreis(3), Kreis(5), RechtwinkligesDreieck(5,7), Kreis(7), RechtwinkligesDreieck(4,9)]
 flaechensumme = 0
 
 for form in formen:
-    if form == Kreis:
-        flaechensumme = flaechensumme + flaeche_kreis
-    elif:
-        flaechensumme = flaechensumme + 
+        flaechensumme = flaechensumme + form.flaeche()
+        
+print(flaechensumme)
 
      
