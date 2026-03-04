@@ -29,3 +29,7 @@ Schreibe die `angreifen()` Methode so um, dass sie jetzt nicht mehr den Schaden 
 # Aufgabe 3
 
 Die Rüstung des Kriegers soll dafür sorgen, dass Angriffe auf ihn weniger Schaden verursachen.
+
+# Aufgabe 4
+
+Ändere die Funktionsweise von `zaubern()` so dass sie funktioniert wie `angreifen(ziel)`.
