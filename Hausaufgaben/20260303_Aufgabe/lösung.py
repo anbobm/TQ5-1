@@ -1,5 +1,6 @@
 import random
 
+
 class Charakter:
     def __init__(self, name, leben, damage):
         self._name = name
@@ -14,8 +15,9 @@ class Charakter:
     def leben(self):
         return self._leben
 
-    def angreifen(self):
-        return self._damage
+    def angreifen(self, ziel):
+        print(f"{self._name} greift an!")
+        ziel.erleiden_schaden(self._damage)
 
     def erleiden_schaden(self, schaden):
         self._leben -= schaden
@@ -32,16 +34,16 @@ class Magier(Charakter):
     def mana(self):
         return self._mana
 
-    def zaubern(self):
+    def zaubern(self, ziel):
         if self._mana >= 10:
             self._mana -= 10
             schaden = self._damage + random.randint(10, 20)
             print(f"{self._name} benutzt Magie! (-10 Mana)")
             print(f"Mana übrig: {self._mana}")
-            return schaden
+            ziel.erleiden_schaden(schaden)
         else:
             print(f"{self._name} hat nicht genug Mana!")
-            return self.angreifen()
+            self.angreifen(ziel)
 
 
 class Krieger(Charakter):
@@ -49,8 +51,10 @@ class Krieger(Charakter):
         super().__init__(name, leben, damage)
         self._ruestung = ruestung
 
-    def angreifen(self):
-        return self._damage + random.randint(5, 10)
+    def angreifen(self, ziel):
+        schaden = self._damage + random.randint(5, 10)
+        print(f"{self._name} führt einen starken Angriff aus!")
+        ziel.erleiden_schaden(schaden)
 
     def erleiden_schaden(self, schaden):
         reduzierter_schaden = schaden - self._ruestung
@@ -64,26 +68,24 @@ def kampf_simulation(kämpfer_1, kämpfer_2):
 
     while kämpfer_1.leben > 0 and kämpfer_2.leben > 0:
 
-        # kämpfer_1 
-        if isinstance(kämpfer_1, Magier) and random.choice([True, False]) == True:
-            schaden = kämpfer_1.zaubern()
+        # Kämpfer 1 greift an
+        if isinstance(kämpfer_1, Magier) and random.choice([True, False]):
+            kämpfer_1.zaubern(kämpfer_2)
         else:
-            schaden = kämpfer_1.angreifen()
+            kämpfer_1.angreifen(kämpfer_2)
 
-        kämpfer_2.erleiden_schaden(schaden)
-        print(f"{kämpfer_1.name} macht {schaden} Schaden. {kämpfer_2.name} hat HP: {kämpfer_2.leben}")
+        print(f"{kämpfer_2.name} hat HP: {kämpfer_2.leben}")
 
         if kämpfer_2.leben <= 0:
             break
 
-        # kämpfer_2
-        if isinstance(kämpfer_2, Magier) and random.choice([True, False]) == True:
-            schaden = kämpfer_2.zaubern()
+        # Kämpfer 2 greift an
+        if isinstance(kämpfer_2, Magier) and random.choice([True, False]):
+            kämpfer_2.zaubern(kämpfer_1)
         else:
-            schaden = kämpfer_2.angreifen()
+            kämpfer_2.angreifen(kämpfer_1)
 
-        kämpfer_1.erleiden_schaden(schaden)
-        print(f"{kämpfer_2.name} macht {schaden} Schaden. {kämpfer_1.name} hat HP: {kämpfer_1.leben}")
+        print(f"{kämpfer_1.name} hat HP: {kämpfer_1.leben}")
 
     if kämpfer_1.leben > 0:
         print(f"\n{kämpfer_1.name} gewinnt!")
@@ -97,7 +99,6 @@ def display_menu():
 
 
 def main():
-
     while True:
         display_menu()
         auswahl = input("Wähle eine Option: ")
@@ -112,5 +113,6 @@ def main():
                 break
             case _:
                 print("Ungültige Eingabe!")
+
 
 main()
