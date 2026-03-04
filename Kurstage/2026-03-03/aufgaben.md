@@ -25,3 +25,7 @@ Baue eine Methode `erleiden_schaden(schaden)` ein.
 # Aufgabe 2
 
 Schreibe die `angreifen()` Methode so um, dass sie jetzt nicht mehr den Schaden zurückgibt, sondern das angegriffene Objekt (Ziel) übergeben bekommt und dort den Schaden anrichtet.
+
+# Aufgabe 3
+
+Die Rüstung des Kriegers soll dafür sorgen, dass Angriffe auf ihn weniger Schaden verursachen.

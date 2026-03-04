@@ -51,5 +51,5 @@ class Krieger(Charakter):
 magier = Magier("Gandalf", 100, 100)
 krieger = Krieger("Aragorn", 100, 50)
 
-schaden = magier.angreifen(krieger)
+schaden = magier.angreifen()
 krieger.erleiden_schaden(schaden)
