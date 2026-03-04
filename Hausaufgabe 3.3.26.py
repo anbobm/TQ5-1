@@ -44,3 +44,4 @@ class Krieger(Charakter):
         self._leben = self._leben - reduzierter_schaden
         if self._leben < 0:
             self._leben = 0
+
