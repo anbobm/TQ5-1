@@ -4,9 +4,9 @@ class Charakter:
         self._leben = leben
         self._schaden = 10
     
-    def angreifen(self):
+    def angreifen(self, ziel):
         print(f"{self._name} hat {self._schaden} Schaden verteilt.")
-        return self._schaden
+        ziel.erleiden_schaden(self._schaden)
     
     def erleiden_schaden(self, schaden):
         self._leben -= schaden
@@ -21,15 +21,14 @@ class Magier(Charakter):
         super().__init__(name, leben)
         self._mana = mana
 
-    def zaubern(self):
+    def zaubern(self, ziel : Charakter):
         if self._mana >= 5:
             self._mana = self._mana - 5
             schaden = int(self._schaden * 2.5)
             print(f"{self._name} hat einen Zauber angewendet! Schaden: {schaden}, Mana übrig: {self._mana}")
-            return schaden
+            ziel.erleiden_schaden(schaden)
         else:
             print(f"Nicht genug Mana {self._name}!")
-            return 0
 
         # if self.mana < 10:
         #     print("Nicht genug Mana")
@@ -42,14 +41,18 @@ class Krieger(Charakter):
     def __init__(self, name, leben, ruestung):
         super().__init__(name, leben)
         self._ruestung = ruestung
-        self._schaden = self._schaden + 5
+        self._schaden = 15
 
-    def angreifen(self):
-        print(f"{self._name} hat {self._schaden} Schaden verteilt.")
-        return self._schaden
+    def erleiden_schaden(self, schaden):
+        if self._ruestung >= schaden:
+            reduzierter_schaden = 0
+        else:
+            reduzierter_schaden = schaden - self._ruestung
+
+        super().erleiden_schaden(reduzierter_schaden)
+
 
 magier = Magier("Gandalf", 100, 100)
-krieger = Krieger("Aragorn", 100, 50)
+krieger = Krieger("Aragorn", 100, 20)
 
-schaden = magier.angreifen()
-krieger.erleiden_schaden(schaden)
+magier.zaubern(krieger)
