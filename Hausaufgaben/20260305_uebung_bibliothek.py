@@ -9,6 +9,7 @@ class Medium:
     def __init__(self, titel):
         self.titel = titel
         self.ist_ausgeliehen = False
+        self.ausgeliehen_von = None
 
     def ausleihen(self):
         self.ist_ausgeliehen = True
@@ -18,6 +19,19 @@ class Medium:
         self.ist_ausgeliehen = False
         print(f"{self.titel} wurde zurueckgegeben.")
         
+    # Erweitere die Klasse Medium um das Attribut ausgeliehen_von, welches den ausleihenden Benutzer speichert. Füge die Methoden ausleihen(benutzer) und zurückgeben() hinzu.
+    def ausleihen(self, benutzer):
+        if self.ist_ausgeliehen == False:
+            self.ausgeliehen_von = self.name
+            self.ist_ausgeliehen = True
+            print(f"Das Medium {self.titel} wurde von {self.name} ausgeliehen.")
+        else:
+            print(f"Das gewünschte Medium {self.titel} ist bereits verliehen.")
+        
+    def zurueckgeben(self):
+        print(f"Das Medium {self.titel} wurde von {self.name} zurückgegeben.")
+        
+           
 # Buch
 # Erbt von Medium
 # Attribute: # seitenzahl, autor        
@@ -52,21 +66,70 @@ class Bibliothek:
                 ausgeliehen.append(medium)
                 # print(f"{medium.titel} ist ausgeliehen.")
         return ausgeliehen
-    
-    
-buchkrimi = Buch("Leichenblässe", 435, "Arielle die Meerjungfrau")
-buchromanze = Buch("Taubendreck", 255, "Freund Doktor")
-filmaction = DVD("Sneakers - Die Lautlosen", 95, "Phil Alden Robinson")
-filmromanze = DVD("Dr. Doolittle", 90, "Betty Thomas")
 
-buchkrimi.ausleihen()
-filmaction.ausleihen()
+    # Aufgabe 2
+    # Erweitere die Klasse Bibliothek so, dass man mit hinzufuegen(medium) neue Medien hinzufügen kann.
+    def hinzufuegen(self, medium):
+        self.medien.append(medium)
+        print(f"Das Medium {medium.titel} wurde in die Bibliothek eingepflegt.")
+    
+    
+    # Aufgabe 4
+    # Füge der Klasse Bibliothek hinzu:    
+    # anzahl_medien(): gibt die Anzahl aller Medien zurück
+    # anzahl_buecher(): gibt die Anzahl aller Bücher zurück (type(..))
+    # anzahl_dvds(): gibt die Anzahl aller Dvds zurück
+    # anzahl_ausgeliehen(): gibt die Anzahl der ausgeliehenen Medien zurück
+    # anzahl_verfügbar(): gibt die Anzahl der verfügbaren Medien zurück
+    def anzahl_medien(self):
+        return len(self.medien)
+        
+    def anzahl_buecher(self):
+        if medium in self.medien : isinstance(medium, Buch)
+        return len(medium)
+    
+    def anzahl_dvds(self):
+        if medium in self.medien : isinstance(medium, DVD)
+        return len(medium)
+    
+    def anzahl_ausgeliehen(self):
+        return len(ausgeliehen)
+    
+    def anzahl_verfuegbar(self):
+        return len(self.medien) - len(ausgeliehen)
+    
+    
+    # Aufgabe 3
+    # Erstelle eine Klasse Benutzer mit dem Attribut name.
+class benutzer:
+    def __init__(self, name):
+        self.name = name
+        
+    
+
+
+
+   
+    
+buch1 = Buch("Leichenblässe", 435, "Arielle die Meerjungfrau")
+buch2 = Buch("Taubendreck", 255, "Freund Doktor")
+film1 = DVD("Sneakers - Die Lautlosen", 95, "Phil Alden Robinson")
+film2 = DVD("Dr. Doolittle", 90, "Betty Thomas")
+buch3 = Buch("Alice im Wunderland", 395, "Fred Feuerstein")
+film3 = DVD("Tinkerbell und die Feenschwestern", 80, "Anna & Elsa")
+
+
+buch1.ausleihen("Karl")
+film1.ausleihen("Katja")
 
 biblio = Bibliothek()
-biblio.medien = [buchkrimi, buchromanze, filmaction, filmromanze]
+biblio.medien = [buch1, buch2, film1, film2]
 
 ausgeliehen = biblio.ausgeliehene_medien()
-print("Bibliothesfunktion auslesen")
+
+print("Bibliotheksfunktion auslesen")
 print("Ausgeliehene Medien:")
 for medium in ausgeliehen:
     print(medium.titel)
+    
+biblio.hinzufuegen(film3)
