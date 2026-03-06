@@ -45,8 +45,51 @@ class Bibliothek(Medium):
                 ausgeliehen.append(medium)
         
         return ausgeliehen
-    
+
+    def anzahl_medien(self):
+        return len(self._medien)
+
+    def anzahl_buecher(self):
+        anzahl = 0
+        for medium in self._medien:
+            if isinstance(medium, Buch):
+                anzahl += 1
+        return anzahl
+
+    def anzahl_dvds(self):
+        anzahl = 0
+        for medium in self._medien:
+            if isinstance(medium, DVD):
+                anzahl += 1
+        return anzahl
+
+    def anzahl_ausgeliehen(self):
+        anzahl = 0
+        for medium in self._medien:
+            if medium._ist_ausgeliehen:
+                anzahl += 1
+        return anzahl
+
+    def anzahl_verfuegbar(self):
+        anzahl = 0
+        for medium in self._medien:
+            if not medium._ist_ausgeliehen:
+                anzahl += 1
+        return anzahl
         
+class Benutzer:
+    def __init__(self, name):
+        self._name = name
+    
+    def ausgeliehen_von(self):
+        print(f"{self._name} hat folgende Medien ausgeliehen:")
+    
+    def ausleihen(self, benutzer):
+        print(f"{benutzer._name} leiht ein Medium aus.")
+    
+    def zurückgeben(self, benutzer):
+        print(f"{benutzer._name} gibt ein Medium zurück.")
+    
 
 Buch1 = Buch("Der Herr der Ringe", True, 1178, "J.R.R. Tolkien")
 
@@ -57,3 +100,4 @@ ausgeliehene_medien.ausgeliehene_medien()
 print("Ausgeliehene Medien")
 for medium in ausgeliehene_medien.ausgeliehene_medien():
     print(medium._titel)
+
