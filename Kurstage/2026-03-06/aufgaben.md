@@ -30,3 +30,14 @@
 
 * `personalnummer`
 * `name`
+
+
+# Aufgabe 2
+
+Ergänze die Klasse `Unternehmen` um folgende Methoden:
+
+* `abteilung_finden(bezeichnung)`
+
+* `alle_mitarbeiter_anzeigen()`
+
+* `mitarbeiter_suchen(personalnummer)`
