@@ -20,16 +20,16 @@ class Medium:
         print(f"{self.titel} wurde zurueckgegeben.")
         
     # Erweitere die Klasse Medium um das Attribut ausgeliehen_von, welches den ausleihenden Benutzer speichert. Füge die Methoden ausleihen(benutzer) und zurückgeben() hinzu.
-    def ausleihen(self, benutzer):
+    def ausleihen_von(self, benutzer):
         if self.ist_ausgeliehen == False:
-            self.ausgeliehen_von = self.name
+            self.ausgeliehen_von = benutzer
             self.ist_ausgeliehen = True
-            print(f"Das Medium {self.titel} wurde von {self.name} ausgeliehen.")
+            print(f"Das Medium {self.titel} wurde von {benutzer} ausgeliehen.")
         else:
             print(f"Das gewünschte Medium {self.titel} ist bereits verliehen.")
         
     def zurueckgeben(self):
-        print(f"Das Medium {self.titel} wurde von {self.name} zurückgegeben.")
+        print(f"Das Medium {self.titel} wurde von {benutzer} zurückgegeben.")
         
            
 # Buch
@@ -85,19 +85,34 @@ class Bibliothek:
         return len(self.medien)
         
     def anzahl_buecher(self):
-        if medium in self.medien : isinstance(medium, Buch)
-        return len(medium)
+        count = 0
+        for medium in self.medien:
+            if type(medium) == Buch:
+                count = count + 1
+        return count
     
     def anzahl_dvds(self):
-        if medium in self.medien : isinstance(medium, DVD)
-        return len(medium)
+        count = 0
+        for medium in self.medien:
+            if type(medium) == DVD:
+                count = count + 1
+        return count
     
     def anzahl_ausgeliehen(self):
-        return len(ausgeliehen)
+        # return len(self.ausgeliehene_medien)
+        count = 0
+        for medium in self.medien:
+            if medium.ist_ausgeliehen:
+                count = count + 1
+        return count
     
     def anzahl_verfuegbar(self):
-        return len(self.medien) - len(ausgeliehen)
-    
+        # return self.anzahl_medien() - anzahl_ausgeliehen()
+        count = 0
+        for medium in self.medien:
+            if not medium.ist_ausgeliehen:
+                count = count + 1
+        return count
     
     # Aufgabe 3
     # Erstelle eine Klasse Benutzer mit dem Attribut name.
@@ -119,8 +134,8 @@ buch3 = Buch("Alice im Wunderland", 395, "Fred Feuerstein")
 film3 = DVD("Tinkerbell und die Feenschwestern", 80, "Anna & Elsa")
 
 
-buch1.ausleihen("Karl")
-film1.ausleihen("Katja")
+buch1.ausleihen_von("Karl")
+film1.ausleihen_von("Katja")
 
 biblio = Bibliothek()
 biblio.medien = [buch1, buch2, film1, film2]
@@ -133,3 +148,5 @@ for medium in ausgeliehen:
     print(medium.titel)
     
 biblio.hinzufuegen(film3)
+
+print(biblio.anzahl_medien())
