@@ -29,13 +29,31 @@ class DVD(Medium):
         self._laufzeit = laufzeit
         self._regisseur = regisseur
 
-class Bibliothek:
+class Bibliothek(Medium):
     def __init__(self):
         self._medien = []
+ 
+    def hinzufügen_medium(self, medium : Medium):
+        self._medien.append(medium)
+        print(f"{medium._titel} wurde zur Bibliothek hinzugefügt.")
     
     def ausgeliehene_medien(self):
-        print("Ausgeliehene Medien:")
+        ausgeliehen = []
+
         for medium in self._medien:
             if medium._ist_ausgeliehen:
-                print(f"- {medium._titel}")
+                ausgeliehen.append(medium)
+        
+        return ausgeliehen
+    
+        
 
+Buch1 = Buch("Der Herr der Ringe", True, 1178, "J.R.R. Tolkien")
+
+ausgeliehene_medien = Bibliothek()
+ausgeliehene_medien.hinzufügen_medium(Buch1)
+ausgeliehene_medien.ausgeliehene_medien()
+
+print("Ausgeliehene Medien")
+for medium in ausgeliehene_medien.ausgeliehene_medien():
+    print(medium._titel)
