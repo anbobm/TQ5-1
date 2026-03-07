@@ -41,3 +41,20 @@ Ergänze die Klasse `Unternehmen` um folgende Methoden:
 * `alle_mitarbeiter_anzeigen()`
 
 * `mitarbeiter_suchen(personalnummer)`
+
+# Aufgabe 3
+
+Ergänze die Klasse `Unternehmen` um eine Methode `info()`, die alle Informationen zum Unternehmen, den Abteilungen und ihrer Mitarbeiter ausgibt, z.B. so:
+
+```
+Unternehmen X
+    Abteilung A
+        Mitarbeiter 1
+        Mitarbeiter 2
+    Abteilung B
+        Mitarbeiter 3
+    Abteilung C
+        Mitarbeiter 4
+        Mitarbeiter 5
+        Mitarbeiter 6
+```
