@@ -2,6 +2,7 @@
 # Erstelle eine Basisklasse Charakter mit:
 # name
 # leben
+from random import randint
 
 class Charakter:
     def __init__(self, name, leben):
@@ -14,10 +15,13 @@ class Charakter:
     #     print(f"{self._name} hat {self._schaden} Schaden verteilt.")
    
     # Schreibe die angreifen() Methode so um, dass sie jetzt nicht mehr den Schaden zurückgibt, sondern das angegriffene Objekt (Ziel) übergeben bekommt und dort den Schaden anrichtet.
-    
+    # Aufgabe 5
+    # Angriffe sollen jetzt eine Zufallskomponente beinhalten. Es soll nicht immer der volle Schaden bewirkt werden. Benutze dazu random.randint(..).
     def angreifen(self, ziel):
-        print(f"{self._name} hat {self._schaden} verteilt!") 
-        ziel.schaden_erleiden(self._schaden)
+        schaden = self._schaden - randint(0, 5)
+                
+        print(f"{self._name} greift {ziel._name} an! Es wurden {schaden} Schaden verteilt!") 
+        ziel.schaden_erleiden(schaden)
     
     # Bonus
     # Baue eine Methode erleiden_schaden(schaden) ein.
@@ -28,6 +32,14 @@ class Charakter:
             self._leben = self._leben - schaden
             print(f"{self._name} hat {self._schaden} Schaden erlitten und noch {self._leben} Leben übrig.")
         
+    # Aufgabe 6
+    # Schreibe eine Methode ist_tot() die zurückgibt ob der Charakter tot ist (keine Lebenspunkte mehr hat).
+    def gestorben(self):
+        if self._leben <= 0:
+            return True
+        else:
+            return False
+    
     
     # Magier - zusätzlich: mana
     # Methode zaubern() (verbraucht Mana und macht mehr Schaden)         
@@ -39,13 +51,15 @@ class Magier(Charakter):
     def zaubern(self):
         if self._mana >= 5:
             self._mana = self._mana - 5
-            schaden = self._schaden * 2.5
-            print(f"{self._name} hat einen Zauber angewendet! Schaden: {schaden}, Mana übrig: {self._mana}")
-            return schaden
+            faktor = random.randint(10, 25) / 100
+            schaden = int(self._schaden * 2.5 * faktor)
+            print(f"{self._name} hat einen Zauber auf {ziel._name} angewendet! Schaden: {schaden}, Mana übrig: {self._mana}")
+            ziel.schaden_erleiden(schaden)
         else:
             print(f"Nicht genug Mana {self._name}!")
             return 0
-      
+        
+        
     # Krieger - zusätzlich: ruestung
     # Überschreibt angreifen() (mehr Schaden)  
 class Krieger(Charakter):
@@ -66,12 +80,27 @@ class Krieger(Charakter):
             print(f"{self._name} hat {self._schaden} Schaden erlitten und noch {self._leben} Lebnen übrig.")
         super().schaden_erleiden(reduzierter_schaden)
 
-
-    
+    # Aufgabe 7
+    # Erstelle zwei Charaktere und lasse sie in einer Schleife gegeneinander Kämpfen, bis einer von ihnen tot ist.
 char1 = Charakter("Wilbert", 100)
 char2 = Charakter("Marsha", 100)
 char3 = Magier("Idefix", 200, 50)
 char4 = Krieger("Gary", 110, 50)
+    
+runde = 1
+
+while not char3.gestorben() and not char4.gestorben():
+    print(f"Runde: {runde}")
+    char3.angreifen(char4)
+    if char4.gestorben():
+        print("char4 ist gestorben.")
+        break
+    char4.angreifen(char3)
+    
+    runde = runde + 1
+
+    
+
 
 
 char3.zaubern()

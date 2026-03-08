@@ -21,12 +21,12 @@ class Magier(Charakter):
         super().__init__(name, leben)
         self._mana = mana
 
-    def zaubern(self):
+    def zaubern(self, ziel : Charakter):
         if self._mana >= 5:
             self._mana = self._mana - 5
             schaden = int(self._schaden * 2.5)
             print(f"{self._name} hat einen Zauber angewendet! Schaden: {schaden}, Mana übrig: {self._mana}")
-            return schaden
+            ziel.erleiden_schaden(schaden)
         else:
             print(f"Nicht genug Mana {self._name}!")
             return 0
@@ -53,3 +53,7 @@ krieger = Krieger("Aragorn", 100, 50)
 
 schaden = magier.angreifen()
 krieger.erleiden_schaden(schaden)
+
+# Aufgabe 4
+# Ändere die Funktionsweise von zaubern() so dass sie funktioniert wie angreifen(ziel).
+
