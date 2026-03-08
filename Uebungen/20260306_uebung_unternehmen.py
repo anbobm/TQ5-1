@@ -20,16 +20,36 @@ class Unternehmen:
         for abteilung in self.abteilungen:
             if abteilung.bezeichnung == bezeichnung:
                 return abteilung
-        return None
+        print("Keine Abteilung gefunden")
         
     def mitarbeiter_anzeigen(self):
-        print(f"Mitarbeiter: {self.mitarbeiter}")
+        for abteilung in self.abteilungen:
+            for mitarbeiter in abteilung.mitarbeiter:
+                print(f"Mitarbeiter: {mitarbeiter.personalnummer}: {mitarbeiter.name}")
         
     def mitarbeiter_suchen(self, personalnummer):
-        for mitarbeiter in self.mitarbeiter:
-            if mitarbeiter.personalnummer == personalnummer:
-                print(f"Mitarbeiter mit Personalnummer {personalnummer} ist {mitarbeiter.name}.")
-        return None
+        for abteilung in self.abteilungen:
+            for mitarbeiter in self.mitarbeiter:
+                if mitarbeiter.personalnummer == personalnummer:
+                    print(f"Mitarbeiter mit Personalnummer {personalnummer} ist {mitarbeiter.name}.")
+                else:
+                    print(f"Keinen Mitarbeiter mit Personalnummer {personalnummer} gefunden.")
+
+    # Aufgabe 3
+    # Ergänze die Klasse Unternehmen um eine Methode info(), die alle Informationen zum Unternehmen, den Abteilungen und ihrer Mitarbeiter ausgibt, z.B. so:
+    def info(self):
+        print(f"Unternehmen: \n {self.name}")
+    # Unternehmen X
+    # Abteilung A
+    # Mitarbeiter 1
+    # Mitarbeiter 2
+    # Abteilung B
+    # Mitarbeiter 3
+    # Abteilung C
+    # Mitarbeiter 4
+    # Mitarbeiter 5
+    # Mitarbeiter 6
+
 
 # Klasse Abteilung
 # Attribute: bezeichnung, mitarbeiter: Liste von Objekten vom Typ Mitarbeiter
@@ -77,6 +97,10 @@ ma2 = Mitarbeiter(2, "Olaf Schneemann")
 
 # Mitarbeiter hinzufuegen
 
+# Abteilung finden
+
+
 
 # Mitarbeiter suchen
-firma1.mitarbeiter_suchen(2)
+# firma1.mitarbeiter_suchen(2)
+(firma1.abteilungen.mitarbeiter_suchen(2))
