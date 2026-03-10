@@ -34,6 +34,18 @@ class Unternehmen:
             for mitarbeiter in abteilung.mitarbeiter:
                 print(f"        {mitarbeiter.personalnummer}: {mitarbeiter.name}")
 
+    def mitarbeiter_erzeugen(self, personalnummer, name, abteilung):
+        mitarbeiter = self.mitarbeiter_suchen(personalnummer)
+
+        if mitarbeiter:
+            print(f"Mitarbeiter konnte nicht erzeugt werden: Personalnummer {personalnummer} existiert bereits")
+            return None
+        
+        mitarbeiter = Mitarbeiter(personalnummer, name)
+        abteilung.mitarbeiter_hinzufügen(mitarbeiter)
+
+        return mitarbeiter
+
 
 class Abteilung:
     def __init__(self, bezeichnung):
@@ -71,27 +83,22 @@ abteilungen = [
 ]
 
 mitarbeiter = [
-    Mitarbeiter("001", "Tunahan"),
-    Mitarbeiter("002", "Anne"),
-    Mitarbeiter("003", "Katja"),
-    Mitarbeiter("004", "Mohamad"),
-    Mitarbeiter("005", "Sebastian"),
-    Mitarbeiter("006", "Ihor"),
-    Mitarbeiter("007", "Ruwen"),
-    Mitarbeiter("008", "Nataliya"),
-    Mitarbeiter("009", "Andreas"),
-    Mitarbeiter("010", "Efkan"),
-    Mitarbeiter("009", "Max Mustermann")
+    unternehmen.mitarbeiter_erzeugen("001", "Tunahan", random.choice(abteilungen)),
+    unternehmen.mitarbeiter_erzeugen("002", "Anne", random.choice(abteilungen)),
+    unternehmen.mitarbeiter_erzeugen("003", "Katja", random.choice(abteilungen)),
+    unternehmen.mitarbeiter_erzeugen("004", "Mohamad", random.choice(abteilungen)),
+    unternehmen.mitarbeiter_erzeugen("005", "Sebastian", random.choice(abteilungen)),
+    unternehmen.mitarbeiter_erzeugen("006", "Ihor", random.choice(abteilungen)),
+    unternehmen.mitarbeiter_erzeugen("007", "Ruwen", random.choice(abteilungen)),
+    unternehmen.mitarbeiter_erzeugen("008", "Nataliya", random.choice(abteilungen)),
+    unternehmen.mitarbeiter_erzeugen("009", "Andreas", random.choice(abteilungen)),
+    unternehmen.mitarbeiter_erzeugen("010", "Efkan", random.choice(abteilungen)),
+    unternehmen.mitarbeiter_erzeugen("009", "Max Mustermann", random.choice(abteilungen))
 ]
 
 # Abteilungen hinzufügen
 for abteilung in abteilungen:
     unternehmen.abteilung_hinzufügen(abteilung)
-
-# Mitarbeiter hinzufügen (hier zufällig)
-for mitarbeiter in mitarbeiter:
-    zufällige_abteilung = random.choice(unternehmen.abteilungen)
-    zufällige_abteilung.mitarbeiter_hinzufügen(mitarbeiter)
 
 # Abteilung suchen
 gesuchte_abteilung = "Vertrieb"
@@ -120,3 +127,6 @@ else:
 
 # Unternehmensinfo ausgeben
 unternehmen.info()
+
+# Mitarbeiter erzeugen mit Personalnummer die es bereits gibt, sollte fehlschlagen
+mitarbeiter = unternehmen.mitarbeiter_erzeugen("001", "Max Mustermann", abteilungen[0])
