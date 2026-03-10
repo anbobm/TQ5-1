@@ -7,6 +7,7 @@ class Unternehmen:
     def __init__(self, name):
         self.name = name
         self.abteilungen = []
+        self.mitarbeiter = []
         
     def abteilung_hinzufuegen(self, abteilung):
         self.abteilungen.append(abteilung)
@@ -30,13 +31,26 @@ class Unternehmen:
         
     def mitarbeiter_suchen(self, personalnummer):
         for abteilung in self.abteilungen:
-            for mitarbeiter in self.mitarbeiter:
+            for mitarbeiter in abteilung.mitarbeiter:
                 if mitarbeiter.personalnummer == personalnummer:
                     print(f"Mitarbeiter mit Personalnummer {personalnummer} ist {mitarbeiter.name}.")
                     return mitarbeiter
                 else:
                     print(f"Keinen Mitarbeiter mit Personalnummer {personalnummer} gefunden.")
 
+    # Aufgabe 5
+    # Wir wollen durchsetzen, dass die personalnummer des Mitarbeiters in einem Unternehmen eindeutig ist. Dazu erstellen wir eine mitarbeiter_erzeugen() Methode in Unternehmen, der einen Mitarbeiter nur erstellt, wenn es die übergebene personalnummer nicht gibt. Der Konstruktor von Mitarbeiter soll nur von dieser Methode aufgerufen werden.
+    def mitarbeiter_erzeugen(self, personalnummer, name):
+        for m in self.mitarbeiter:
+            if m.personalnummer == personalnummer:
+                print(f"Fehler: Die Personalnummer {personalnummer} ist bereits vergeben.")
+                return None
+            
+        mitarbeiter_neu = Mitarbeiter(personalnummer, name)
+        self.mitarbeiter.append(mitarbeiter_neu)
+        return mitarbeiter_neu
+    
+    
     # Aufgabe 3
     # Ergänze die Klasse Unternehmen um eine Methode info(), die alle Informationen zum Unternehmen, den Abteilungen und ihrer Mitarbeiter ausgibt
     # def info(self):
@@ -72,21 +86,27 @@ class Abteilung:
         self.mitarbeiter = [] # : list[Abteilung]
 
     def mitarbeiter_hinzufuegen(self, mitarbeiter):
+        if mitarbeiter.abteilung is not None:
+            print(f"{mitarbeiter.name} ist bereits in Abteilung {mitarbeiter.abteilung.bezeichnung}")
+            return
         self.mitarbeiter.append(mitarbeiter)
         return self.mitarbeiter
  
     def mitarbeiter_entfernen(self, mitarbeiter):
-        self.mitarbeiter.remove(mitarbeiter)
-        return self.mitarbeiter
+        if mitarbeiter in self.mitarbeiter:
+            self.mitarbeiter.remove(mitarbeiter)
+            mitarbeiter.abteilung = None
 
 # Klasse Mitarbeiter
 # Attribute: personalnummer, name
 class Mitarbeiter:
     def __init__(self, personalnummer, name):
         self.personalnummer = personalnummer
-        self.name = name    
+        self.name = name
+        self.abteilung = None    
         
-
+# Aufgabe 4
+# Ergänze die Klasse Mitarbeiter um ein Attribut abteilung. Mit diesem soll sichergestellt werden, dass man einen Mitarbeiter nur einer Abteilung zuweisen kann.
  
         
 # Unternehmen erzeugen
@@ -105,19 +125,21 @@ firma2.abteilung_hinzufuegen(Abteilung("Außendienst"))
 firma2.abteilung_hinzufuegen(Abteilung("IT"))
 firma2.abteilung_hinzufuegen(Abteilung("Cleaning")) 
 
-ma1 = Mitarbeiter(1, "Sabine Sonne")
-ma2 = Mitarbeiter(2, "Olaf Schneemann")
-ma3 = Mitarbeiter("001", "Tunahan")
-ma4 = Mitarbeiter("002", "Anne")
-ma5 = Mitarbeiter("003", "Katja")
-ma6 = Mitarbeiter("004", "Mohamad")
-ma7 = Mitarbeiter("005", "Sebastian")
-ma8 = Mitarbeiter("006", "Ihor")
-ma9 = Mitarbeiter("007", "Ruwen")
-ma10 = Mitarbeiter("008", "Nataliya")
-ma11 = Mitarbeiter("009", "Andreas")
-ma12 = Mitarbeiter("010", "Efkan")
+ma1 = firma2.mitarbeiter_erzeugen(1, "Sabine Sonne")
+ma2 = firma2.mitarbeiter_erzeugen(2, "Olaf Schneemann")
+ma3 = firma2.mitarbeiter_erzeugen("001", "Tunahan")
+ma4 = firma2.mitarbeiter_erzeugen("002", "Anne")
+ma5 = firma2.mitarbeiter_erzeugen("003", "Katja")
+ma6 = firma2.mitarbeiter_erzeugen("004", "Mohamad")
+ma7 = firma2.mitarbeiter_erzeugen("005", "Sebastian")
+ma8 = firma2.mitarbeiter_erzeugen("006", "Ihor")
+ma9 = firma2.mitarbeiter_erzeugen("007", "Ruwen")
+ma10 = firma2.mitarbeiter_erzeugen("008", "Nataliya")
+ma11 = firma2.mitarbeiter_erzeugen("009", "Andreas")
+ma12 = firma2.mitarbeiter_erzeugen("010", "Efkan")
 mitarbeiter = [ma1, ma2, ma3, ma4, ma5, ma6, ma7, ma8, ma9, ma10, ma11, ma12]
+
+
 
 # Mitarbeiter hinzufuegen
 for mitarbeiter in mitarbeiter:
@@ -126,8 +148,10 @@ for mitarbeiter in mitarbeiter:
     
 # Abteilungen hinzufügen
 # for abteilung in abteilungen:
-#     unternehmen.abteilung_hinzufügen(abteilung)
-       
+#     unternehmen.abteilung_hinzufuegen(abteilung)
+
+
+ 
 # Abteilung finden
 
 
