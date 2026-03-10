@@ -62,3 +62,7 @@ Unternehmen X
 # Aufgabe 4
 
 Ergänze die Klasse `Mitarbeiter` um ein Attribut `abteilung`. Mit diesem soll sichergestellt werden, dass man einen Mitarbeiter nur einer Abteilung zuweisen kann.
+
+# Aufgabe 5
+
+Wir wollen durchsetzen, dass die `personalnummer` des `Mitarbeiter`s in einem `Unternehmen` eindeutig ist. Dazu erstellen wir eine `mitarbeiter_erzeugen()` Methode in `Unternehmen`, der einen `Mitarbeiter` nur erstellt, wenn es die übergebene `personalnummer` nicht gibt. Der Konstruktor von `Mitarbeiter` soll nur von dieser Methode aufgerufen werden.
