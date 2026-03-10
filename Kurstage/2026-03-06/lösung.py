@@ -15,7 +15,6 @@ class Unternehmen:
         for abteilung in self.abteilungen:
             if abteilung.bezeichnung == bezeichnung:
                 return abteilung
-            
 
     def alle_mitarbeiter_anzeigen(self):
         for abteilung in self.abteilungen:
@@ -27,6 +26,13 @@ class Unternehmen:
             for mitarbeiter in abteilung.mitarbeiter:
                 if mitarbeiter.personalnummer == personalnummer:
                     return mitarbeiter
+                
+    def info(self):
+        print(f"{self.name}")
+        for abteilung in self.abteilungen:
+            print(f"    {abteilung.bezeichnung}")
+            for mitarbeiter in abteilung.mitarbeiter:
+                print(f"        {mitarbeiter.personalnummer}: {mitarbeiter.name}")
 
 
 class Abteilung:
@@ -97,3 +103,6 @@ if mitarbeiter:
     print(f"Name: {mitarbeiter.name}")
 else:
     print(f"Mitarbeiter mit Nummer {personalnummer} nicht gefunden")
+
+# Unternehmensinfo ausgeben
+unternehmen.info()
