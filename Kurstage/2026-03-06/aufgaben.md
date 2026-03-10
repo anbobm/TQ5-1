@@ -58,3 +58,7 @@ Unternehmen X
         Mitarbeiter 5
         Mitarbeiter 6
 ```
+
+# Aufgabe 4
+
+Ergänze die Klasse `Mitarbeiter` um ein Attribut `abteilung`. Mit diesem soll sichergestellt werden, dass man einen Mitarbeiter nur einer Abteilung zuweisen kann.
