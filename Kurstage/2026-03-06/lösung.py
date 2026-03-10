@@ -11,6 +11,23 @@ class Unternehmen:
     def abteilung_entfernen(self, abteilung):
         self.abteilungen.remove(abteilung)
 
+    def abteilung_finden(self, bezeichnung):
+        for abteilung in self.abteilungen:
+            if abteilung.bezeichnung == bezeichnung:
+                return abteilung
+            
+
+    def alle_mitarbeiter_anzeigen(self):
+        for abteilung in self.abteilungen:
+            for mitarbeiter in abteilung.mitarbeiter:
+                print(f"{mitarbeiter.personalnummer}: {mitarbeiter.name}")
+
+    def mitarbeiter_suchen(self, personalnummer):
+        for abteilung in self.abteilungen:
+            for mitarbeiter in abteilung.mitarbeiter:
+                if mitarbeiter.personalnummer == personalnummer:
+                    return mitarbeiter
+
 
 class Abteilung:
     def __init__(self, bezeichnung):
@@ -61,3 +78,22 @@ for mitarbeiter in mitarbeiter:
     zufällige_abteilung = random.choice(unternehmen.abteilungen)
     zufällige_abteilung.mitarbeiter_hinzufügen(mitarbeiter)
 
+# Abteilung suchen
+gesuchte_abteilung = "Vertrieb"
+if unternehmen.abteilung_finden(gesuchte_abteilung):
+    print(f"Abteilung {gesuchte_abteilung} gefunden")
+else:
+    print(f"Abteilung {gesuchte_abteilung} nicht gefunden")
+
+# Alle Mitarbeiter anzeigen
+unternehmen.alle_mitarbeiter_anzeigen()
+
+# Einen Mitarbeiter suchen
+personalnummer = "001"
+mitarbeiter = unternehmen.mitarbeiter_suchen(personalnummer)
+if mitarbeiter:
+    print(f"Mitarbeiter gefunden:")
+    print(f"Personalnummer: {personalnummer}")
+    print(f"Name: {mitarbeiter.name}")
+else:
+    print(f"Mitarbeiter mit Nummer {personalnummer} nicht gefunden")
