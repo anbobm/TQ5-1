@@ -41,6 +41,13 @@ class Abteilung:
         self.mitarbeiter = [] # list[Mitarbeiter]
 
     def mitarbeiter_hinzufügen(self, mitarbeiter):
+        abteilung = mitarbeiter.abteilung
+        if abteilung:
+            print(f"Der Mitarbeiter ist bereits Abteilung {abteilung.bezeichnung} zugewiesen.")
+            print("Mitarbeiter wird verschoben")
+            abteilung.mitarbeiter_entfernen(mitarbeiter)
+
+        mitarbeiter.abteilung = self
         self.mitarbeiter.append(mitarbeiter)
 
     def mitarbeiter_entfernen(self, mitarbeiter):
@@ -51,6 +58,7 @@ class Mitarbeiter:
     def __init__(self, personalnummer, name):
         self.personalnummer = personalnummer
         self.name = name
+        self.abteilung = None
 
 
 unternehmen = Unternehmen("Print GmbH")
@@ -72,7 +80,8 @@ mitarbeiter = [
     Mitarbeiter("007", "Ruwen"),
     Mitarbeiter("008", "Nataliya"),
     Mitarbeiter("009", "Andreas"),
-    Mitarbeiter("010", "Efkan")
+    Mitarbeiter("010", "Efkan"),
+    Mitarbeiter("009", "Max Mustermann")
 ]
 
 # Abteilungen hinzufügen
@@ -93,6 +102,11 @@ else:
 
 # Alle Mitarbeiter anzeigen
 unternehmen.alle_mitarbeiter_anzeigen()
+
+# Testen, dass Mitarbeiter nur einer Abteilung gleichzeitig zugewiesen sein kann
+mitarbeiter1 = Mitarbeiter("xxx", "Doppelgänger")
+unternehmen.abteilungen[0].mitarbeiter_hinzufügen(mitarbeiter1)
+unternehmen.abteilungen[1].mitarbeiter_hinzufügen(mitarbeiter1)
 
 # Einen Mitarbeiter suchen
 personalnummer = "001"
