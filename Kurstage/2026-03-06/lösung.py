@@ -3,7 +3,7 @@ import random
 class Unternehmen:
     def __init__(self, name : str):
         self.name = name
-        self.abteilungen : list[Abteilung] = [] # list[Abteilung]
+        self.abteilungen = [] # list[Abteilung]
     
     def abteilung_hinzufügen(self, abteilung):
         self.abteilungen.append(abteilung)
