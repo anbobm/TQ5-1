@@ -44,3 +44,11 @@ class Rechteck(Form):
 class Quadrat(Rechteck):
     def __init__(self, kantenlänge):
         super().__init__(kantenlänge, kantenlänge)
+        
+class Fünfeck(Form):
+    pass
+        
+
+quadrat = Quadrat(10)
+rechteck = Rechteck(3, 4)
+fünfeck = Fünfeck()
