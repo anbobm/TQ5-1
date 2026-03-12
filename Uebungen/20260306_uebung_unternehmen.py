@@ -51,8 +51,8 @@ class Unternehmen:
         return mitarbeiter_neu
     
     
-    # Aufgabe 3
-    # Ergänze die Klasse Unternehmen um eine Methode info(), die alle Informationen zum Unternehmen, den Abteilungen und ihrer Mitarbeiter ausgibt
+    # # Aufgabe 3
+    # # Ergänze die Klasse Unternehmen um eine Methode info(), die alle Informationen zum Unternehmen, den Abteilungen und ihrer Mitarbeiter ausgibt
     # def info(self):
     #     print(f"Unternehmen: \n {self.name}")
     #     print("Abteilungen:")
@@ -118,6 +118,7 @@ print(firma1.name)
 print(firma2.name)
 print(firma3.name)
 
+# Abteilungen erzeugen
 firma1.abteilung_hinzufuegen(Abteilung("Geschäftsführung"))
 firma1.abteilung_hinzufuegen(Abteilung("Projektplanung"))
 firma2.abteilung_hinzufuegen(Abteilung("CEO"))
@@ -125,6 +126,7 @@ firma2.abteilung_hinzufuegen(Abteilung("Außendienst"))
 firma2.abteilung_hinzufuegen(Abteilung("IT"))
 firma2.abteilung_hinzufuegen(Abteilung("Cleaning")) 
 
+# Mitarbeiter erzeugen
 ma1 = firma2.mitarbeiter_erzeugen(1, "Sabine Sonne")
 ma2 = firma2.mitarbeiter_erzeugen(2, "Olaf Schneemann")
 ma3 = firma2.mitarbeiter_erzeugen("001", "Tunahan")
@@ -139,25 +141,42 @@ ma11 = firma2.mitarbeiter_erzeugen("009", "Andreas")
 ma12 = firma2.mitarbeiter_erzeugen("010", "Efkan")
 mitarbeiter = [ma1, ma2, ma3, ma4, ma5, ma6, ma7, ma8, ma9, ma10, ma11, ma12]
 
+ma1 = firma1.mitarbeiter_erzeugen(1, "Sabine Sonne")
+ma2 = firma1.mitarbeiter_erzeugen(2, "Olaf Schneemann")
+ma3 = firma1.mitarbeiter_erzeugen("001", "Tunahan")
+ma4 = firma1.mitarbeiter_erzeugen("002", "Anne")
+ma5 = firma1.mitarbeiter_erzeugen("003", "Katja")
+ma6 = firma1.mitarbeiter_erzeugen("004", "Mohamad")
+ma7 = firma1.mitarbeiter_erzeugen("005", "Sebastian")
+ma8 = firma1.mitarbeiter_erzeugen("006", "Ihor")
+ma9 = firma1.mitarbeiter_erzeugen("007", "Ruwen")
+ma10 = firma1.mitarbeiter_erzeugen("008", "Nataliya")
+ma11 = firma1.mitarbeiter_erzeugen("009", "Andreas")
+ma12 = firma1.mitarbeiter_erzeugen("010", "Efkan")
 
+# Abteilungen hinzufügen
+for abteilung in abteilungen:
+    firma1.abteilung_hinzufügen(abteilung)
+
+# Abteilung suchen
+gesuchte_abteilung = "Projektplanung"
+if firma1.abteilung_finden(gesuchte_abteilung):
+    print(f"Abteilung {gesuchte_abteilung} gefunden")
+else:
+    print(f"Abteilung {gesuchte_abteilung} nicht gefunden")
+
+# Alle Mitarbeiter anzeigen
+firma2.alle_mitarbeiter_anzeigen()
 
 # Mitarbeiter hinzufuegen
 for mitarbeiter in mitarbeiter:
     zufällige_abteilung = choice(firma2.abteilungen)
     zufällige_abteilung.mitarbeiter_hinzufuegen(mitarbeiter)
-    
-# Abteilungen hinzufügen
-# for abteilung in abteilungen:
-#     unternehmen.abteilung_hinzufuegen(abteilung)
 
+for mitarbeiter in mitarbeiter:
+    zufällige_abteilung = choice(firma1.abteilungen)
+    zufällige_abteilung.mitarbeiter_hinzufuegen(mitarbeiter)   
 
- 
-# Abteilung finden
-
-
-
-# Mitarbeiter suchen
-# firma1.mitarbeiter_suchen(2)
 
 firma1.info()
 firma2.info()
