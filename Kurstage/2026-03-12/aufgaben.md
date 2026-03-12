@@ -1,10 +1,10 @@
 # Aufgabe 1
 
-Das folgende Listing definiert eine Verbungsbeziehung zwischen Form, Kreis, RechtwinkligesDreieck, Quadrat und Rechteck.
+Das folgende Listing definiert eine Vererbungsbeziehung zwischen `Form`, `Kreis`, `RechtwinkligesDreieck`, `Quadrat` und `Rechteck`.
 
-Wie man sehen kann, definiert die Basisklasse Form eine Methode `flaeche()`, ohne bereits eine Basisimplementierung vorzugeben. Das macht auch Sinn, denn eine `Form` ist zu allgemein, um einen Flächeninhalt berechnen zu können.
+Wie man sehen kann, definiert die Basisklasse `Form` eine Methode `flaeche()`, ohne bereits eine Basisimplementierung vorzugeben. Das macht auch Sinn, denn eine `Form` ist zu allgemein, um einen Flächeninhalt berechnen zu können.
 
-Die Klasse Form ist also ein guter Kandidat für eine abstrakte Klasse.
+Die Klasse `Form` ist also ein guter Kandidat für eine **abstrakte** Klasse.
 
 Benutze die Klasse `ABC` und den decorator `abstractmethod` aus dem `abc`-Modul, um die Klasse `Form` und ihre Methode `flaeche()` als abstrakt zu deklarieren.
 
@@ -46,3 +46,5 @@ class Quadrat(Rechteck):
     def __init__(self, kantenlänge):
         super().__init__(kantenlänge, kantenlänge)
 ```
+
+![UML-Klassendiagramm](form_uml.png)
