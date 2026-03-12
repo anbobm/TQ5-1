@@ -53,7 +53,7 @@ Stellen Sie sich vor, Sie sind der Projektmanager eines Teams, das eine neue Sof
 
 ### Aufgabe:
 
-1. Erstellen Sie ein Gantt-Diagramm, das den gesamten Projektzeitraum abdeckt und alle oben aufgeführten Aufgaben und Phasen berücksichtigt.
+1. Erstellen Sie ein Gantt-Diagramm mit [Online-Gantt](https://www.onlinegantt.com/#/gantt), das den gesamten Projektzeitraum abdeckt und alle oben aufgeführten Aufgaben und Phasen berücksichtigt.
 2. Berücksichtigen Sie die Abhängigkeiten zwischen den Aufgaben und sorgen Sie dafür, dass keine Aufgabe vor ihrem Vorgänger beginnt.
 3. Weisen Sie den Aufgaben die entsprechenden Zeiträume zu, indem Sie die Dauer der einzelnen Aufgaben verwenden.
 4. Stellen Sie sicher, dass das Projekt innerhalb des vorgegebenen Zeitrahmens abgeschlossen wird.
