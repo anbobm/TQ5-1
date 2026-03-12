@@ -1,0 +1,28 @@
+ID,Task Name,Start Date,Duration,Dependencies
+1,Anforderungserhebung,2024-09-01,3,
+2,Marktanalyse,2024-09-01,5,
+3,Erstellung Pflichtenheft,2024-09-06,5,2
+4,Review und Freigabe Pflichtenheft,2024-09-11,2,3
+
+5,Systemarchitektur entwerfen,2024-09-16,5,4
+6,Datenbankdesign,2024-09-21,5,5
+7,UI/UX Design,2024-09-16,7,
+8,Review und Anpassungen Design,2024-09-23,3,5
+
+9,Frontend Entwicklung,2024-10-01,30,7
+10,Backend Entwicklung,2024-10-01,40,5
+11,Integration und API Entwicklung,2024-11-26,20,10
+12,Systemtests,2024-12-24,15,11
+13,Fehlerbehebung,2025-01-08,10,12
+
+14,Testfälle erstellen,2025-01-18,7,13
+15,Funktionale Tests,2025-01-25,10,14
+16,Performancetests,2025-02-04,10,15
+17,Sicherheitstests,2025-02-04,10,15
+18,Abnahmetests,2025-02-04,5,15
+
+19,Marketingstrategie erstellen,2025-03-01,7,
+20,Dokumentation und Schulungsmaterial,2025-03-01,10,
+21,Rolloutplanung,2025-03-11,5,20
+22,Soft Launch,2025-03-18,5,19
+23,Full Launch,2025-03-25,5,22
