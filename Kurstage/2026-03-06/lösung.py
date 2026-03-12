@@ -72,38 +72,41 @@ class Mitarbeiter:
         self.name = name
         self.abteilung = None
 
-
+# Unternehmensobjekt erzeugen
 unternehmen = Unternehmen("Print GmbH")
 
-abteilungen = [
-    Abteilung("Entwicklung"),
-    Abteilung("Vertrieb"),
-    Abteilung("Produktion"),
-    Abteilung("Buchhaltung"),
-]
+# Abteilungen erzeugen
+entwicklung = Abteilung("Entwicklung")
+vertrieb = Abteilung("Vertrieb")
+produktion = Abteilung("Produktion")
+buchhaltung = Abteilung("Buchhaltung")
 
-mitarbeiter = [
-    unternehmen.mitarbeiter_erzeugen("001", "Tunahan", random.choice(abteilungen)),
-    unternehmen.mitarbeiter_erzeugen("002", "Anne", random.choice(abteilungen)),
-    unternehmen.mitarbeiter_erzeugen("003", "Katja", random.choice(abteilungen)),
-    unternehmen.mitarbeiter_erzeugen("004", "Mohamad", random.choice(abteilungen)),
-    unternehmen.mitarbeiter_erzeugen("005", "Sebastian", random.choice(abteilungen)),
-    unternehmen.mitarbeiter_erzeugen("006", "Ihor", random.choice(abteilungen)),
-    unternehmen.mitarbeiter_erzeugen("007", "Ruwen", random.choice(abteilungen)),
-    unternehmen.mitarbeiter_erzeugen("008", "Nataliya", random.choice(abteilungen)),
-    unternehmen.mitarbeiter_erzeugen("009", "Andreas", random.choice(abteilungen)),
-    unternehmen.mitarbeiter_erzeugen("010", "Efkan", random.choice(abteilungen)),
-    unternehmen.mitarbeiter_erzeugen("009", "Max Mustermann", random.choice(abteilungen))
-]
+abteilungen = [entwicklung, vertrieb, produktion, buchhaltung]
 
-# Abteilungen hinzufügen
+# Abteilungen dem Unternehmen hinzufügen
 for abteilung in abteilungen:
     unternehmen.abteilung_hinzufügen(abteilung)
 
+# Mitarbeiter anlegen (und Abteilung zuweisen)
+unternehmen.mitarbeiter_erzeugen("001", "Tunahan", entwicklung)
+unternehmen.mitarbeiter_erzeugen("002", "Anne", vertrieb)
+unternehmen.mitarbeiter_erzeugen("003", "Katja", produktion)
+unternehmen.mitarbeiter_erzeugen("004", "Mohamad", produktion)
+unternehmen.mitarbeiter_erzeugen("005", "Sebastian", random.choice(abteilungen))
+unternehmen.mitarbeiter_erzeugen("006", "Ihor", buchhaltung)
+unternehmen.mitarbeiter_erzeugen("007", "Ruwen", vertrieb)
+unternehmen.mitarbeiter_erzeugen("008", "Nataliya", entwicklung)
+unternehmen.mitarbeiter_erzeugen("009", "Andreas", produktion)
+unternehmen.mitarbeiter_erzeugen("010", "Efkan", entwicklung)
+
+# Soll fehlschlagen, da Mitarbeiter mit Nummer 009 bereits existiert
+unternehmen.mitarbeiter_erzeugen("009", "Max Mustermann", vertrieb)
+
 # Abteilung suchen
-gesuchte_abteilung = "Vertrieb"
-if unternehmen.abteilung_finden(gesuchte_abteilung):
-    print(f"Abteilung {gesuchte_abteilung} gefunden")
+gesuchte_abteilung = unternehmen.abteilung_finden("Vertrieb")
+
+if gesuchte_abteilung:
+    print(f"Abteilung gefunden: {abteilung.bezeichnung}")
 else:
     print(f"Abteilung {gesuchte_abteilung} nicht gefunden")
 
