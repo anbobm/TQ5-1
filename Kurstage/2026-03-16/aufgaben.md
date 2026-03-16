@@ -64,7 +64,7 @@ bar foo bar
 foo 
 ```
 
-# Aufgabe 2
+# Aufgabe 3
 
 Es gibt eine Datei `foobar2.txt` mit folgendem Inhalt. Zähle wie oft das Wort `foo` in dieser Datei vorkommt.
 
