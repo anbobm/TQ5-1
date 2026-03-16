@@ -4,15 +4,15 @@ datei = open("test.txt")
 
 # print(inhalt)
 
-zeilennummer = 1
+count = 1
 zeile = datei.readline()
 
 while zeile != "":
     if "bar" in zeile:
-        print("\"bar\" gefunden in Zeile:", zeilennummer)
+        print("\"bar\" gefunden in Zeile:", count)
 
     zeile = datei.readline()
-    zeilennummer = zeilennummer + 1
+    count = count + 1
 
     
 
