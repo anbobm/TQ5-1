@@ -63,3 +63,28 @@ bar bar foo foo bar
 bar foo bar 
 foo 
 ```
+
+# Aufgabe 2
+
+Es gibt eine Datei `foobar2.txt` mit folgendem Inhalt. Zähle wie oft das Wort `foo` in dieser Datei vorkommt.
+
+```
+bar foo foo foo bar bar foo foo bar foo 
+bar foo bar bar foo bar bar bar foo foo foo foo foo bar 
+bar foo bar foo foo foo bar bar foo foo foo bar bar foo bar bar bar foo 
+foo bar foo bar bar bar foo bar foo bar bar bar bar bar foo bar bar bar bar bar foo bar bar foo bar foo bar bar foo foo foo foo foo 
+bar foo foo 
+foo foo 
+bar bar bar bar 
+bar 
+bar foo foo bar bar foo foo bar foo bar foo 
+bar foo 
+foo bar 
+foo foo foo 
+bar bar foo foo bar 
+bar foo foo bar foo foo bar foo foo bar 
+foo 
+foo bar foo bar 
+bar foo 
+bar foo foo foo foo foo bar bar foo bar foo bar bar 
+```
