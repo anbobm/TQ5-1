@@ -88,3 +88,39 @@ foo bar foo bar
 bar foo 
 bar foo foo foo foo foo bar bar foo bar foo bar bar 
 ```
+
+# Aufgabe 4
+
+Der Benutzer soll Vornamen, Nachnamen und sein Alter eingeben. Z.B.
+
+```
+Vorname? Max
+Nachname? Mustermann
+Alter? 30
+```
+
+Anschließend sollen die eingebenen Daten in der Datei `person.txt` geschrieben werden, in folgender Form: `Max,Mustermann,30`
+
+**Zusatz**:
+
+Der Nutzer kann so lange Personendaten eingeben, bis er abbrechen möchte:
+
+```
+Vorname? Max
+Nachname? Mustermann
+Alter? 30
+Weiter? (j/n) j
+Vorname? Maxine
+Nachname? Musterfrau
+Alter? 25
+Weiter? (j/n) n
+```
+
+Anschließend landen alle Daten in der Datei `person.txt`, pro Zeile ein Datensatz:
+
+```
+Max,Mustermann,30
+Maxine,Musterfrau,25
+Paul,Pausenfreu,17
+Ingrid,Individuell,23
+```
