@@ -1,90 +1,90 @@
-Datum: 2026-3-22
+Datum: 22.3.2026
 Uhrzeit: 10:24
 
-Datum: 2026-3-4
+Datum: 4.3.2026
 Uhrzeit: 22:42
 
-Datum: 2026-3-28
+Datum: 28.3.2026
 Uhrzeit: 23:18
 
-Datum: 2026-7-21
+Datum: 21.7.2026
 Uhrzeit: 10:25
 
-Datum: 2026-8-30
+Datum: 30.8.2026
 Uhrzeit: 22:25
 
-Datum: 2026-3-24
+Datum: 24.3.2026
 Uhrzeit: 20:4
 
-Datum: 2026-4-17
+Datum: 17.4.2026
 Uhrzeit: 7:51
 
-Datum: 2026-6-26
+Datum: 26.6.2026
 Uhrzeit: 23:39
 
-Datum: 2026-8-24
+Datum: 24.8.2026
 Uhrzeit: 7:28
 
-Datum: 2026-5-4
+Datum: 4.5.2026
 Uhrzeit: 19:48
 
-Datum: 2026-11-29
+Datum: 29.11.2026
 Uhrzeit: 18:38
 
-Datum: 2026-7-18
+Datum: 18.7.2026
 Uhrzeit: 16:30
 
-Datum: 2026-10-7
+Datum: 7.10.2026
 Uhrzeit: 9:17
 
-Datum: 2026-6-16
+Datum: 16.6.2026
 Uhrzeit: 19:7
 
-Datum: 2026-10-14
+Datum: 14.10.2026
 Uhrzeit: 23:29
 
-Datum: 2026-2-8
+Datum: 8.2.2026
 Uhrzeit: 16:34
 
-Datum: 2026-7-20
+Datum: 20.7.2026
 Uhrzeit: 14:49
 
-Datum: 2026-6-15
+Datum: 15.6.2026
 Uhrzeit: 17:15
 
-Datum: 2026-2-21
+Datum: 21.2.2026
 Uhrzeit: 17:51
 
-Datum: 2026-7-1
+Datum: 1.7.2026
 Uhrzeit: 3:41
 
-Datum: 2026-8-5
+Datum: 5.8.2026
 Uhrzeit: 21:53
 
-Datum: 2026-7-1
+Datum: 1.7.2026
 Uhrzeit: 19:16
 
-Datum: 2026-4-13
+Datum: 13.4.2026
 Uhrzeit: 2:45
 
-Datum: 2026-8-10
+Datum: 10.8.2026
 Uhrzeit: 6:28
 
-Datum: 2026-8-24
+Datum: 24.8.2026
 Uhrzeit: 15:54
 
-Datum: 2026-6-30
+Datum: 30.6.2026
 Uhrzeit: 0:37
 
-Datum: 2026-2-13
+Datum: 13.2.2026
 Uhrzeit: 15:23
 
-Datum: 2026-2-22
+Datum: 22.2.2026
 Uhrzeit: 6:47
 
-Datum: 2026-6-7
+Datum: 7.6.2026
 Uhrzeit: 12:58
 
-Datum: 2026-10-1
+Datum: 1.10.2026
 Uhrzeit: 21:50
 
