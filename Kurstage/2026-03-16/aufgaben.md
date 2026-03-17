@@ -131,8 +131,8 @@ Die Datensätze aus `person.txt` sollen eingelesen und in einer Liste aus Dictio
 
 ```python
 personen = [
-    {"vorname": "Max", "Nachname": "Mustermann", "alter": "30"},
-    {"vorname": "Maxine", "Nachname": "Musterfrau", "alter": "25"},
+    {"vorname": "Max", "nachname": "Mustermann", "alter": "30"},
+    {"vorname": "Maxine", "nachname": "Musterfrau", "alter": "25"},
     ...
 ]
 ```
