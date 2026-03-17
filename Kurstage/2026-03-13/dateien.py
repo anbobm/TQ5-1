@@ -26,3 +26,14 @@ while drei_zeichen != "":
     time.sleep(2)
 
 datei.close()
+
+
+# In der Regel öffnet man Dateien mit dem with-Keyword:
+
+with open(r"Kurstage\2026-03-16\person.txt") as datei:
+    inhalt = datei.read(10)
+    inhalt = datei.read(10)
+    inhalt = datei.read(10)
+    inhalt = datei.read(10)
+    inhalt = datei.read(10)
+print()

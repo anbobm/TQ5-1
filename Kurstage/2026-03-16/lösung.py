@@ -46,25 +46,39 @@
 # # print(f"Es gibt {anzahl} Wörter in der Datei")
 
 
-# Aufgabe 3
+# # Aufgabe 3
 
-datei = open("Kurstage/2026-03-16/foobar2.txt")
+# datei = open("Kurstage/2026-03-16/foobar2.txt")
 
-anzahl = 0
-for zeile in datei:
-    anzahl += zeile.split().count("foo")
-print(f"Das Wort foo kommt {anzahl} mal in der Datei vor.")
-
-# # Alternative 1
-# print(f"Es gibt {datei.read().split().count("foo")} Wörter in der Datei")
-
-# # Alternative 2
 # anzahl = 0
 # for zeile in datei:
-#     for wort in zeile.split():
-#         if wort == "foo":
-#             anzahl += 1
+#     anzahl += zeile.split().count("foo")
 # print(f"Das Wort foo kommt {anzahl} mal in der Datei vor.")
 
+# # # Alternative 1
+# # print(f"Es gibt {datei.read().split().count("foo")} Wörter in der Datei")
 
+# # # Alternative 2
+# # anzahl = 0
+# # for zeile in datei:
+# #     for wort in zeile.split():
+# #         if wort == "foo":
+# #             anzahl += 1
+# # print(f"Das Wort foo kommt {anzahl} mal in der Datei vor.")
 
+# Aufgabe 4
+
+# Datei muss mit mode = "w" geöffnet werden, sonst kommt bei write() ein Fehler,
+# da sie defaultmäßig nur mit "r", also zum lesen, geöffnet wird
+datei = open("Kurstage/2026-03-16/person.txt", "w")
+
+weiter = "j"
+while weiter == "j":
+    vorname = input("Vorname? ")
+    nachname = input("Nachname? ")
+    alter = input("Alter? ")
+    datei.write(f"{vorname},{nachname},{alter}\n")
+
+    weiter = input("Weiter? (j/n)")
+
+datei.close()

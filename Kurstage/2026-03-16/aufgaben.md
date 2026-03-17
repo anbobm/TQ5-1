@@ -124,3 +124,17 @@ Maxine,Musterfrau,25
 Paul,Pausenfreu,17
 Ingrid,Individuell,23
 ```
+
+# Aufgabe 5
+
+Die Datensätze aus `person.txt` sollen eingelesen und in einer Liste aus Dictionaries gespeichert werden:
+
+```python
+personen = [
+    {"vorname": "Max", "nachname": "Mustermann", "alter": "30"},
+    {"vorname": "Maxine", "nachname": "Musterfrau", "alter": "25"},
+    ...
+]
+```
+
+Überprüfe mit `print(personen)` ob du erfolgreich warst.
