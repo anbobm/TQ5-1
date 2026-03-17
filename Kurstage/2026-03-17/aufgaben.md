@@ -81,3 +81,17 @@ Uhrzeit: 22:42
 2026-6-7 12:58Uhr
 2026-10-1 21:50Uhr
 ```
+
+# Aufgabe 4
+
+Wie Aufgabe 3. Die gleiche Datei `dates.txt` soll genutzt werden, aber das Format von `formatted_dates.txt` soll so aussehen (Datumsformat jetzt Tag.Monat.Jahr anstelle von Jahr-Monat-Tag):
+
+```
+Datum: 22.3.2026
+Uhrzeit: 10:24
+
+Datum: 4.3.2026
+Uhrzeit: 22:42
+
+...
+```
