@@ -36,10 +36,3 @@ datei.close()
 # Maxine,Musterfrau,25
 # Paul,Pausenfreu,17
 # Ingrid,Individuell,23
-
-
-# eingabe = input("Gib einen Satz ein: ")
-# wortliste = eingabe.split()
-# wörter = len(wortliste)
-
-# print(f"Der Satz hat {wörter} Wörter.")
