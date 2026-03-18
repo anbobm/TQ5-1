@@ -3,35 +3,35 @@ Datum: 19.10.2026
 Uhrzeit: 19:58
 
 Temperatur: 19.9 °C
-Datum: 04.01.2026
+Datum: 4.1.2026
 Uhrzeit: 9:36
 
 Temperatur: 24.4 °C
-Datum: 10.01.2026
+Datum: 10.1.2026
 Uhrzeit: 16:42
 
 Temperatur: 13.3 °C
-Datum: 02.12.2026
+Datum: 2.12.2026
 Uhrzeit: 6:47
 
 Temperatur: 22.1 °C
-Datum: 26.03.2026
+Datum: 26.3.2026
 Uhrzeit: 9:15
 
 Temperatur: 11.6 °C
-Datum: 09.03.2026
+Datum: 9.3.2026
 Uhrzeit: 11:22
 
 Temperatur: 22.4 °C
-Datum: 04.04.2026
+Datum: 4.4.2026
 Uhrzeit: 13:3
 
 Temperatur: 16.3 °C
-Datum: 29.03.2026
+Datum: 29.3.2026
 Uhrzeit: 22:31
 
 Temperatur: 5.5 °C
-Datum: 30.08.2026
+Datum: 30.8.2026
 Uhrzeit: 2:52
 
 Temperatur: 20.8 °C
@@ -39,15 +39,15 @@ Datum: 29.12.2026
 Uhrzeit: 10:13
 
 Temperatur: 5.1 °C
-Datum: 20.09.2026
+Datum: 20.9.2026
 Uhrzeit: 5:38
 
 Temperatur: 20.1 °C
-Datum: 01.02.2026
+Datum: 1.2.2026
 Uhrzeit: 12:51
 
 Temperatur: 14.7 °C
-Datum: 27.06.2026
+Datum: 27.6.2026
 Uhrzeit: 22:50
 
 Temperatur: 8.7 °C
@@ -55,66 +55,66 @@ Datum: 30.10.2026
 Uhrzeit: 8:3
 
 Temperatur: 19.2 °C
-Datum: 17.07.2026
+Datum: 17.7.2026
 Uhrzeit: 21:38
 
 Temperatur: 13.5 °C
-Datum: 05.06.2026
+Datum: 5.6.2026
 Uhrzeit: 12:49
 
 Temperatur: 18.3 °C
-Datum: 07.01.2026
+Datum: 7.1.2026
 Uhrzeit: 7:28
 
 Temperatur: 6.4 °C
-Datum: 20.06.2026
+Datum: 20.6.2026
 Uhrzeit: 8:31
 
 Temperatur: 17.4 °C
-Datum: 11.04.2026
+Datum: 11.4.2026
 Uhrzeit: 6:57
 
 Temperatur: 24.0 °C
-Datum: 01.03.2026
+Datum: 1.3.2026
 Uhrzeit: 9:29
 
 Temperatur: 20.1 °C
-Datum: 23.04.2026
+Datum: 23.4.2026
 Uhrzeit: 11:10
 
 Temperatur: 6.7 °C
-Datum: 06.12.2026
+Datum: 6.12.2026
 Uhrzeit: 18:40
 
 Temperatur: 21.5 °C
-Datum: 02.05.2026
+Datum: 2.5.2026
 Uhrzeit: 20:44
 
 Temperatur: 16.1 °C
-Datum: 01.07.2026
+Datum: 1.7.2026
 Uhrzeit: 14:43
 
 Temperatur: 12.2 °C
-Datum: 11.02.2026
+Datum: 11.2.2026
 Uhrzeit: 0:9
 
 Temperatur: 14.1 °C
-Datum: 27.02.2026
+Datum: 27.2.2026
 Uhrzeit: 13:24
 
 Temperatur: 7.0 °C
-Datum: 16.05.2026
+Datum: 16.5.2026
 Uhrzeit: 19:24
 
 Temperatur: 13.8 °C
-Datum: 12.05.2026
+Datum: 12.5.2026
 Uhrzeit: 0:54
 
 Temperatur: 6.3 °C
-Datum: 22.08.2026
+Datum: 22.8.2026
 Uhrzeit: 8:44
 
 Temperatur: 22.1 °C
-Datum: 09.10.2026
+Datum: 9.10.2026
 Uhrzeit: 7:9
 
