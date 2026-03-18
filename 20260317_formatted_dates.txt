@@ -1,60 +1,90 @@
 Datum: 2026-3-22
-Uhrzeit: 10:24Uhr
+Uhrzeit: 10:24
+
 Datum: 2026-3-4
-Uhrzeit: 22:42Uhr
+Uhrzeit: 22:42
+
 Datum: 2026-3-28
-Uhrzeit: 23:18Uhr
+Uhrzeit: 23:18
+
 Datum: 2026-7-21
-Uhrzeit: 10:25Uhr
+Uhrzeit: 10:25
+
 Datum: 2026-8-30
-Uhrzeit: 22:25Uhr
+Uhrzeit: 22:25
+
 Datum: 2026-3-24
-Uhrzeit: 20:4Uhr
+Uhrzeit: 20:4
+
 Datum: 2026-4-17
-Uhrzeit: 7:51Uhr
+Uhrzeit: 7:51
+
 Datum: 2026-6-26
-Uhrzeit: 23:39Uhr
+Uhrzeit: 23:39
+
 Datum: 2026-8-24
-Uhrzeit: 7:28Uhr
+Uhrzeit: 7:28
+
 Datum: 2026-5-4
-Uhrzeit: 19:48Uhr
+Uhrzeit: 19:48
+
 Datum: 2026-11-29
-Uhrzeit: 18:38Uhr
+Uhrzeit: 18:38
+
 Datum: 2026-7-18
-Uhrzeit: 16:30Uhr
+Uhrzeit: 16:30
+
 Datum: 2026-10-7
-Uhrzeit: 9:17Uhr
+Uhrzeit: 9:17
+
 Datum: 2026-6-16
-Uhrzeit: 19:7Uhr
+Uhrzeit: 19:7
+
 Datum: 2026-10-14
-Uhrzeit: 23:29Uhr
+Uhrzeit: 23:29
+
 Datum: 2026-2-8
-Uhrzeit: 16:34Uhr
+Uhrzeit: 16:34
+
 Datum: 2026-7-20
-Uhrzeit: 14:49Uhr
+Uhrzeit: 14:49
+
 Datum: 2026-6-15
-Uhrzeit: 17:15Uhr
+Uhrzeit: 17:15
+
 Datum: 2026-2-21
-Uhrzeit: 17:51Uhr
+Uhrzeit: 17:51
+
 Datum: 2026-7-1
-Uhrzeit: 3:41Uhr
+Uhrzeit: 3:41
+
 Datum: 2026-8-5
-Uhrzeit: 21:53Uhr
+Uhrzeit: 21:53
+
 Datum: 2026-7-1
-Uhrzeit: 19:16Uhr
+Uhrzeit: 19:16
+
 Datum: 2026-4-13
-Uhrzeit: 2:45Uhr
+Uhrzeit: 2:45
+
 Datum: 2026-8-10
-Uhrzeit: 6:28Uhr
+Uhrzeit: 6:28
+
 Datum: 2026-8-24
-Uhrzeit: 15:54Uhr
+Uhrzeit: 15:54
+
 Datum: 2026-6-30
-Uhrzeit: 0:37Uhr
+Uhrzeit: 0:37
+
 Datum: 2026-2-13
-Uhrzeit: 15:23Uhr
+Uhrzeit: 15:23
+
 Datum: 2026-2-22
-Uhrzeit: 6:47Uhr
+Uhrzeit: 6:47
+
 Datum: 2026-6-7
-Uhrzeit: 12:58Uhr
+Uhrzeit: 12:58
+
 Datum: 2026-10-1
-Uhrzeit: 21:50Uhr
+Uhrzeit: 21:50
+

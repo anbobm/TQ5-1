@@ -14,7 +14,7 @@
 # Ausgabe: Ich zahle bar.
 
 # eingabe = input("Gib etwas ein: ")
-# ausgabe = eingabe.rstrip("bar")
+# ausgabe = eingabe.rstrip("bar") # removesuffix("bar") nimmt nur 1x bar weg, während strip alle Zeichen in irgendeiner Kombi wegschneidet
 
 # print(ausgabe)
 
@@ -38,17 +38,17 @@
 
 datumsliste = []
 datei = open("20260317_dates.txt")
-datei2 = open("20260317_formatted_dates.txt", "x")
+datei2 = open("20260317_formatted_dates.txt", "w")
 
 for zeile in datei:
         datum, uhrzeit = zeile.strip().split(" ")
         date = {
             "Datum": datum.strip(),
-            "Uhrzeit": uhrzeit.strip("Uhr")
+            "Uhrzeit": uhrzeit.rstrip("Uhr")
         }
         datumsliste.append(date)
         
-        datei2.write(f"Datum: {datum}\nUhrzeit: {uhrzeit}\n")
+        datei2.write(f"Datum: {datum}\nUhrzeit: {uhrzeit.rstrip("Uhr")}\n\n")
 
 print(datumsliste)
 datei.close()
