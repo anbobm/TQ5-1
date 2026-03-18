@@ -1,4 +1,4 @@
-# Aufgabe 3
+# Aufgabe 3.1
 
 datei = open("Kurstage/Aufgabe 3.1_2026_03_17/dates.txt", "r")
 neue_datei = open("Kurstage/Aufgabe 3.1_2026_03_17/formatted_dates.txt", "w")
