@@ -14,17 +14,17 @@ class TempMessung:
         self.uhrzeit = uhrzeit
         
     def __repr__(self):
-        return f'TempMessung({self.wert}, "{self.datum}", "{self.uhrzeit}")'
+        return f'TempMessung({self.wert}, "{self.datum}", "{self.uhrzeit}\n")'
     
 temperaturen = []
 
-datei = open("20260318_temperaturen.txt", "r", encoding="utf-8")
+datei = open("20260318_temperaturen.txt", encoding="utf-8")
 for zeile in datei:
-    zeile = zeile.strip()
+    zeile = zeile.rstrip("Uhr")
     if not zeile:
         continue
     
-    wert, datum, uhrzeit = [mess.strip() for mess in zeile.split(" ")]
+    wert, datum, uhrzeit = [mess.strip() for mess in zeile.split()]
     temperaturen.append(TempMessung(wert, datum, uhrzeit))
     
     print(temperaturen)
