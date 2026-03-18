@@ -43,7 +43,7 @@ datei2 = open("20260317_formatted_dates.txt", "w")
 for zeile in datei:
         datum, uhrzeit = zeile.strip().split(" ")
         date = {
-            "Datum": datum.strip(),
+            "Datum": datum,
             "Uhrzeit": uhrzeit.rstrip("Uhr")
         }
         datumsliste.append(date)
