@@ -24,7 +24,7 @@ zeilen = inhalt.split()
 
 with open('dates_output.txt', 'w') as ausgabe:
     for zeile in range(0, len(zeilen), 2):
-        ausgabe.write(f"Datum: {zeilen[zeile]}, \nUhrzeit: {zeilen[zeile + 1].rstrip('Uhr')}\n")
+        ausgabe.write(f"Datum: {zeilen[zeile]}, \nUhrzeit: {zeilen[zeile + 1].rstrip('Uhr')}\n\n")
 
 #Aufgabe 4
 with open('dates.txt', 'r') as eingabe:
@@ -35,12 +35,11 @@ date = []
 for i in range(0, len(zeilen), 2):
     date.append(zeilen[i])
 
-anzahl = 0
 with open('dates_output2.txt', 'w') as ausgabe:
     for zeile in range(0, len(zeilen), 2):
         d = zeilen[zeile].replace('-', '.')
         d = d.split(".")
         date = ".".join(reversed(d))
-        ausgabe.write(f"Datum: {date}, \nUhrzeit: {zeilen[zeile + 1].rstrip('Uhr')}\n")
+        ausgabe.write(f"Datum: {date}, \nUhrzeit: {zeilen[zeile + 1].rstrip('Uhr')}\n\n")
         
 
