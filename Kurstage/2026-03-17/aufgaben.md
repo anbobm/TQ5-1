@@ -98,7 +98,9 @@ Uhrzeit: 22:42
 
 # Aufgabe 5
 
-`formatted_temps.txt`:
+Generiere die datei `formatted_temps.txt` im angegebenen Format aus der unten gegebenen Datei `temps.txt`.
+
+Format von `formatted_temps.txt`:
 ```
 Temperatur: 23.2 °C
 Datum: 22.3.2026
@@ -110,7 +112,6 @@ Uhrzeit: 22:42
 
 ...
 ```
-
 
 `temps.txt`:
 ```
