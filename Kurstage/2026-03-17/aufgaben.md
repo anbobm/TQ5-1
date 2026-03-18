@@ -151,7 +151,7 @@ Uhrzeit: 22:42
 
 Erstelle eine Klasse `TemperaturMessung` mit den Attributen `wert` (`float` in Celsius), `datum` (String in der Form `22.12.2026`) und `uhrzeit` (String in der Form `3:14`).
 
-Überschreibe in der Klasse die Methode `__repr__(self)`. Diese soll einen String **zurückgeben** der Form: `TemperaturMessung(24.5, "2026-12-24", "18:00")`.
+Überschreibe in der Klasse die Methode `__repr__(self)`. Diese soll einen String **zurückgeben** der Form: `TemperaturMessung(24.5, '24.12.2026', '18:00')`.
 
 Lies die Datei `temps.txt` ein, und erstelle eine Liste `temperaturen` von `TemperaturMessung`-Objekten, je eins pro Datensatz.
 
