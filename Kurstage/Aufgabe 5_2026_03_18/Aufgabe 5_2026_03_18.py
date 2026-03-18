@@ -2,7 +2,7 @@
 
 from datetime import datetime
 
-datei = open("Kurstage/Aufgabe 5_2026_03_18/temps.txt", "r", encoding="utf-8")
+datei = open("Kurstage/Aufgabe 5_2026_03_18/ted_temps.txt", "r") as datei:
 neue_datei = open("Kurstage/Aufgabe 5_2026_03_18/formatted_temps.txt", "w", encoding="utf-8")
 
 for zeile in datei:
