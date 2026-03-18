@@ -36,57 +36,22 @@
 # Uhrzeit: 22:42
 
 
-datumsliste = []
-datei = open("20260317_dates.txt")
-datei2 = open("20260317_formatted_dates.txt", "w")
+# datumsliste = []
+# datei = open("20260317_dates.txt")
+# datei2 = open("20260317_formatted_dates.txt", "w")
 
-for zeile in datei:
-        datum, uhrzeit = zeile.strip().split(" ")
-        date = {
-            "Datum": datum,
-            "Uhrzeit": uhrzeit.rstrip("Uhr")
-        }
-        datumsliste.append(date)
+# for zeile in datei:
+#         datum, uhrzeit = zeile.strip().split(" ")
+#         date = {
+#             "Datum": datum,
+#             "Uhrzeit": uhrzeit.rstrip("Uhr")
+#         }
+#         datumsliste.append(date)
         
-        datei2.write(f"Datum: {datum}\nUhrzeit: {uhrzeit.rstrip("Uhr")}\n\n")
+#         datei2.write(f"Datum: {datum}\nUhrzeit: {uhrzeit.rstrip("Uhr")}\n\n")
 
-print(datumsliste)
-datei.close()
-
-# ...
-# dates.txt:
-
-# 2026-3-22 10:24Uhr
-# 2026-3-4 22:42Uhr
-# 2026-3-28 23:18Uhr
-# 2026-7-21 10:25Uhr
-# 2026-8-30 22:25Uhr
-# 2026-3-24 20:4Uhr
-# 2026-4-17 7:51Uhr
-# 2026-6-26 23:39Uhr
-# 2026-8-24 7:28Uhr
-# 2026-5-4 19:48Uhr
-# 2026-11-29 18:38Uhr
-# 2026-7-18 16:30Uhr
-# 2026-10-7 9:17Uhr
-# 2026-6-16 19:7Uhr
-# 2026-10-14 23:29Uhr
-# 2026-2-8 16:34Uhr
-# 2026-7-20 14:49Uhr
-# 2026-6-15 17:15Uhr
-# 2026-2-21 17:51Uhr
-# 2026-7-1 3:41Uhr
-# 2026-8-5 21:53Uhr
-# 2026-7-1 19:16Uhr
-# 2026-4-13 2:45Uhr
-# 2026-8-10 6:28Uhr
-# 2026-8-24 15:54Uhr
-# 2026-6-30 0:37Uhr
-# 2026-2-13 15:23Uhr
-# 2026-2-22 6:47Uhr
-# 2026-6-7 12:58Uhr
-# 2026-10-1 21:50Uhr
-
+# print(datumsliste)
+# datei.close()
 
 
 
@@ -99,5 +64,50 @@ datei.close()
 
 # Datum: 4.3.2026
 # Uhrzeit: 22:42
+# from datetime import datetime
+# datumsliste = []
+# datei = open("20260317_dates.txt")
+# datei2 = open("20260317_formatted_dates.txt", "w")
 
-# ...
+# for zeile in datei:
+#         datum, uhrzeit = zeile.strip().split(" ")
+#         jahr, monat, tag = datum.split("-")
+#         date = {
+#             "Datum": datum,
+#             "Uhrzeit": uhrzeit.rstrip("Uhr")
+#         }
+#         datumsliste.append(date)
+        
+#         datei2.write(f"Datum: {tag}.{monat}.{jahr}\nUhrzeit: {uhrzeit.rstrip("Uhr")}\n\n")
+
+# print(datumsliste)
+# datei.close()
+
+# Aufgabe 5
+# formatted_temps.txt:
+
+# Temperatur: 23.2 °C
+# Datum: 22.3.2026
+# Uhrzeit: 10:24
+
+# Temperatur: 6.0 °C
+# Datum: 4.3.2026
+# Uhrzeit: 22:42
+from datetime import datetime
+datumsliste = []
+datei = open("20260318_temperaturen.txt")
+datei2 = open("20260318_formatted_temperaturen.txt", "w")
+
+for zeile in datei:
+        temp, datum, uhrzeit = zeile.strip().split(" ")
+        jahr, monat, tag = datum.split("-")
+        date = {
+            "Datum": datum,
+            "Uhrzeit": uhrzeit.rstrip("Uhr")
+        }
+        datumsliste.append(date)
+        
+        datei2.write(f"Temperatur: {temp}\nDatum: {tag}.{monat}.{jahr}\nUhrzeit: {uhrzeit.rstrip("Uhr")}\n\n")
+
+print(datumsliste)
+datei.close()
