@@ -107,7 +107,7 @@ for zeile in datei:
         }
         datumsliste.append(date)
         
-        datei2.write(f"Temperatur: {temp}\nDatum: {tag}.{monat}.{jahr}\nUhrzeit: {uhrzeit.rstrip("Uhr")}\n\n")
+        datei2.write(f"Temperatur: {temp}°C\nDatum: {tag}.{monat}.{jahr}\nUhrzeit: {uhrzeit.rstrip("Uhr")}\n\n")
 
 print(datumsliste)
 datei.close()
