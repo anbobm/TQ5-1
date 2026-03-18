@@ -95,3 +95,64 @@ Uhrzeit: 22:42
 
 ...
 ```
+
+# Aufgabe 5
+
+Generiere die Datei `formatted_temps.txt` im angegebenen Format aus der unten gegebenen Datei `temps.txt`.
+
+Format von `formatted_temps.txt`:
+```
+Temperatur: 23.2 °C
+Datum: 22.3.2026
+Uhrzeit: 10:24
+
+Temperatur: 6.0 °C
+Datum: 4.3.2026
+Uhrzeit: 22:42
+
+...
+```
+
+`temps.txt`:
+```
+13.4 2026-10-19 19:58Uhr
+19.9 2026-1-4 9:36Uhr
+24.4 2026-1-10 16:42Uhr
+13.3 2026-12-2 6:47Uhr
+22.1 2026-3-26 9:15Uhr
+11.6 2026-3-9 11:22Uhr
+22.4 2026-4-4 13:3Uhr
+16.3 2026-3-29 22:31Uhr
+5.5 2026-8-30 2:52Uhr
+20.8 2026-12-29 10:13Uhr
+5.1 2026-9-20 5:38Uhr
+20.1 2026-2-1 12:51Uhr
+14.7 2026-6-27 22:50Uhr
+8.7 2026-10-30 8:3Uhr
+19.2 2026-7-17 21:38Uhr
+13.5 2026-6-5 12:49Uhr
+18.3 2026-1-7 7:28Uhr
+6.4 2026-6-20 8:31Uhr
+17.4 2026-4-11 6:57Uhr
+24.0 2026-3-1 9:29Uhr
+20.1 2026-4-23 11:10Uhr
+6.7 2026-12-6 18:40Uhr
+21.5 2026-5-2 20:44Uhr
+16.1 2026-7-1 14:43Uhr
+12.2 2026-2-11 0:9Uhr
+14.1 2026-2-27 13:24Uhr
+7.0 2026-5-16 19:24Uhr
+13.8 2026-5-12 0:54Uhr
+6.3 2026-8-22 8:44Uhr
+22.1 2026-10-9 7:9Uhr
+```
+
+# Aufgabe 6
+
+Erstelle eine Klasse `TemperaturMessung` mit den Attributen `wert` (`float` in Celsius), `datum` (String in der Form `22.12.2026`) und `uhrzeit` (String in der Form `3:14`).
+
+Überschreibe in der Klasse die Methode `__repr__(self)`. Diese soll einen String **zurückgeben** der Form: `TemperaturMessung(24.5, '24.12.2026', '18:00')`.
+
+Lies die Datei `temps.txt` ein, und erstelle eine Liste `temperaturen` von `TemperaturMessung`-Objekten, je eins pro Datensatz.
+
+Gib dann die Liste aus mit `print(temperaturen)`.
