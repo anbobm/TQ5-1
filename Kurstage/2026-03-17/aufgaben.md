@@ -98,7 +98,7 @@ Uhrzeit: 22:42
 
 # Aufgabe 5
 
-Generiere die datei `formatted_temps.txt` im angegebenen Format aus der unten gegebenen Datei `temps.txt`.
+Generiere die Datei `formatted_temps.txt` im angegebenen Format aus der unten gegebenen Datei `temps.txt`.
 
 Format von `formatted_temps.txt`:
 ```
