@@ -96,7 +96,7 @@
 from datetime import datetime
 datumsliste = []
 datei = open("20260318_temperaturen.txt")
-datei2 = open("20260318_formatted_temperaturen.txt", "w")
+datei2 = open("20260318_formatted_temperaturen.txt", "w", encoding="utf-8")
 
 for zeile in datei:
         temp, datum, uhrzeit = zeile.strip().split(" ")
