@@ -53,18 +53,36 @@
 # neue_datei.close()
 
 
-# Aufgabe 4
+# # Aufgabe 4
 
-datei = open("Kurstage/2026-03-17/dates.txt")
+# datei = open("Kurstage/2026-03-17/dates.txt")
+# zeilen = datei.read().splitlines()
+# datei.close()
+
+# neue_datei = open("Kurstage/2026-03-17/formatted_dates.txt", "w")
+
+# for zeile in zeilen:
+#     zeile = zeile.removesuffix("Uhr")
+#     datum, uhrzeit = zeile.split()
+#     jahr, monat, tag = datum.split("-")
+#     neue_datei.write(f"Datum: {tag}.{monat}.{jahr}\nUhrzeit: {uhrzeit}\n\n")
+
+# neue_datei.close()
+
+# Aufgabe 5
+
+datei = open("Kurstage/2026-03-17/temps.txt", encoding="utf-8")
 zeilen = datei.read().splitlines()
 datei.close()
 
-neue_datei = open("Kurstage/2026-03-17/formatted_dates.txt", "w")
+neue_datei = open("Kurstage/2026-03-17/formatted_temps.txt", "w", encoding="utf-8")
 
 for zeile in zeilen:
     zeile = zeile.removesuffix("Uhr")
-    datum, uhrzeit = zeile.split()
+    temperatur, datum, uhrzeit = zeile.split()
     jahr, monat, tag = datum.split("-")
-    neue_datei.write(f"Datum: {tag}.{monat}.{jahr}\nUhrzeit: {uhrzeit}\n\n")
+    neue_datei.write(f"Temperatur: {temperatur} °C\n")
+    neue_datei.write(f"Datum: {tag}.{monat}.{jahr}\n")
+    neue_datei.write(f"Uhrzeit: {uhrzeit}\n\n")
 
 neue_datei.close()
