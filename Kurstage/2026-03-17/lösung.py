@@ -69,20 +69,52 @@
 
 # neue_datei.close()
 
-# Aufgabe 5
+# # Aufgabe 5
+
+# datei = open("Kurstage/2026-03-17/temps.txt", encoding="utf-8")
+# zeilen = datei.read().splitlines()
+# datei.close()
+
+# neue_datei = open("Kurstage/2026-03-17/formatted_temps.txt", "w", encoding="utf-8")
+
+# for zeile in zeilen:
+#     zeile = zeile.removesuffix("Uhr")
+#     temperatur, datum, uhrzeit = zeile.split()
+#     jahr, monat, tag = datum.split("-")
+#     neue_datei.write(f"Temperatur: {temperatur} °C\n")
+#     neue_datei.write(f"Datum: {tag}.{monat}.{jahr}\n")
+#     neue_datei.write(f"Uhrzeit: {uhrzeit}\n\n")
+
+# neue_datei.close()
+
+
+# Aufgabe 6
+
+class TemperaturMessung:
+    def __init__(self, wert, datum, uhrzeit):
+        self.wert = wert
+        self.datum = datum
+        self.uhrzeit = uhrzeit
+
+    def __repr__(self):
+        return f"TemperaturMessung({self.wert}, '{self.datum}', '{self.uhrzeit}')"
+    
 
 datei = open("Kurstage/2026-03-17/temps.txt", encoding="utf-8")
 zeilen = datei.read().splitlines()
 datei.close()
 
-neue_datei = open("Kurstage/2026-03-17/formatted_temps.txt", "w", encoding="utf-8")
+temperaturen = []
 
 for zeile in zeilen:
     zeile = zeile.removesuffix("Uhr")
     temperatur, datum, uhrzeit = zeile.split()
     jahr, monat, tag = datum.split("-")
-    neue_datei.write(f"Temperatur: {temperatur} °C\n")
-    neue_datei.write(f"Datum: {tag}.{monat}.{jahr}\n")
-    neue_datei.write(f"Uhrzeit: {uhrzeit}\n\n")
 
-neue_datei.close()
+    temperatur = float(temperatur)
+    datum = f"{tag}.{monat}.{jahr}"
+
+    messung = TemperaturMessung(temperatur, datum, uhrzeit)
+    temperaturen.append(messung)
+    
+print(temperaturen)
