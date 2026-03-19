@@ -156,3 +156,33 @@ Erstelle eine Klasse `TemperaturMessung` mit den Attributen `wert` (`float` in C
 Lies die Datei `temps.txt` ein, und erstelle eine Liste `temperaturen` von `TemperaturMessung`-Objekten, je eins pro Datensatz.
 
 Gib dann die Liste aus mit `print(temperaturen)`.
+
+# Aufgabe 7
+
+Die Datei `temps.txt` soll in eine Liste von `TemperaturMessung`-Objekten eingelesen werden, wie in Aufgabe 6.
+
+Anschließend soll dem Benutzer folgendes angezeigt werden:
+
+```
+Was möchtest du tun?
+[1] Messungen anzeigen
+[2] Messung hinzufügen
+[3] Messung löschen
+[E] Speichern und beenden
+```
+
+Wenn der Benutzer `1` eingibt, sollen alle Messungen in der Liste ausgeben werden, zusammen mit einer Nummer:
+
+```
+Messungen
+[0] 13.4 °C, 19.10.2026, 19:58 Uhr
+[1] 19.9 °C, 4.1.2026, 9:36 Uhr
+[2] 24.4 °C, 10.1.2026, 16:42 Uhr
+...
+```
+
+Wenn der Benutzer `2` eingibt, dann soll er zur Eingabe der Temperatur in °C und zur Eingabe von `Datum` und `Uhrzeit` (in einem explizit angegebenen Format) aufgefordert werden. Daraus wird ein `TemperaturMessung`-Objekt erzeugt und der Liste angehängt.
+
+Wenn der Benutzer `3` eingibt, kann der Benutzer die Nummer des Datensatzes angeben, den er löschen möchte. Dieser wird dann aus der `temperaturen`-Liste entfernt. (`pop(index)`)
+
+Wenn der Benutzer `E` eingibt, soll die Liste der Messungen wieder in `temps.txt` gespeichert, und das Programm beendet werden. Wenn man das Programm dann neu startet, sind 
