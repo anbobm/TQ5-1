@@ -22,5 +22,5 @@ for zeile in zeilen:
 
     messung = TemperaturMessung(float(wert), datum, uhrzeit)
     temperaturen.append(messung)
-
-print(temperaturen)
+for t in temperaturen:
+    print(t)
