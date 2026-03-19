@@ -185,4 +185,4 @@ Wenn der Benutzer `2` eingibt, dann soll er zur Eingabe der Temperatur in °C un
 
 Wenn der Benutzer `3` eingibt, kann der Benutzer die Nummer des Datensatzes angeben, den er löschen möchte. Dieser wird dann aus der `temperaturen`-Liste entfernt. (`pop(index)`)
 
-Wenn der Benutzer `E` eingibt, soll die Liste der Messungen wieder in `temps.txt` gespeichert, und das Programm beendet werden. Wenn man das Programm dann neu startet, sind 
+Wenn der Benutzer `E` eingibt, soll die Liste der Messungen wieder in `temps.txt` gespeichert, und das Programm beendet werden.
