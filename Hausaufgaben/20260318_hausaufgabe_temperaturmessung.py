@@ -53,9 +53,11 @@ while True:
 
 
     if eingabe == "1":
-        for index, messung in enumerate(temperaturen):
+        index = 0
+        for messung in temperaturen:
             print(f"[{index}] {messung.wert} °C, {messung.datum}, {messung.uhrzeit} Uhr")
-
+            index = index + 1
+            
     elif eingabe == "2":
         temperatur = input(f"Gib die Temperatur in °C ein (Format xy.z): ")
         datum = input("Gib das Datum ein (Format TT.MM.JJJJ): ")
@@ -64,15 +66,19 @@ while True:
 
     elif eingabe == "3":
         index = int(input("Gib die Nummer des Datensatzes ein, den du löschen möchtest: "))
-        temperaturen.pop(index)
-        print(f"Messung mit Index [{index}] gelöscht.")
+        #if index >= 0 and index < len(temperaturen):
+        if index in range(len(temperaturen)):
+            temperaturen.pop(index)
+            print(f"Messung mit Index [{index}] gelöscht.")
+        else:
+            print("Diese Nummer gibt es nicht.")
 
     elif eingabe.upper() == "E":
         datei = open("20260318_temperaturen.txt", "w", encoding="utf-8")
         for m in temperaturen:
            tag, monat, jahr = m.datum.split(".")
            datum_format = f"{jahr}-{monat}-{tag}"
-           datei.write(f"{m.wert} {datum_format} {m.uhrzeit} Uhr\n")
+           datei.write(f"{m.wert} {datum_format} {m.uhrzeit}Uhr\n")
         
         print("Daten gespeichert und Programm verlassen.")
         break
