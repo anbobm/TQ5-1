@@ -41,9 +41,20 @@
 
 # trinkgeld_funktion(rechnung, prozent)
 
-Passwortlänge = 0
-neues_pw = input("Irgendein Passowrt eingeben: ")
-for i in neues_pw:
-    Passwortlänge = Passwortlänge + 1
+# Passwortlänge = 0
+# neues_pw = input("Irgendein Passowrt eingeben: ")
+# for i in neues_pw:
+#     Passwortlänge = Passwortlänge + 1
 
-print(Passwortlänge)
+# print(Passwortlänge)
+
+class Mathe:
+    def __init__(self, plus):
+        self.plus = plus
+
+    def Plus(self, a, b):
+        return a + b
+    
+
+
+

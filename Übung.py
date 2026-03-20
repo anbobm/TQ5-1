@@ -27,16 +27,25 @@
 #     print("Es ist heiß.")
 
 
-benutzer_note= int(input("Gib deine Note ein: "))
-if benutzer_note >= 92:
-    print("Sehr gut")
-elif benutzer_note >= 81:
-    print("Gut")
-elif benutzer_note >= 67:
-    print("Befriedigend")
-elif benutzer_note >= 50:
-    print("Ausreichend")
-elif benutzer_note >= 30:
-    print("Mangelhaft")
-else:
-    print("Ungenügend")
+# benutzer_note= int(input("Gib deine Note ein: "))
+# if benutzer_note >= 92:
+#     print("Sehr gut")
+# elif benutzer_note >= 81:
+#     print("Gut")
+# elif benutzer_note >= 67:
+#     print("Befriedigend")
+# elif benutzer_note >= 50:
+#     print("Ausreichend")
+# elif benutzer_note >= 30:
+#     print("Mangelhaft")
+# else:
+#     print("Ungenügend")
+
+
+from test import Mathe
+
+a = 3
+b = 5
+
+Mathe = Mathe(0)
+print(Mathe.Plus(a, b))
