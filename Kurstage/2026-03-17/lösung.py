@@ -88,12 +88,44 @@
 # neue_datei.close()
 
 
-# Aufgabe 6
+# # Aufgabe 6
+
+# class TemperaturMessung:
+#     def __init__(self, wert, datum, uhrzeit):
+#         self.wert = wert
+#         self.datum = datum
+#         self.uhrzeit = uhrzeit
+
+#     def __repr__(self):
+#         return f"TemperaturMessung({self.wert}, '{self.datum}', '{self.uhrzeit}')"
+    
+
+# datei = open("Kurstage/2026-03-17/temps.txt", encoding="utf-8")
+# zeilen = datei.read().splitlines()
+# datei.close()
+
+# temperaturen = []
+
+# for zeile in zeilen:
+#     zeile = zeile.removesuffix("Uhr")
+#     temperatur, datum, uhrzeit = zeile.split()
+#     jahr, monat, tag = datum.split("-")
+
+#     temperatur = float(temperatur)
+#     datum = f"{tag}.{monat}.{jahr}"
+
+#     messung = TemperaturMessung(temperatur, datum, uhrzeit)
+#     temperaturen.append(messung)
+    
+# print(temperaturen)
+
+
+# Aufgabe 7
 
 class TemperaturMessung:
     def __init__(self, wert, datum, uhrzeit):
         self.wert = wert
-        self.datum = datum
+        self.datum : str = datum # Type hint str bedeutet datum soll String sein
         self.uhrzeit = uhrzeit
 
     def __repr__(self):
@@ -104,7 +136,7 @@ datei = open("Kurstage/2026-03-17/temps.txt", encoding="utf-8")
 zeilen = datei.read().splitlines()
 datei.close()
 
-temperaturen = []
+temperaturen : list[TemperaturMessung] = [] # Type hint list[TemperaturMessung] bedeutet Liste von TemperaturMessungs-Objekten
 
 for zeile in zeilen:
     zeile = zeile.removesuffix("Uhr")
@@ -116,5 +148,52 @@ for zeile in zeilen:
 
     messung = TemperaturMessung(temperatur, datum, uhrzeit)
     temperaturen.append(messung)
-    
-print(temperaturen)
+
+while True:
+    print("Was möchtest du tun?")
+    print("[1] Messungen anzeigen")
+    print("[2] Messung hinzufügen")
+    print("[3] Messung löschen")
+    print("[E] Speichern und beenden")
+
+    eingabe = input()
+
+    if eingabe == "1":
+        index = 0
+        for messung in temperaturen:
+            print(f"[{index}] {messung.wert} °C, {messung.datum}, {messung.uhrzeit} Uhr")
+            index += 1
+
+        # Alternative:
+        # for index, messung in enumerate(temperaturen):
+        #     print(f"[{index}] {messung.wert} °C, {messung.datum}, {messung.uhrzeit} Uhr")
+            
+    elif eingabe == "2":
+        temperatur = float(input("Temperaturwert in °C? "))
+        datum = input("Datum (DD.MM.YYYY)? ")
+        uhrzeit = input("Uhrzeit (HH:MM)? ")
+
+        messung = TemperaturMessung(temperatur, datum, uhrzeit)
+        temperaturen.append(messung)
+
+    elif eingabe == "3":
+        index = int(input("Welche Messung löschen (Nr.)? "))
+   
+        # Alternative: if index in range(len(temperaturen)):
+        if index >= 0 and index < len(temperaturen):
+            temperaturen.pop(index)
+            print(f"Messung Nr. {index} gelöscht")
+        else:
+            print("Diese Nummer gibt es nicht")
+
+    elif eingabe == "E":
+        break
+    else:
+        print("Menüoption nicht verfügbar")
+
+
+datei = open("Kurstage/2026-03-17/temps.txt", "w", encoding="utf-8")
+for messung in temperaturen:
+    tag, monat, jahr = messung.datum.split(".")
+    datei.write(f"{messung.wert} {jahr}-{monat}-{tag} {messung.uhrzeit}Uhr\n")
+datei.close()
