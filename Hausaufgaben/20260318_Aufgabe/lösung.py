@@ -15,9 +15,6 @@ def read_file(path):
     
     with open(path, "r") as file:
         for zeile in file:
-            if not zeile.strip():
-                continue
-
             wert_str, datum_raw, uhrzeit_raw = zeile.split()
             jahr, monat, tag = datum_raw.split("-")
             datum = f"{tag}.{monat}.{jahr}"
