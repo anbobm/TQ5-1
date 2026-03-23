@@ -42,22 +42,29 @@ def do_operation(a, b, operation):
     result = operation(a, b)
     print(f"result: {result}")
 
-while True:
-    user_input = input("Input a string: ")
+def result_output():       
+    while True:
+        try:
+            user_input = input("Input a string: ")   
+            operation, a, b = user_input.split()
 
-    operation, a, b = user_input.split()
+            a = int(a)
+            b = int(b)
+
+            match operation:
+
+                case 'durch':
+                    do_operation(a, b, lambda a, b: a / b)
+                case 'plus':
+                    do_operation(a, b, lambda a, b: a + b)
+                case 'minus':
+                    do_operation(a, b, lambda a, b: a - b)
+                case 'mal':
+                    do_operation(a, b, lambda a, b: a * b)
+                case _:
+                    print("Unknown operation. Try Again (minus, plus, durch or mal)")
     
-    a = int(a)
-    b = int(b)
+        except ValueError as exception:
+            print(exception)
 
-    match operation:
-        case 'durch':
-            do_operation(a, b, lambda a, b: a / b)
-        case 'plus':
-            do_operation(a, b, lambda a, b: a + b)
-        case 'minus':
-            do_operation(a, b, lambda a, b: a - b)
-        case 'mal':
-            do_operation(a, b, lambda a, b: a * b)
-
-
+result_output()
