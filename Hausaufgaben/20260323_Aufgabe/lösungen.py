@@ -1,0 +1,51 @@
+import os
+
+#Aufgabe 1
+
+def parse_filename(filename):
+    teile = filename.split("-")
+
+    datum_zeit = teile[-1].removesuffix(".jpg")
+
+    tag, monat, rest = datum_zeit.split(".")
+    jahr, uhrzeit = rest.split("_")
+
+    uhrzeit = uhrzeit.replace("h", "")
+
+    beschreibung = " ".join(teile[2:-1])
+
+    return jahr, monat, tag, uhrzeit, beschreibung
+
+
+def build_new_name(jahr, monat, tag, uhrzeit, beschreibung):
+    return f"{jahr}-{monat}-{tag}-{uhrzeit} {beschreibung}.jpg"
+
+
+def rename_photos(ordner):
+    for dateiname in os.listdir(ordner):
+
+        jahr, monat, tag, uhrzeit, beschreibung = parse_filename(dateiname)
+
+        neuer_name = build_new_name(jahr, monat, tag, uhrzeit, beschreibung)
+
+        alt_pfad = os.path.join(ordner, dateiname)
+        neu_pfad = os.path.join(ordner, neuer_name)
+
+        os.rename(alt_pfad, neu_pfad)
+
+
+# rename_photos("Kurstage/2026-03-23/photos")
+
+#Aufgabe 2
+
+user_input = input("Input a string: ")
+
+operation, a, b = user_input.split()
+
+match operation:
+    case 'durch':
+        result = int(a) // int(b)
+        print(result)
+    
+
+print(operation)
