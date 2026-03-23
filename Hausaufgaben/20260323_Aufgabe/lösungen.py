@@ -38,14 +38,26 @@ def rename_photos(ordner):
 
 #Aufgabe 2
 
-user_input = input("Input a string: ")
+def do_operation(a, b, operation):
+    result = operation(a, b)
+    print(f"result: {result}")
 
-operation, a, b = user_input.split()
+while True:
+    user_input = input("Input a string: ")
 
-match operation:
-    case 'durch':
-        result = int(a) // int(b)
-        print(result)
+    operation, a, b = user_input.split()
     
+    a = int(a)
+    b = int(b)
 
-print(operation)
+    match operation:
+        case 'durch':
+            do_operation(a, b, lambda a, b: a / b)
+        case 'plus':
+            do_operation(a, b, lambda a, b: a + b)
+        case 'minus':
+            do_operation(a, b, lambda a, b: a - b)
+        case 'mal':
+            do_operation(a, b, lambda a, b: a * b)
+
+
