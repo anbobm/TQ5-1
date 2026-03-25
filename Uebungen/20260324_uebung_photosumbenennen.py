@@ -11,10 +11,10 @@
 # ...
 # Du kannst dafür die die Funktionen listdir(pfad) zum Auflisten von Dateien in einem Ordner, und rename(von, nach) zum umbenennen nutzen, beide im os-Modul
 
-from os import listdir, rename, path 
+from os import listdir, rename, path
 
 ordner = r"C:\Users\brainyuser\Documents\TQ5\Test\TQ5-1\photos"
-# datei = open("C:/Users/brainyuser/Documents/TQ5/Test/TQ5-1")
+
 for datei in listdir(ordner):
     if not datei.endswith(".jpg"):
         continue
@@ -22,10 +22,10 @@ for datei in listdir(ordner):
     datei_geteilt = datei_nackt.split("-")
            
     for wert in datei_geteilt:
-        typ = wert[0],
-        nummer = wert[1],
-        anlass = wert[2],
-        datum_uhrzeit = wert[3]
+        typ = datei_geteilt[0]
+        nummer = datei_geteilt[1]
+        anlass = datei_geteilt[2]
+        datum_uhrzeit = datei_geteilt[3]
 
         datum, zeit = datum_uhrzeit.split("_")
         tag, monat, jahr = datum.split(".")
@@ -35,8 +35,8 @@ for datei in listdir(ordner):
 
         datei_neu = f"{datum_neu}-{zeit_neu}-{anlass}.jpg"
     
-    alte_datei = "C:/Users/brainyuser/Documents/TQ5/Test/TQ5-1/photos, datei"
-    neue_datei = "C:/Users/brainyuser/Documents/TQ5/Test/TQ5-1/photos, datei_neu"
+    alte_datei = path.join(ordner, datei)
+    neue_datei = path.join(ordner, datei_neu)
     
     rename(alte_datei, neue_datei)
     
