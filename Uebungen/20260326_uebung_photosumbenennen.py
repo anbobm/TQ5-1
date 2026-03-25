@@ -3,7 +3,7 @@
 
 # DCIM-169-Geburtstagsfeier Stefan Süßmaus-29.01.2025_17h51.jpg
 # DCIM-258-Geburtstagsfeier Paul Pausenfreu-13.09.2025_00h32.jpg
-# ...
+
 # Diese Dateien sollen mit einem Python-Skript umbenannt werden:
 
 # 2025-01-29-1751 Geburtstagsfeier Stefan Süßmaus.jpg
@@ -11,68 +11,33 @@
 # ...
 # Du kannst dafür die die Funktionen listdir(pfad) zum Auflisten von Dateien in einem Ordner, und rename(von, nach) zum umbenennen nutzen, beide im os-Modul
 
-# from os import listdir, rename, path 
+from os import listdir, rename, path 
 
-# ordner = r"C:\Users\brainyuser\Documents\TQ5\Test\TQ5-1\photos"
-# # datei = open("C:/Users/brainyuser/Documents/TQ5/Test/TQ5-1")
-# for datei in listdir(ordner):
-#     if not datei.endswith(".jpg"):
-#         continue
-#     datei_nackt = datei.removesuffix(".jpg")
-#     datei_geteilt = datei_nackt.split("-")
+ordner = r"C:\Users\brainyuser\Documents\TQ5\Test\TQ5-1\photos"
+# datei = open("C:/Users/brainyuser/Documents/TQ5/Test/TQ5-1")
+for datei in listdir(ordner):
+    if not datei.endswith(".jpg"):
+        continue
+    datei_nackt = datei.removesuffix(".jpg")
+    datei_geteilt = datei_nackt.split("-")
            
-# for wert in datei_geteilt:
-#     typ = wert[0],
-#     nummer = wert[1],
-#     anlass = wert[2],
-#     datum_uhrzeit = wert[4]
+for wert in datei_geteilt:
+    typ = wert[0],
+    nummer = wert[1],
+    anlass = wert[2],
+    datum_uhrzeit = wert[4]
     
-#     datum, zeit = datum_uhrzeit.split("_")
-#     tag, monat, jahr = datum.split(".")
-#     datum_neu = f"{jahr}-{monat}-{tag}"
-#     stunde, minute = zeit.split("h")
-#     zeit_neu = f"{stunde}{minute}"
+    datum, zeit = datum_uhrzeit.split("_")
+    tag, monat, jahr = datum.split(".")
+    datum_neu = f"{jahr}-{monat}-{tag}"
+    stunde, minute = zeit.split("h")
+    zeit_neu = f"{stunde}{minute}"
     
-#     datei_neu = f"{datum_neu}-{zeit_neu}-{anlass}.jpg"
+    datei_neu = f"{datum_neu}-{zeit_neu}-{anlass}.jpg"
     
-#     alte_datei = "C:/Users/brainyuser/Documents/TQ5/Test/TQ5-1/photos, datei"
-#     neue_datei = "C:/Users/brainyuser/Documents/TQ5/Test/TQ5-1/photos, datei_neu"
+    alte_datei = "C:/Users/brainyuser/Documents/TQ5/Test/TQ5-1/photos, datei"
+    neue_datei = "C:/Users/brainyuser/Documents/TQ5/Test/TQ5-1/photos, datei_neu"
     
-#     rename(alte_datei, neue_datei)
+    rename(alte_datei, neue_datei)
     
-#     print(f"Umbenannte von: {datei} in {datei_neu}")
- 
- 
- 
-   
-#  Aufgabe 2: textbasierter einfacher Taschenrechner
-# Der Benutzer soll z.B. eingeben "plus 3 19", "minus 2 7", "mal 11 5" oder "durch 18 3" und das Programm soll entsprechend ausgeben 22, -5, 55 oder 6.
-
-# Benutze split() und denk dran, dass du Strings erst in eine Zahl umwandeln musst um damit rechnen zu können.
-
-rechnung = input("Gib eine Aufgabe ein: (plus, minus, mal oder durch und dann die Zahlen) " )
-
-formelzeichen, a, b = rechnung.split()
-a = float(a)
-b = float(b)
-if formelzeichen == "plus": 
-    summe = a + b
-    print(f"{summe}")
-elif formelzeichen == "minus":
-    summe = a - b
-    print(f"{summe}")
-elif formelzeichen == "mal":
-    summe = a * b
-    print(f"{summe}")
-elif formelzeichen == "durch":
-    summe = a / b
-    print(f"{summe}")
-else:
-    print("Eingabe ungültig")
-
-
-
-
-
-# Aufgabe 3
-# Zeichne mit Draw.io Klassendiagramme (mit Vererbungspfeilen) für die in den vorherigen Aufgaben besprochenen Klassen (wo es Vererbung gibt).
+    print(f"Umbenannte von: {datei} in {datei_neu}")
