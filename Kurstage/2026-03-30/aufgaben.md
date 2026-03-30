@@ -26,3 +26,40 @@ Der Prozess geht erst weiter, wenn die Unterlagen vollständig sind.
 * Mitarbeitende willkommen heißen
 * Begrüßung durch HR
 * Übergabe der Zugangs- und Arbeitsplatzinformationen
+
+
+# Aufgabe 3 - Aktivitätsdiagramm Flugbuchung
+
+Entwirf ein UML-Aktivitätsdiagramm für ein Flugbuchungssystem. Der Kunde kann Flüge suchen, einen Flug auswählen, zusätzliche Services hinzufügen, eine Zahlung durchführen und eine Buchungsbestätigung erhalten. Beachten Sie die folgenden Schritte und Entscheidungsstellen:
+
+## Szenario-Details
+
+1. Flüge suchen:
+    * Der Kunde gibt Abflug- und Zielort, Datum und Anzahl der Passagiere ein.
+    * Das System zeigt verfügbare Flüge an.
+    * Wenn keine Flüge verfügbar sind, kann der Kunde die Suche ändern oder den Vorgang abbrechen.
+2. Flug auswählen:
+    * Der Kunde wählt einen Flug aus den Suchergebnissen aus.
+    * Wenn kein Flug ausgewählt wird, wird der Kunde zur Suche zurückgeleitet oder kann abbrechen.
+3. Zusatzservices hinzufügen (optional):
+    * Der Kunde kann zusätzliche Services auswählen, wie z. B.:
+        * Sitzplatzreservierung
+        * Aufgabegepäck
+        * Mahlzeiten
+    * Der Kunde kann auch ohne Zusatzservices fortfahren.
+4. Passagierdaten eingeben:
+    * Der Kunde gibt persönliche Daten (z. B. Name, Geburtsdatum, Reisepassnummer) für jeden Passagier ein.
+    * Das System prüft die Vollständigkeit und Validität der Daten.
+5. Zahlung durchführen:
+    * Der Kunde wählt eine Zahlungsmethode: Kreditkarte, PayPal oder Banküberweisung.
+    * Bei der Kreditkarte:
+    * Kartendetails werden validiert.
+    * Bei Fehlschlag kann der Kunde die Daten korrigieren oder eine andere Methode wählen.
+    * Bei PayPal:
+    * Der Kunde wird zu PayPal weitergeleitet.
+    * Authentifizierung kann bei Fehlschlag erneut durchgeführt werden.
+    * Bei Banküberweisung:
+    * Der Kunde erhält Zahlungsanweisungen, die manuell durchgeführt werden müssen.
+6. Buchungsbestätigung:
+    * Wenn die Zahlung erfolgreich ist, erstellt das System die Buchung und sendet die Bestätigung per E-Mail.
+    * Wenn die Zahlung fehlschlägt, wird der Kunde informiert und kann den Vorgang wiederholen oder abbrechen.
