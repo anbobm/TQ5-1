@@ -163,3 +163,9 @@ customer = Customer("Max", atm)
 
 customer.perform_withdrawal(50)
 ```
+
+# Aufgabe 4
+
+Schreibe die Klassen `A`, `B` und `C` und deren Methoden, die durch folgendes Sequenzdiagramm beschrieben werden:
+
+![](Aufgabe.png)
