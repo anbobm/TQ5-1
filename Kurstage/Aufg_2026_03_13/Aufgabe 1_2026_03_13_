@@ -1,0 +1,13 @@
+datei = open("Kurstage/Aufg_2026_03_13/foo.txt")
+
+zeilennummer = 1
+zeile = datei.readline()
+
+while zeile != "":
+    if "bar" in zeile:
+        print("bar gefunden in Zeile:", zeilennummer)
+
+    zeile = datei.readline()
+    zeilennummer = zeilennummer + 1
+
+datei.close()

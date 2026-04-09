@@ -1,0 +1,46 @@
+# Aufgabe 5
+
+class Mitarbeiter:
+
+    def __init__(self, name, gehalt):
+        self._name = name
+        self._gehalt = gehalt
+
+    def get_gehalt(self):
+        return self._gehalt
+
+    def gehalt_erhoehen(self, prozent):
+        if prozent <= 0:
+            print("Nur positive Prozentwerte sind erlaubt")
+            return
+        self._gehalt = self._gehalt * (1 + prozent / 100)
+
+    
+class Manager(Mitarbeiter):
+
+    def __init__(self, name, gehalt, bonus):
+        super().__init__(name, gehalt)
+        self._bonus = bonus
+
+    def get_gehalt(self):
+        return self._gehalt + self._bonus
+
+    def set_bonus(self, bonus):
+        if bonus < 0:
+            print("Negative Bonuswerte sind nicht erlaubt")
+            return
+        self._bonus = bonus  
+
+   # Test
+
+mitarbeiter1 = Mitarbeiter("Anna", 3000)
+print(mitarbeiter1.get_gehalt())
+
+mitarbeiter1.gehalt_erhoehen(10)
+print(mitarbeiter1.get_gehalt())
+
+manager1 = Manager("Peter", 5000, 1000)
+print(manager1.get_gehalt())
+
+manager1.set_bonus(1500)
+print(manager1.get_gehalt())    

@@ -1,0 +1,10 @@
+# Aufgabe 3
+# Der Benutzer gibt sein Alter ein. Ist es kleiner als 18,
+# wird "minderjährig" ausgegeben, sonst "volljährig".
+
+alter = int(input("Gib dein Alter ein: "))
+
+if alter < 18:
+    print("minderjährig")
+else:
+    print("volljährig")

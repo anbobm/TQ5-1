@@ -1,13 +1,25 @@
-# Schleife die die Zahlen von 0 bis 9 ausgibt
-n = 0
+#Aufgabe 1
+#mit while
+zahl = 0
+while zahl <= 20:
+    print(zahl)
+    zahl += 1
 
-while n < 10:
-    print(n)
-    n = n + 1
+  # Aufgabe 2
+# mit while
 
-# Schleife die den Benutzer so lange etwas eingeben lässt, bis er "ende" eingibt
-eingabe = ""
+zahl = 13
+while zahl <= 25:
+    print(zahl)
+    zahl += 1
 
-while eingabe != "ende":
-    eingabe = input()
-    print(f"Du hast {eingabe} eingegeben")
+
+    # mit while
+summe = 0
+zahl = 0
+
+while zahl <= 100:
+    summe = summe + zahl
+    zahl += 1
+
+print(summe)

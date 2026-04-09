@@ -1,0 +1,67 @@
+INPUT number1
+INPUT number2
+INPUT operator
+
+IF operator = "+" THEN
+    result = number1 + number2
+ELSE IF operator = "-" THEN
+    result = number1 - number2
+ELSE IF operator = "*" THEN
+    result = number1 * number2
+ELSE IF operator = "/" THEN
+    result = number1 / number2
+ELSE
+    OUTPUT "Bitte Operator eingeben"
+END IF
+
+OUTPUT result
+
+
+INPUT score
+
+IF score >= 90 THEN
+    OUTPUT "Grade A"
+ELSE IF score >= 80 THEN
+    OUTPUT "Grade B"
+ELSE IF score >= 70 THEN
+    OUTPUT "Grade C"
+ELSE IF score >= 60 THEN
+    OUTPUT "Grade D"
+ELSE
+    OUTPUT "Grade F"
+END IF
+
+INPUT number1
+INPUT number2
+INPUT number3
+
+
+IF number1 >= number2 AND number1 >= number3 THEN
+    max = number1
+    
+ELSE IF number2 >= number1 AND number2 >= number3 THEN
+    max = number2
+ELSE
+    max = number3
+END IF
+
+OUTPUT max
+
+
+
+INPUT number
+
+WHILE number >= 0
+    OUTPUT number
+    number = number - 1
+END WHILE
+
+
+   INPUT n
+sum ← 0
+i ← 2
+
+WHILE i ≤ n
+    sum ← sum + i
+    i ← i + 2
+END WHILES 

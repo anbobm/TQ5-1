@@ -1,20 +1,11 @@
-# einen Block von Anweisungen 5 mal ausführen:
+#Aufgabe 1
+#mit for
 
-for _ in range(5):
-    print("Hallo")
-
-
-# eine Reihe von Zahlen von 0 bis 7 (8 Stück):
-
-for zahl in range(8):
+for zahl in range(21):
     print(zahl)
 
+# Aufgabe 2
+# mit for
 
-# eine Liste durchlaufen
-
-früchte = ["apfel", "birne", "banane"]
-
-for frucht in früchte:
-    if frucht == "birne":
-        break
-    print(f"Frucht: {frucht}")
+for zahl in range(13, 26):
+    print(zahl)
