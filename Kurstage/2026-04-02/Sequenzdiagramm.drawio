@@ -1,0 +1,197 @@
+<mxfile host="app.diagrams.net">
+  <diagram name="Seite-1" id="76Zsn4UsNhq9s_t6MyDw">
+    <mxGraphModel dx="1869" dy="659" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-1" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="foo1:Foo" vertex="1">
+          <mxGeometry height="310" width="100" x="90" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-3" parent="Do6j-dG4hSgUJn1AjsbS-1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="190" width="10" x="45" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-4" edge="1" parent="Do6j-dG4hSgUJn1AjsbS-1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="Do6j-dG4hSgUJn1AjsbS-3" value="methode1()">
+          <mxGeometry relative="1" y="5" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="-25" y="75" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-5" edge="1" parent="Do6j-dG4hSgUJn1AjsbS-1" source="Do6j-dG4hSgUJn1AjsbS-3" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-20" y="255" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-2" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="bar:Bar" vertex="1">
+          <mxGeometry height="300" width="100" x="240" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-44" parent="Do6j-dG4hSgUJn1AjsbS-2" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="45" y="120" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-24" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;div style=&quot;color: #bbbebf;background-color: #121314;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #ff7b72;&quot;&gt;class&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #4ec9b0;&quot;&gt;Foo&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #ff7b72;&quot;&gt;def&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;__init__&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;color: #ffa657;&quot;&gt;bar&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;):&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;bar&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #ffa657;&quot;&gt;bar&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #ff7b72;&quot;&gt;def&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #d2a8ff;&quot;&gt;methode1&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;):&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #8b949e;&quot;&gt;# ...&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #d2a8ff;&quot;&gt;methode2&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #8b949e;&quot;&gt;# ...&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #ff7b72;&quot;&gt;def&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #d2a8ff;&quot;&gt;methode2&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;):&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #8b949e;&quot;&gt;# ...&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;bar&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;.methode()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #8b949e;&quot;&gt;# ...&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: #ff7b72;&quot;&gt;class&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #4ec9b0;&quot;&gt;Bar&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #ff7b72;&quot;&gt;def&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #d2a8ff;&quot;&gt;methode&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;):&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #c586c0;&quot;&gt;pass&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="350" width="250" x="-180" y="95" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-27" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="140" width="40" x="140" y="210" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-28" parent="Do6j-dG4hSgUJn1AjsbS-27" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="114.54545454545455" width="10" y="12.727272727272727" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-29" edge="1" parent="Do6j-dG4hSgUJn1AjsbS-27" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="Do6j-dG4hSgUJn1AjsbS-28" value="">
+          <mxGeometry relative="1" x="-0.3125" y="5" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="40" />
+              <mxPoint x="40" y="12.727272727272727" />
+            </Array>
+            <mxPoint x="5" as="sourcePoint" />
+            <mxPoint x="10" y="12.727272727272727" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-30" edge="1" parent="Do6j-dG4hSgUJn1AjsbS-27" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="127.27272727272727" />
+              <mxPoint x="40" y="140" />
+            </Array>
+            <mxPoint x="10" y="127.27272727272727" as="sourcePoint" />
+            <mxPoint x="5" y="140" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-43" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="methode2()" vertex="1">
+          <mxGeometry height="30" width="60" x="190" y="200" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-45" edge="1" parent="1" source="Do6j-dG4hSgUJn1AjsbS-28" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="Do6j-dG4hSgUJn1AjsbS-44" value="methode()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="240" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-46" edge="1" parent="1" source="Do6j-dG4hSgUJn1AjsbS-44" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="Do6j-dG4hSgUJn1AjsbS-28" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="310" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-50" parent="1" style="text;whiteSpace=wrap;html=1;" value="&lt;div style=&quot;color: #bbbebf;background-color: #121314;font-family: Consolas, &#39;Courier New&#39;, monospace;font-weight: normal;font-size: 14px;line-height: 19px;white-space: pre;&quot;&gt;&lt;div&gt;&lt;span style=&quot;color: #ff7b72;&quot;&gt;class&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #4ec9b0;&quot;&gt;Foo&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #ff7b72;&quot;&gt;def&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #dcdcaa;&quot;&gt;__init__&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;, &lt;/span&gt;&lt;span style=&quot;color: #ffa657;&quot;&gt;bar&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;):&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;bar&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #ffa657;&quot;&gt;bar&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #ff7b72;&quot;&gt;def&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #d2a8ff;&quot;&gt;methode1&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;):&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #8b949e;&quot;&gt;# ...&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #d2a8ff;&quot;&gt;methode2&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #8b949e;&quot;&gt;# ...&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #ff7b72;&quot;&gt;def&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #d2a8ff;&quot;&gt;methode2&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;):&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #8b949e;&quot;&gt;# ...&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;result&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;bar&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;.methode()&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #c586c0;&quot;&gt;if&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;result&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;&amp;gt;&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #b5cea8;&quot;&gt;100&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #d2a8ff;&quot;&gt;methode3&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #c586c0;&quot;&gt;else&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;bar&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;.methode2()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #8b949e;&quot;&gt;# ...&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #ff7b72;&quot;&gt;def&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #d2a8ff;&quot;&gt;methode3&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;):&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #8b949e;&quot;&gt;# ...&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #c586c0;&quot;&gt;return&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: #ff7b72;&quot;&gt;class&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #4ec9b0;&quot;&gt;Bar&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;:&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #ff7b72;&quot;&gt;def&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #d2a8ff;&quot;&gt;methode&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;):&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #c586c0;&quot;&gt;return&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #79c0ff;&quot;&gt;...&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #ff7b72;&quot;&gt;def&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #d2a8ff;&quot;&gt;methode2&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;self&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;):&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #8b949e;&quot;&gt;# ...&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;&amp;nbsp; &amp;nbsp; &amp;nbsp; &amp;nbsp; &lt;/span&gt;&lt;span style=&quot;color: #c586c0;&quot;&gt;return&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;bar1&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #4ec9b0;&quot;&gt;Bar&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;()&lt;/span&gt;&lt;/div&gt;&lt;div&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;foo1&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #d4d4d4;&quot;&gt;=&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt; &lt;/span&gt;&lt;span style=&quot;color: #4ec9b0;&quot;&gt;Foo&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;(&lt;/span&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;bar1&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;)&lt;/span&gt;&lt;/div&gt;&lt;br&gt;&lt;div&gt;&lt;span style=&quot;color: #c9d1d9;&quot;&gt;foo1&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;.&lt;/span&gt;&lt;span style=&quot;color: #d2a8ff;&quot;&gt;methode1&lt;/span&gt;&lt;span style=&quot;color: #bbbebf;&quot;&gt;()&lt;/span&gt;&lt;/div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="690" width="300" x="-240" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-51" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="foo1:Foo" vertex="1">
+          <mxGeometry height="570" width="100" x="90" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-53" parent="Do6j-dG4hSgUJn1AjsbS-51" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="480" width="10" x="45" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-54" edge="1" parent="Do6j-dG4hSgUJn1AjsbS-51" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="Do6j-dG4hSgUJn1AjsbS-53" value="methode1()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="-25" y="75" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-52" parent="1" style="shape=umlLifeline;perimeter=lifelinePerimeter;whiteSpace=wrap;html=1;container=1;dropTarget=0;collapsible=0;recursiveResize=0;outlineConnect=0;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="bar:Bar" vertex="1">
+          <mxGeometry height="570" width="100" x="240" y="490" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-64" parent="Do6j-dG4hSgUJn1AjsbS-52" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="55" width="10" x="45" y="150" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-59" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="425" width="40" x="140" y="585" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-60" parent="Do6j-dG4hSgUJn1AjsbS-59" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="370.62098765432097" width="10" y="38.638271604938275" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-61" edge="1" parent="Do6j-dG4hSgUJn1AjsbS-59" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="Do6j-dG4hSgUJn1AjsbS-60" value="">
+          <mxGeometry relative="1" x="-0.3125" y="5" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="40" />
+              <mxPoint x="40" y="38.63636363636364" />
+            </Array>
+            <mxPoint x="5" as="sourcePoint" />
+            <mxPoint x="10" y="38.63636363636364" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-62" edge="1" parent="Do6j-dG4hSgUJn1AjsbS-59" source="Do6j-dG4hSgUJn1AjsbS-60" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=1;exitY=1;exitDx=0;exitDy=-5;exitPerimeter=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="404.01234567901236" />
+              <mxPoint x="40" y="425.00000000000006" />
+            </Array>
+            <mxPoint x="10" y="386.3636363636364" as="sourcePoint" />
+            <mxPoint x="5" y="425.00000000000006" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-63" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="methode2()" vertex="1">
+          <mxGeometry height="30" width="60" x="150" y="560" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-66" edge="1" parent="1" source="Do6j-dG4hSgUJn1AjsbS-64" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="Do6j-dG4hSgUJn1AjsbS-60" value="result">
+          <mxGeometry relative="1" x="0.0049" as="geometry">
+            <mxPoint as="offset" />
+            <mxPoint x="215" y="690" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-67" parent="1" style="shape=umlFrame;whiteSpace=wrap;html=1;pointerEvents=0;" value="alt" vertex="1">
+          <mxGeometry height="270" width="320" x="50" y="710" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-55" edge="1" parent="1" source="Do6j-dG4hSgUJn1AjsbS-53" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="60" y="1035" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-68" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="[result &amp;gt; 100]" vertex="1">
+          <mxGeometry height="30" width="90" x="50" y="740" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-69" connectable="0" parent="1" style="group" value="" vertex="1">
+          <mxGeometry height="110" width="40" x="145" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-70" parent="Do6j-dG4hSgUJn1AjsbS-69" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="90" width="10" y="10" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-71" edge="1" parent="Do6j-dG4hSgUJn1AjsbS-69" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;" target="Do6j-dG4hSgUJn1AjsbS-70" value="">
+          <mxGeometry relative="1" x="-0.3125" y="5" as="geometry">
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="40" />
+              <mxPoint x="40" y="10" />
+            </Array>
+            <mxPoint x="5" as="sourcePoint" />
+            <mxPoint x="10" y="10" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-72" edge="1" parent="Do6j-dG4hSgUJn1AjsbS-69" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <Array as="points">
+              <mxPoint x="40" y="100" />
+              <mxPoint x="40" y="110" />
+            </Array>
+            <mxPoint x="10" y="100" as="sourcePoint" />
+            <mxPoint x="5" y="110" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-73" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="methode3()" vertex="1">
+          <mxGeometry height="30" width="60" x="170" y="730" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-74" parent="1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;dashed=1;" value="" vertex="1">
+          <mxGeometry height="8" width="320" x="50" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-77" parent="1" style="text;html=1;whiteSpace=wrap;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;rounded=0;" value="[else]" vertex="1">
+          <mxGeometry height="30" width="60" x="60" y="860" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-78" parent="1" style="html=1;points=[[0,0,0,0,5],[0,1,0,0,-5],[1,0,0,0,5],[1,1,0,0,-5]];perimeter=orthogonalPerimeter;outlineConnect=0;targetShapes=umlLifeline;portConstraint=eastwest;newEdgeStyle={&quot;curved&quot;:0,&quot;rounded&quot;:0};" value="" vertex="1">
+          <mxGeometry height="80" width="10" x="285" y="880" as="geometry" />
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-79" edge="1" parent="1" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="Do6j-dG4hSgUJn1AjsbS-78" value="methode2()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="150" y="885" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-80" edge="1" parent="1" source="Do6j-dG4hSgUJn1AjsbS-78" style="html=1;verticalAlign=bottom;endArrow=open;dashed=1;endSize=8;curved=0;rounded=0;exitX=0;exitY=1;exitDx=0;exitDy=-5;" target="Do6j-dG4hSgUJn1AjsbS-60" value="return">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="215" y="955" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="Do6j-dG4hSgUJn1AjsbS-65" edge="1" parent="1" source="Do6j-dG4hSgUJn1AjsbS-60" style="html=1;verticalAlign=bottom;endArrow=block;curved=0;rounded=0;entryX=0;entryY=0;entryDx=0;entryDy=5;" target="Do6j-dG4hSgUJn1AjsbS-64" value="methode()">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="215" y="620" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>

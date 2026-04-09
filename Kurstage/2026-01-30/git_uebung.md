@@ -11,7 +11,7 @@ In dieser Uebung lernst du die wichtigsten Git Grundbefehle:
 -   git log
 
 Du arbeitest an einem kleinen Python Projekt und verfolgst deine
-Aenderungen mit Git.
+Änderungen mit Git.
 
 ------------------------------------------------------------------------
 
