@@ -17,18 +17,16 @@
     'sphinx.ext.viewcode',     # add source code links
     ]
     ```
-
 1. Übergeordneten Ordner öffnen und `sphinx-apidoc -o .\docs\ .` ausführen
 1. `docs\index.rst` ändern zu:
-
-```
-Welcome to My Project
-====================
-
-.. toctree::
-   :maxdepth: 2
-
-   modules
-```
+    ```
+    Welcome to My Project
+    ====================
+    
+    .. toctree::
+       :maxdepth: 2
+    
+       modules
+    ```
 1. `sphinx-build -b html docs .\docs\_build\html` ausführen
 1. `\docs\_build\html` öffnen und `python -m http.server 8080` ausführen und Webseite `localhost:8080` aufrufen
