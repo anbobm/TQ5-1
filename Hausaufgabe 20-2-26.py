@@ -7,6 +7,7 @@ class auto:
     def info(self):
         return f"Das Auto hat die Farbe {self._farbe}, fährt mit {self._geschwindigkeit} km/h und hat eine maximale Geschwindigkeit von {self._max_geschwindigkeit} km/h."
     
+    """Beschleigt das Auto"""
     def beschleunigen(self, geschwindigkeit):
         if self._geschwindigkeit + geschwindigkeit <= self._max_geschwindigkeit and self._geschwindigkeit + geschwindigkeit >= 0:
             self._geschwindigkeit += geschwindigkeit
@@ -16,13 +17,16 @@ class auto:
         else:
             self._geschwindigkeit = self._max_geschwindigkeit
             return "Das Auto erreicht die maximale Geschwindigkeit."
-    
+
+    """Setzt die maximale Geschwindigkeit des Autos"""    
     def set_max_geschwindigkeit(self, max_geschwindigkeit):
         self._max_geschwindigkeit = max_geschwindigkeit
     
+    """Setzt die aktuelle Geschwindigkeit des Autos"""
     def set_geschwindigkeit(self, geschwindigkeit):
         self._geschwindigkeit = geschwindigkeit
     
+    """Bremst das Auto"""
     def bremsen(self, bremsen):
         if self._geschwindigkeit - bremsen >= 0 and bremsen >= 0:
             self._geschwindigkeit -= bremsen
@@ -32,9 +36,11 @@ class auto:
             self._geschwindigkeit = 0
             return "Das Auto kommt zum Stillstand."
     
+    """Gibt die Farbe des Autos zurück"""
     def get_farbe(self):
         return self._farbe
     
+    """Setzt die Farbe des Autos, nur bestimmte Farben sind erlaubt"""
     def set_farbe(self, farbe):
         farben = ["rot", "blau", "grün", "schwarz", "weiß"]
         if farbe in farben:
